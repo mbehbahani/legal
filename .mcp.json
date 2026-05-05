@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "aws": {
+      "type": "stdio",
+      "command": "npm",
+      "args": [
+        "--silent",
+        "--prefix",
+        "C:/Users/Mohammad/Documents/Cline/MCP/aws-mcp",
+        "start"
+      ]
+    }
+  }
+}

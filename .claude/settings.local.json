@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-Content *)",
+      "PowerShell(Test-Path *)",
+      "PowerShell(jq *)",
+      "Bash(aws sts get-caller-identity *)",
+      "Bash(aws bedrock *)",
+      "Bash(aws bedrock-runtime *)"
+    ]
+  }
+}
