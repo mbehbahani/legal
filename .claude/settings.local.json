@@ -21,7 +21,8 @@
       "Bash(python -m pytest test_latency_budgets.py -v)",
       "Bash(python -m pytest -m \"not slow and not integration\" --tb=no -q)",
       "Bash(python -m pytest test_latency_budgets.py::test_ttft_p95_within_budget -v -s)",
-      "Bash(powershell *)"
+      "Bash(powershell *)",
+      "mcp__claude_ai_Gamma__generate"
     ]
   }
 }

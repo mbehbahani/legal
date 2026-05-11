@@ -1,1 +1,7 @@
 .env
+reports/junit.xml
+reports/jaeger-screenshots/trace-cache-hit-raw.json
+reports/jaeger-screenshots/trace-refusal-raw.json
+reports/jaeger-screenshots/trace-generation-raw.json
+Present/
+reports/youtube-script.md
