@@ -5,3 +5,7 @@ reports/jaeger-screenshots/trace-refusal-raw.json
 reports/jaeger-screenshots/trace-generation-raw.json
 Present/
 reports/youtube-script.md
+
+# graphify
+graphify-out/cache/
+.claude/settings.local.json
