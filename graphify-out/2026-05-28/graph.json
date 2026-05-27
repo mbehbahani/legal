@@ -4,1140 +4,6 @@
   "graph": {},
   "nodes": [
     {
-      "label": "GRAPHIFY_API_ENRICHMENT.md",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L1",
-      "id": "docs_graphify_api_enrichment_md",
-      "community": 37,
-      "norm_label": "graphify_api_enrichment.md"
-    },
-    {
-      "label": "Graphify: AST-Only vs Gemini API Enrichment",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L1",
-      "id": "docs_graphify_api_enrichment_graphify_ast_only_vs_gemini_api_enrichment",
-      "community": 37,
-      "norm_label": "graphify: ast-only vs gemini api enrichment"
-    },
-    {
-      "label": "What changed \u2014 numbers",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L10",
-      "id": "docs_graphify_api_enrichment_what_changed_numbers",
-      "community": 37,
-      "norm_label": "what changed \u2014 numbers"
-    },
-    {
-      "label": "Which files were affected",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L23",
-      "id": "docs_graphify_api_enrichment_which_files_were_affected",
-      "community": 37,
-      "norm_label": "which files were affected"
-    },
-    {
-      "label": "Design docs (biggest gain)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L27",
-      "id": "docs_graphify_api_enrichment_design_docs_biggest_gain",
-      "community": 37,
-      "norm_label": "design docs (biggest gain)"
-    },
-    {
-      "label": "Docs I wrote (newly indexed)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L35",
-      "id": "docs_graphify_api_enrichment_docs_i_wrote_newly_indexed",
-      "community": 37,
-      "norm_label": "docs i wrote (newly indexed)"
-    },
-    {
-      "label": "New concept nodes (semantic-only, didn't exist in AST)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L48",
-      "id": "docs_graphify_api_enrichment_new_concept_nodes_semantic_only_didn_t_exist_in_ast",
-      "community": 37,
-      "norm_label": "new concept nodes (semantic-only, didn't exist in ast)"
-    },
-    {
-      "label": "How the queries changed",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L71",
-      "id": "docs_graphify_api_enrichment_how_the_queries_changed",
-      "community": 37,
-      "norm_label": "how the queries changed"
-    },
-    {
-      "label": "Before (AST only): `graphify query \"authentication boundary enforcement\"`",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L73",
-      "id": "docs_graphify_api_enrichment_before_ast_only_graphify_query_authentication_boundary_enforcement",
-      "community": 37,
-      "norm_label": "before (ast only): `graphify query \"authentication boundary enforcement\"`"
-    },
-    {
-      "label": "code:block1 (Start nodes found: \"Guard drops FIOD chunk...\", \".test_seman)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L75",
-      "id": "docs_graphify_api_enrichment_codeblock_1",
-      "community": 37,
-      "norm_label": "code:block1 (start nodes found: \"guard drops fiod chunk...\", \".test_seman)"
-    },
-    {
-      "label": "After (Gemini enriched): same query",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L82",
-      "id": "docs_graphify_api_enrichment_after_gemini_enriched_same_query",
-      "community": 37,
-      "norm_label": "after (gemini enriched): same query"
-    },
-    {
-      "label": "code:block2 (Start nodes found: \"3.3 Three Enforcement Layers (Defense in)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L84",
-      "id": "docs_graphify_api_enrichment_codeblock_2",
-      "community": 37,
-      "norm_label": "code:block2 (start nodes found: \"3.3 three enforcement layers (defense in)"
-    },
-    {
-      "label": "What the API enrichment physically did",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L96",
-      "id": "docs_graphify_api_enrichment_what_the_api_enrichment_physically_did",
-      "community": 37,
-      "norm_label": "what the api enrichment physically did"
-    },
-    {
-      "label": "Step 1 \u2014 AST extraction (same as before, free)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L98",
-      "id": "docs_graphify_api_enrichment_step_1_ast_extraction_same_as_before_free",
-      "community": 37,
-      "norm_label": "step 1 \u2014 ast extraction (same as before, free)"
-    },
-    {
-      "label": "Step 2 \u2014 Semantic extraction (new, costs tokens)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L101",
-      "id": "docs_graphify_api_enrichment_step_2_semantic_extraction_new_costs_tokens",
-      "community": 37,
-      "norm_label": "step 2 \u2014 semantic extraction (new, costs tokens)"
-    },
-    {
-      "label": "Step 3 \u2014 Deduplication",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L107",
-      "id": "docs_graphify_api_enrichment_step_3_deduplication",
-      "community": 37,
-      "norm_label": "step 3 \u2014 deduplication"
-    },
-    {
-      "label": "Step 4 \u2014 Community re-clustering",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L110",
-      "id": "docs_graphify_api_enrichment_step_4_community_re_clustering",
-      "community": 37,
-      "norm_label": "step 4 \u2014 community re-clustering"
-    },
-    {
-      "label": "New \"surprising connection\" discovered by Gemini",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L115",
-      "id": "docs_graphify_api_enrichment_new_surprising_connection_discovered_by_gemini",
-      "community": 37,
-      "norm_label": "new \"surprising connection\" discovered by gemini"
-    },
-    {
-      "label": "code:block3 (\"Process Report: How the Tax Authority RAG Architecture Was )",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L119",
-      "id": "docs_graphify_api_enrichment_codeblock_3",
-      "community": 37,
-      "norm_label": "code:block3 (\"process report: how the tax authority rag architecture was )"
-    },
-    {
-      "label": "What did NOT change",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L133",
-      "id": "docs_graphify_api_enrichment_what_did_not_change",
-      "community": 37,
-      "norm_label": "what did not change"
-    },
-    {
-      "label": "When to re-run `graphify extract`",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L142",
-      "id": "docs_graphify_api_enrichment_when_to_re_run_graphify_extract",
-      "community": 37,
-      "norm_label": "when to re-run `graphify extract`"
-    },
-    {
-      "label": "Summary: is the API worth it?",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L155",
-      "id": "docs_graphify_api_enrichment_summary_is_the_api_worth_it",
-      "community": 37,
-      "norm_label": "summary: is the api worth it?"
-    },
-    {
-      "label": "GRAPHIFY_COMPLETE_GUIDE.md",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L1",
-      "id": "docs_graphify_complete_guide_md",
-      "community": 61,
-      "norm_label": "graphify_complete_guide.md"
-    },
-    {
-      "label": "Graphify: Complete Student Guide",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L1",
-      "id": "docs_graphify_complete_guide_graphify_complete_student_guide",
-      "community": 61,
-      "norm_label": "graphify: complete student guide"
-    },
-    {
-      "label": "From Zero to Knowledge Graph \u2014 Everything You Need to Know",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L2",
-      "id": "docs_graphify_complete_guide_from_zero_to_knowledge_graph_everything_you_need_to_know",
-      "community": 61,
-      "norm_label": "from zero to knowledge graph \u2014 everything you need to know"
-    },
-    {
-      "label": "Table of Contents",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L10",
-      "id": "docs_graphify_complete_guide_table_of_contents",
-      "community": 61,
-      "norm_label": "table of contents"
-    },
-    {
-      "label": "1. What is Graphify?",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L28",
-      "id": "docs_graphify_complete_guide_1_what_is_graphify",
-      "community": 89,
-      "norm_label": "1. what is graphify?"
-    },
-    {
-      "label": "code:block1 (Your repo files  \u2192  graphify  \u2192  graph.json + graph.html + G)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L32",
-      "id": "docs_graphify_complete_guide_codeblock_1",
-      "community": 89,
-      "norm_label": "code:block1 (your repo files  \u2192  graphify  \u2192  graph.json + graph.html + g)"
-    },
-    {
-      "label": "Install",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L46",
-      "id": "docs_graphify_complete_guide_install",
-      "community": 89,
-      "norm_label": "install"
-    },
-    {
-      "label": "code:powershell (python -m pip install graphifyy   # note: two y's \u2014 graphify)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L48",
-      "id": "docs_graphify_complete_guide_codeblock_2",
-      "community": 89,
-      "norm_label": "code:powershell (python -m pip install graphifyy   # note: two y's \u2014 graphify)"
-    },
-    {
-      "label": "2. What Graphify is NOT",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L56",
-      "id": "docs_graphify_complete_guide_2_what_graphify_is_not",
-      "community": 79,
-      "norm_label": "2. what graphify is not"
-    },
-    {
-      "label": "NOT an NLP tool",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L60",
-      "id": "docs_graphify_complete_guide_not_an_nlp_tool",
-      "community": 79,
-      "norm_label": "not an nlp tool"
-    },
-    {
-      "label": "code:block3 (graphify dependencies:)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L61",
-      "id": "docs_graphify_complete_guide_codeblock_3",
-      "community": 79,
-      "norm_label": "code:block3 (graphify dependencies:)"
-    },
-    {
-      "label": "NOT a question-answering system",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L72",
-      "id": "docs_graphify_complete_guide_not_a_question_answering_system",
-      "community": 79,
-      "norm_label": "not a question-answering system"
-    },
-    {
-      "label": "NOT aware of meaning (without API key)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L86",
-      "id": "docs_graphify_complete_guide_not_aware_of_meaning_without_api_key",
-      "community": 79,
-      "norm_label": "not aware of meaning (without api key)"
-    },
-    {
-      "label": "code:block4 (You ask: \"authentication boundary enforcement\")",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L87",
-      "id": "docs_graphify_complete_guide_codeblock_4",
-      "community": 79,
-      "norm_label": "code:block4 (you ask: \"authentication boundary enforcement\")"
-    },
-    {
-      "label": "What graphify IS (accurately)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L96",
-      "id": "docs_graphify_complete_guide_what_graphify_is_accurately",
-      "community": 79,
-      "norm_label": "what graphify is (accurately)"
-    },
-    {
-      "label": "code:block5 (graphify = AST parser + graph construction + fuzzy text matc)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L97",
-      "id": "docs_graphify_complete_guide_codeblock_5",
-      "community": 79,
-      "norm_label": "code:block5 (graphify = ast parser + graph construction + fuzzy text matc)"
-    },
-    {
-      "label": "3. Installation",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L106",
-      "id": "docs_graphify_complete_guide_3_installation",
-      "community": 75,
-      "norm_label": "3. installation"
-    },
-    {
-      "label": "Step 1 \u2014 Install the Python package",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L108",
-      "id": "docs_graphify_complete_guide_step_1_install_the_python_package",
-      "community": 75,
-      "norm_label": "step 1 \u2014 install the python package"
-    },
-    {
-      "label": "code:powershell (# IMPORTANT: Use python -m pip, not just pip)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L110",
-      "id": "docs_graphify_complete_guide_codeblock_6",
-      "community": 75,
-      "norm_label": "code:powershell (# important: use python -m pip, not just pip)"
-    },
-    {
-      "label": "Step 2 \u2014 Verify installation",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L120",
-      "id": "docs_graphify_complete_guide_step_2_verify_installation",
-      "community": 75,
-      "norm_label": "step 2 \u2014 verify installation"
-    },
-    {
-      "label": "code:powershell (python -m pip show graphifyy    # confirm version)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L122",
-      "id": "docs_graphify_complete_guide_codeblock_7",
-      "community": 75,
-      "norm_label": "code:powershell (python -m pip show graphifyy    # confirm version)"
-    },
-    {
-      "label": "Step 3 \u2014 Install Claude Code integration",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L127",
-      "id": "docs_graphify_complete_guide_step_3_install_claude_code_integration",
-      "community": 75,
-      "norm_label": "step 3 \u2014 install claude code integration"
-    },
-    {
-      "label": "code:powershell (# Run from inside your repository folder)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L129",
-      "id": "docs_graphify_complete_guide_codeblock_8",
-      "community": 75,
-      "norm_label": "code:powershell (# run from inside your repository folder)"
-    },
-    {
-      "label": "Step 4 \u2014 Build the initial graph",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L138",
-      "id": "docs_graphify_complete_guide_step_4_build_the_initial_graph",
-      "community": 75,
-      "norm_label": "step 4 \u2014 build the initial graph"
-    },
-    {
-      "label": "code:powershell (# AST-only extraction \u2014 FREE, no API key needed, ~2-5 second)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L140",
-      "id": "docs_graphify_complete_guide_codeblock_9",
-      "community": 75,
-      "norm_label": "code:powershell (# ast-only extraction \u2014 free, no api key needed, ~2-5 second)"
-    },
-    {
-      "label": "code:block10 ([graphify watch] Rebuilt: 865 nodes, 1188 edges, 80 communit)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L146",
-      "id": "docs_graphify_complete_guide_codeblock_10",
-      "community": 75,
-      "norm_label": "code:block10 ([graphify watch] rebuilt: 865 nodes, 1188 edges, 80 communit)"
-    },
-    {
-      "label": "4. The Three Integrations Graphify Installs",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L153",
-      "id": "docs_graphify_complete_guide_4_the_three_integrations_graphify_installs",
-      "community": 83,
-      "norm_label": "4. the three integrations graphify installs"
-    },
-    {
-      "label": "Integration 1 \u2014 Claude Code hook (installed by `graphify claude install`)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L157",
-      "id": "docs_graphify_complete_guide_integration_1_claude_code_hook_installed_by_graphify_claude_install",
-      "community": 83,
-      "norm_label": "integration 1 \u2014 claude code hook (installed by `graphify claude install`)"
-    },
-    {
-      "label": "code:json ({)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L161",
-      "id": "docs_graphify_complete_guide_codeblock_11",
-      "community": 83,
-      "norm_label": "code:json ({)"
-    },
-    {
-      "label": "Integration 2 \u2014 Git hooks (installed by `graphify hook install`)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L169",
-      "id": "docs_graphify_complete_guide_integration_2_git_hooks_installed_by_graphify_hook_install",
-      "community": 83,
-      "norm_label": "integration 2 \u2014 git hooks (installed by `graphify hook install`)"
-    },
-    {
-      "label": "code:block12 ([graphify] Branch switched - launching background rebuild)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L174",
-      "id": "docs_graphify_complete_guide_codeblock_12",
-      "community": 83,
-      "norm_label": "code:block12 ([graphify] branch switched - launching background rebuild)"
-    },
-    {
-      "label": "Integration 3 \u2014 CLAUDE.md rules (installed by `graphify claude install`)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L179",
-      "id": "docs_graphify_complete_guide_integration_3_claude_md_rules_installed_by_graphify_claude_install",
-      "community": 83,
-      "norm_label": "integration 3 \u2014 claude.md rules (installed by `graphify claude install`)"
-    },
-    {
-      "label": "Summary table",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L184",
-      "id": "docs_graphify_complete_guide_summary_table",
-      "community": 83,
-      "norm_label": "summary table"
-    },
-    {
-      "label": "5. Core Commands",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L194",
-      "id": "docs_graphify_complete_guide_5_core_commands",
-      "community": 40,
-      "norm_label": "5. core commands"
-    },
-    {
-      "label": "`graphify update .` \u2014 Rebuild graph (free, AST-only)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L196",
-      "id": "docs_graphify_complete_guide_graphify_update_rebuild_graph_free_ast_only",
-      "community": 40,
-      "norm_label": "`graphify update .` \u2014 rebuild graph (free, ast-only)"
-    },
-    {
-      "label": "code:powershell (graphify update .)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L197",
-      "id": "docs_graphify_complete_guide_codeblock_13",
-      "community": 40,
-      "norm_label": "code:powershell (graphify update .)"
-    },
-    {
-      "label": "`graphify query \"question\"` \u2014 Search the graph",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L205",
-      "id": "docs_graphify_complete_guide_graphify_query_question_search_the_graph",
-      "community": 40,
-      "norm_label": "`graphify query \"question\"` \u2014 search the graph"
-    },
-    {
-      "label": "code:powershell (graphify query \"How does RBAC pre-filtering work?\")",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L206",
-      "id": "docs_graphify_complete_guide_codeblock_14",
-      "community": 40,
-      "norm_label": "code:powershell (graphify query \"how does rbac pre-filtering work?\")"
-    },
-    {
-      "label": "`graphify explain \"symbol\"` \u2014 Expand one node",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L217",
-      "id": "docs_graphify_complete_guide_graphify_explain_symbol_expand_one_node",
-      "community": 40,
-      "norm_label": "`graphify explain \"symbol\"` \u2014 expand one node"
-    },
-    {
-      "label": "code:powershell (graphify explain \"MockRAGClient\")",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L218",
-      "id": "docs_graphify_complete_guide_codeblock_15",
-      "community": 40,
-      "norm_label": "code:powershell (graphify explain \"mockragclient\")"
-    },
-    {
-      "label": "`graphify affected \"symbol\" --depth 2` \u2014 Blast radius",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L226",
-      "id": "docs_graphify_complete_guide_graphify_affected_symbol_depth_2_blast_radius",
-      "community": 40,
-      "norm_label": "`graphify affected \"symbol\" --depth 2` \u2014 blast radius"
-    },
-    {
-      "label": "code:powershell (graphify affected \"HaikuJudge\" --depth 2)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L227",
-      "id": "docs_graphify_complete_guide_codeblock_16",
-      "community": 40,
-      "norm_label": "code:powershell (graphify affected \"haikujudge\" --depth 2)"
-    },
-    {
-      "label": "`graphify path \"A\" \"B\"` \u2014 Connection between two concepts",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L235",
-      "id": "docs_graphify_complete_guide_graphify_path_a_b_connection_between_two_concepts",
-      "community": 40,
-      "norm_label": "`graphify path \"a\" \"b\"` \u2014 connection between two concepts"
-    },
-    {
-      "label": "code:powershell (graphify path \"semantic cache\" \"RBAC\")",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L236",
-      "id": "docs_graphify_complete_guide_codeblock_17",
-      "community": 40,
-      "norm_label": "code:powershell (graphify path \"semantic cache\" \"rbac\")"
-    },
-    {
-      "label": "`graphify extract . --backend gemini` \u2014 Full LLM enrichment",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L243",
-      "id": "docs_graphify_complete_guide_graphify_extract_backend_gemini_full_llm_enrichment",
-      "community": 40,
-      "norm_label": "`graphify extract . --backend gemini` \u2014 full llm enrichment"
-    },
-    {
-      "label": "code:powershell ($env:GEMINI_API_KEY = \"your-key-here\")",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L244",
-      "id": "docs_graphify_complete_guide_codeblock_18",
-      "community": 40,
-      "norm_label": "code:powershell ($env:gemini_api_key = \"your-key-here\")"
-    },
-    {
-      "label": "`graphify watch .` \u2014 Auto-rebuild on file save",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L253",
-      "id": "docs_graphify_complete_guide_graphify_watch_auto_rebuild_on_file_save",
-      "community": 40,
-      "norm_label": "`graphify watch .` \u2014 auto-rebuild on file save"
-    },
-    {
-      "label": "code:powershell (graphify watch .)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L254",
-      "id": "docs_graphify_complete_guide_codeblock_19",
-      "community": 40,
-      "norm_label": "code:powershell (graphify watch .)"
-    },
-    {
-      "label": "`graphify hook install` \u2014 Auto-rebuild on git commit",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L261",
-      "id": "docs_graphify_complete_guide_graphify_hook_install_auto_rebuild_on_git_commit",
-      "community": 40,
-      "norm_label": "`graphify hook install` \u2014 auto-rebuild on git commit"
-    },
-    {
-      "label": "code:powershell (graphify hook install)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L262",
-      "id": "docs_graphify_complete_guide_codeblock_20",
-      "community": 40,
-      "norm_label": "code:powershell (graphify hook install)"
-    },
-    {
-      "label": "6. Understanding the Outputs",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L271",
-      "id": "docs_graphify_complete_guide_6_understanding_the_outputs",
-      "community": 84,
-      "norm_label": "6. understanding the outputs"
-    },
-    {
-      "label": "`graphify-out/graph.json`",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L273",
-      "id": "docs_graphify_complete_guide_graphify_out_graph_json",
-      "community": 84,
-      "norm_label": "`graphify-out/graph.json`"
-    },
-    {
-      "label": "`graphify-out/graph.html`",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L276",
-      "id": "docs_graphify_complete_guide_graphify_out_graph_html",
-      "community": 84,
-      "norm_label": "`graphify-out/graph.html`"
-    },
-    {
-      "label": "`graphify-out/GRAPH_REPORT.md`",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L279",
-      "id": "docs_graphify_complete_guide_graphify_out_graph_report_md",
-      "community": 84,
-      "norm_label": "`graphify-out/graph_report.md`"
-    },
-    {
-      "label": "`graphify-out/.graphify_analysis.json`",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L289",
-      "id": "docs_graphify_complete_guide_graphify_out_graphify_analysis_json",
-      "community": 84,
-      "norm_label": "`graphify-out/.graphify_analysis.json`"
-    },
-    {
-      "label": "What to commit vs ignore",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L292",
-      "id": "docs_graphify_complete_guide_what_to_commit_vs_ignore",
-      "community": 84,
-      "norm_label": "what to commit vs ignore"
-    },
-    {
-      "label": "code:gitignore (# Add to .gitignore)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L293",
-      "id": "docs_graphify_complete_guide_codeblock_21",
-      "community": 84,
-      "norm_label": "code:gitignore (# add to .gitignore)"
-    },
-    {
-      "label": "7. AST-Only vs Gemini API Extraction",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L308",
-      "id": "docs_graphify_complete_guide_7_ast_only_vs_gemini_api_extraction",
-      "community": 85,
-      "norm_label": "7. ast-only vs gemini api extraction"
-    },
-    {
-      "label": "What AST extraction does (free)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L310",
-      "id": "docs_graphify_complete_guide_what_ast_extraction_does_free",
-      "community": 85,
-      "norm_label": "what ast extraction does (free)"
-    },
-    {
-      "label": "What API extraction adds ($0.06 for 49 files)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L320",
-      "id": "docs_graphify_complete_guide_what_api_extraction_adds_0_06_for_49_files",
-      "community": 85,
-      "norm_label": "what api extraction adds ($0.06 for 49 files)"
-    },
-    {
-      "label": "Real numbers from this session",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L328",
-      "id": "docs_graphify_complete_guide_real_numbers_from_this_session",
-      "community": 85,
-      "norm_label": "real numbers from this session"
-    },
-    {
-      "label": "Query result comparison",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L338",
-      "id": "docs_graphify_complete_guide_query_result_comparison",
-      "community": 85,
-      "norm_label": "query result comparison"
-    },
-    {
-      "label": "Which backend to use",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L348",
-      "id": "docs_graphify_complete_guide_which_backend_to_use",
-      "community": 85,
-      "norm_label": "which backend to use"
-    },
-    {
-      "label": "When to re-run API extraction",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L359",
-      "id": "docs_graphify_complete_guide_when_to_re_run_api_extraction",
-      "community": 85,
-      "norm_label": "when to re-run api extraction"
-    },
-    {
-      "label": "8. Can Claude CLI Replace the API Key?",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L370",
-      "id": "docs_graphify_complete_guide_8_can_claude_cli_replace_the_api_key",
-      "community": 88,
-      "norm_label": "8. can claude cli replace the api key?"
-    },
-    {
-      "label": "code:block22 (Terminal only (no API, no Claude):)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L374",
-      "id": "docs_graphify_complete_guide_codeblock_22",
-      "community": 88,
-      "norm_label": "code:block22 (terminal only (no api, no claude):)"
-    },
-    {
-      "label": "The one thing Claude cannot do that API extraction can",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L400",
-      "id": "docs_graphify_complete_guide_the_one_thing_claude_cannot_do_that_api_extraction_can",
-      "community": 88,
-      "norm_label": "the one thing claude cannot do that api extraction can"
-    },
-    {
-      "label": "code:block23 (\"redaction_guard()\" --implements--> \"access control enforcem)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L403",
-      "id": "docs_graphify_complete_guide_codeblock_23",
-      "community": 88,
-      "norm_label": "code:block23 (\"redaction_guard()\" --implements--> \"access control enforcem)"
-    },
-    {
-      "label": "Summary",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L410",
-      "id": "docs_graphify_complete_guide_summary",
-      "community": 88,
-      "norm_label": "summary"
-    },
-    {
-      "label": "9. Common Errors and Fixes",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L421",
-      "id": "docs_graphify_complete_guide_9_common_errors_and_fixes",
-      "community": 76,
-      "norm_label": "9. common errors and fixes"
-    },
-    {
-      "label": "Error: `No unique node match for UserContext`",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L423",
-      "id": "docs_graphify_complete_guide_error_no_unique_node_match_for_usercontext",
-      "community": 76,
-      "norm_label": "error: `no unique node match for usercontext`"
-    },
-    {
-      "label": "code:powershell (graphify explain \"UserContext\")",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L430",
-      "id": "docs_graphify_complete_guide_codeblock_24",
-      "community": 76,
-      "norm_label": "code:powershell (graphify explain \"usercontext\")"
-    },
-    {
-      "label": "code:powershell (graphify query \"UserContext callers dependencies\")",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L435",
-      "id": "docs_graphify_complete_guide_codeblock_25",
-      "community": 76,
-      "norm_label": "code:powershell (graphify query \"usercontext callers dependencies\")"
-    },
-    {
-      "label": "code:powershell (graphify affected \"tests_conftest_usercontext\" --depth 2)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L440",
-      "id": "docs_graphify_complete_guide_codeblock_26",
-      "community": 76,
-      "norm_label": "code:powershell (graphify affected \"tests_conftest_usercontext\" --depth 2)"
-    },
-    {
-      "label": "Error: `ModuleNotFoundError: No module named 'graphify'` after install",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L444",
-      "id": "docs_graphify_complete_guide_error_modulenotfounderror_no_module_named_graphify_after_install",
-      "community": 76,
-      "norm_label": "error: `modulenotfounderror: no module named 'graphify'` after install"
-    },
-    {
-      "label": "code:powershell (# Always use python -m pip, not pip)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L449",
-      "id": "docs_graphify_complete_guide_codeblock_27",
-      "community": 76,
-      "norm_label": "code:powershell (# always use python -m pip, not pip)"
-    },
-    {
-      "label": "Error: `graphify query` returns irrelevant nodes",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L455",
-      "id": "docs_graphify_complete_guide_error_graphify_query_returns_irrelevant_nodes",
-      "community": 76,
-      "norm_label": "error: `graphify query` returns irrelevant nodes"
-    },
-    {
-      "label": "Warning: `[graphify watch] command substitution: ignored null byte in input`",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L464",
-      "id": "docs_graphify_complete_guide_warning_graphify_watch_command_substitution_ignored_null_byte_in_input",
-      "community": 76,
-      "norm_label": "warning: `[graphify watch] command substitution: ignored null byte in input`"
-    },
-    {
-      "label": "graph.html shows nothing / blank",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L468",
-      "id": "docs_graphify_complete_guide_graph_html_shows_nothing_blank",
-      "community": 76,
-      "norm_label": "graph.html shows nothing / blank"
-    },
-    {
-      "label": "10. Saving the Graph as an Image",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L476",
-      "id": "docs_graphify_complete_guide_10_saving_the_graph_as_an_image",
-      "community": 86,
-      "norm_label": "10. saving the graph as an image"
-    },
-    {
-      "label": "Save as PNG (works, confirmed)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L480",
-      "id": "docs_graphify_complete_guide_save_as_png_works_confirmed",
-      "community": 86,
-      "norm_label": "save as png (works, confirmed)"
-    },
-    {
-      "label": "code:javascript (const canvas = document.querySelector('canvas');)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L487",
-      "id": "docs_graphify_complete_guide_codeblock_28",
-      "community": 86,
-      "norm_label": "code:javascript (const canvas = document.queryselector('canvas');)"
-    },
-    {
-      "label": "Higher resolution export",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L498",
-      "id": "docs_graphify_complete_guide_higher_resolution_export",
-      "community": 86,
-      "norm_label": "higher resolution export"
-    },
-    {
-      "label": "Why SVG export fails",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L502",
-      "id": "docs_graphify_complete_guide_why_svg_export_fails",
-      "community": 86,
-      "norm_label": "why svg export fails"
-    },
-    {
-      "label": "code:block29 (TypeError: Failed to execute 'serializeToString' on 'XMLSeri)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L505",
-      "id": "docs_graphify_complete_guide_codeblock_29",
-      "community": 86,
-      "norm_label": "code:block29 (typeerror: failed to execute 'serializetostring' on 'xmlseri)"
-    },
-    {
-      "label": "11. Day-to-Day Workflow",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L514",
-      "id": "docs_graphify_complete_guide_11_day_to_day_workflow",
-      "community": 74,
-      "norm_label": "11. day-to-day workflow"
-    },
-    {
-      "label": "Before starting any task",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L516",
-      "id": "docs_graphify_complete_guide_before_starting_any_task",
-      "community": 74,
-      "norm_label": "before starting any task"
-    },
-    {
-      "label": "code:powershell (# 1. Check if graph is stale)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L518",
-      "id": "docs_graphify_complete_guide_codeblock_30",
-      "community": 74,
-      "norm_label": "code:powershell (# 1. check if graph is stale)"
-    },
-    {
-      "label": "Before changing code",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L530",
-      "id": "docs_graphify_complete_guide_before_changing_code",
-      "community": 74,
-      "norm_label": "before changing code"
-    },
-    {
-      "label": "code:powershell (# Find the blast radius FIRST)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L532",
-      "id": "docs_graphify_complete_guide_codeblock_31",
-      "community": 74,
-      "norm_label": "code:powershell (# find the blast radius first)"
-    },
-    {
-      "label": "For god nodes (highest blast radius in this repo)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L538",
-      "id": "docs_graphify_complete_guide_for_god_nodes_highest_blast_radius_in_this_repo",
-      "community": 74,
-      "norm_label": "for god nodes (highest blast radius in this repo)"
-    },
-    {
-      "label": "After changing code",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L553",
-      "id": "docs_graphify_complete_guide_after_changing_code",
-      "community": 74,
-      "norm_label": "after changing code"
-    },
-    {
-      "label": "code:powershell (graphify update .   # refresh graph, free, no API call)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L555",
-      "id": "docs_graphify_complete_guide_codeblock_32",
-      "community": 74,
-      "norm_label": "code:powershell (graphify update .   # refresh graph, free, no api call)"
-    },
-    {
-      "label": "code:powershell ($env:GEMINI_API_KEY = \"your-key\")",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L560",
-      "id": "docs_graphify_complete_guide_codeblock_33",
-      "community": 74,
-      "norm_label": "code:powershell ($env:gemini_api_key = \"your-key\")"
-    },
-    {
-      "label": "For onboarding / understanding an unfamiliar area",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L565",
-      "id": "docs_graphify_complete_guide_for_onboarding_understanding_an_unfamiliar_area",
-      "community": 74,
-      "norm_label": "for onboarding / understanding an unfamiliar area"
-    },
-    {
-      "label": "code:powershell (graphify query \"what does X do\"           # broad orientatio)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L567",
-      "id": "docs_graphify_complete_guide_codeblock_34",
-      "community": 74,
-      "norm_label": "code:powershell (graphify query \"what does x do\"           # broad orientatio)"
-    },
-    {
-      "label": "12. The Benefit \u2014 Concrete Numbers",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L576",
-      "id": "docs_graphify_complete_guide_12_the_benefit_concrete_numbers",
-      "community": 61,
-      "norm_label": "12. the benefit \u2014 concrete numbers"
-    },
-    {
-      "label": "Where graphify adds the most value",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L587",
-      "id": "docs_graphify_complete_guide_where_graphify_adds_the_most_value",
-      "community": 61,
-      "norm_label": "where graphify adds the most value"
-    },
-    {
-      "label": "Where graphify adds less value",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L595",
-      "id": "docs_graphify_complete_guide_where_graphify_adds_less_value",
-      "community": 61,
-      "norm_label": "where graphify adds less value"
-    },
-    {
-      "label": "13. Full Q&A Reference",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L603",
-      "id": "docs_graphify_complete_guide_13_full_q_a_reference",
-      "community": 61,
-      "norm_label": "13. full q&a reference"
-    },
-    {
-      "label": "code:powershell (graphify affected \"HaikuJudge\" --depth 2)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L636",
-      "id": "docs_graphify_complete_guide_codeblock_35",
-      "community": 61,
-      "norm_label": "code:powershell (graphify affected \"haikujudge\" --depth 2)"
-    },
-    {
-      "label": "code:javascript (const canvas = document.querySelector('canvas');)",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L725",
-      "id": "docs_graphify_complete_guide_codeblock_36",
-      "community": 61,
-      "norm_label": "code:javascript (const canvas = document.queryselector('canvas');)"
-    },
-    {
-      "label": "Quick Reference Card",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L738",
-      "id": "docs_graphify_complete_guide_quick_reference_card",
-      "community": 61,
-      "norm_label": "quick reference card"
-    },
-    {
-      "label": "code:block37 (SETUP (once per repo))",
-      "file_type": "document",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L740",
-      "id": "docs_graphify_complete_guide_codeblock_37",
-      "community": 61,
-      "norm_label": "code:block37 (setup (once per repo))"
-    },
-    {
       "label": ".mcp.json",
       "file_type": "code",
       "source_file": ".mcp.json",
@@ -1513,7 +379,7 @@
       "file_type": "code",
       "source_file": "tests/conftest.py",
       "source_location": "L106",
-      "community": 11,
+      "community": 1,
       "norm_label": "chunkmeta",
       "id": "tests_conftest_chunkmeta"
     },
@@ -1540,7 +406,7 @@
       "file_type": "code",
       "source_file": "tests/conftest.py",
       "source_location": "L152",
-      "community": 1,
+      "community": 50,
       "norm_label": "int",
       "id": "tests_conftest_py_int"
     },
@@ -1747,7 +613,7 @@
       "file_type": "code",
       "source_file": "tests/conftest.py",
       "source_location": "L782",
-      "community": 1,
+      "community": 0,
       "norm_label": ".emit()",
       "id": "tests_conftest_telemetrysink_emit"
     },
@@ -1792,7 +658,7 @@
       "file_type": "code",
       "source_file": "tests/conftest.py",
       "source_location": "L823",
-      "community": 1,
+      "community": 50,
       "norm_label": ".retrieve()",
       "id": "tests_conftest_mockragclient_retrieve"
     },
@@ -1801,7 +667,7 @@
       "file_type": "code",
       "source_file": "tests/conftest.py",
       "source_location": "L952",
-      "community": 1,
+      "community": 50,
       "norm_label": ".query()",
       "id": "tests_conftest_mockragclient_query"
     },
@@ -1999,7 +865,7 @@
       "file_type": "rationale",
       "source_file": "tests/conftest.py",
       "source_location": "L830",
-      "community": 1,
+      "community": 50,
       "norm_label": "simulated retrieval with rbac pre-filter applied.         matches chunks by keyw",
       "id": "tests_conftest_rationale_830"
     },
@@ -2008,7 +874,7 @@
       "file_type": "rationale",
       "source_file": "tests/conftest.py",
       "source_location": "L958",
-      "community": 1,
+      "community": 50,
       "norm_label": "simulated full pipeline query \u2014 deterministic, no real llm.",
       "id": "tests_conftest_rationale_958"
     },
@@ -2557,7 +1423,7 @@
       "file_type": "code",
       "source_file": "tests/test_citation_accuracy.py",
       "source_location": "L365",
-      "community": 1,
+      "community": 5,
       "norm_label": "test_mock_response_citations_are_grounded()",
       "id": "tests_test_citation_accuracy_test_mock_response_citations_are_grounded"
     },
@@ -3583,7 +2449,7 @@
       "file_type": "code",
       "source_file": "tests/test_rbac_redteam.py",
       "source_location": "L70",
-      "community": 50,
+      "community": 12,
       "norm_label": "redaction_guard()",
       "id": "tests_test_rbac_redteam_redaction_guard"
     },
@@ -3592,7 +2458,7 @@
       "file_type": "code",
       "source_file": "tests/test_rbac_redteam.py",
       "source_location": "L70",
-      "community": 50,
+      "community": 1,
       "norm_label": "chunkmeta",
       "id": "tests_test_rbac_redteam_py_chunkmeta"
     },
@@ -3601,7 +2467,7 @@
       "file_type": "code",
       "source_file": "tests/test_rbac_redteam.py",
       "source_location": "L70",
-      "community": 10,
+      "community": 12,
       "norm_label": "usercontext",
       "id": "tests_test_rbac_redteam_py_usercontext"
     },
@@ -3619,7 +2485,7 @@
       "file_type": "code",
       "source_file": "tests/test_rbac_redteam.py",
       "source_location": "L83",
-      "community": 12,
+      "community": 1,
       "norm_label": "str",
       "id": "tests_test_rbac_redteam_py_str"
     },
@@ -3628,7 +2494,7 @@
       "file_type": "code",
       "source_file": "tests/test_rbac_redteam.py",
       "source_location": "L114",
-      "community": 10,
+      "community": 1,
       "norm_label": "testhelpdeskdirectfiodquery",
       "id": "tests_test_rbac_redteam_testhelpdeskdirectfiodquery"
     },
@@ -3736,7 +2602,7 @@
       "file_type": "code",
       "source_file": "tests/test_rbac_redteam.py",
       "source_location": "L292",
-      "community": 1,
+      "community": 61,
       "norm_label": ".test_cache_key_includes_role_component()",
       "id": "tests_test_rbac_redteam_testcachepoisoningcrossrole_test_cache_key_includes_role_component"
     },
@@ -3844,7 +2710,7 @@
       "file_type": "code",
       "source_file": "tests/test_rbac_redteam.py",
       "source_location": "L517",
-      "community": 12,
+      "community": 1,
       "norm_label": "haikujudge",
       "id": "tests_test_rbac_redteam_py_haikujudge"
     },
@@ -3889,7 +2755,7 @@
       "file_type": "code",
       "source_file": "tests/test_rbac_redteam.py",
       "source_location": "L593",
-      "community": 50,
+      "community": 12,
       "norm_label": "testredactionguardauditcounter",
       "id": "tests_test_rbac_redteam_testredactionguardauditcounter"
     },
@@ -3898,7 +2764,7 @@
       "file_type": "code",
       "source_file": "tests/test_rbac_redteam.py",
       "source_location": "L604",
-      "community": 50,
+      "community": 12,
       "norm_label": ".test_redaction_guard_drops_fiod_chunk_for_helpdesk()",
       "id": "tests_test_rbac_redteam_testredactionguardauditcounter_test_redaction_guard_drops_fiod_chunk_for_helpdesk"
     },
@@ -3907,7 +2773,7 @@
       "file_type": "code",
       "source_file": "tests/test_rbac_redteam.py",
       "source_location": "L614",
-      "community": 50,
+      "community": 12,
       "norm_label": ".test_redaction_guard_drops_internal_chunk_for_helpdesk()",
       "id": "tests_test_rbac_redteam_testredactionguardauditcounter_test_redaction_guard_drops_internal_chunk_for_helpdesk"
     },
@@ -3916,7 +2782,7 @@
       "file_type": "code",
       "source_file": "tests/test_rbac_redteam.py",
       "source_location": "L623",
-      "community": 50,
+      "community": 12,
       "norm_label": ".test_redaction_guard_passes_all_for_fiod()",
       "id": "tests_test_rbac_redteam_testredactionguardauditcounter_test_redaction_guard_passes_all_for_fiod"
     },
@@ -3925,7 +2791,7 @@
       "file_type": "code",
       "source_file": "tests/test_rbac_redteam.py",
       "source_location": "L630",
-      "community": 50,
+      "community": 12,
       "norm_label": ".test_redaction_guard_returns_correct_subset_for_inspector()",
       "id": "tests_test_rbac_redteam_testredactionguardauditcounter_test_redaction_guard_returns_correct_subset_for_inspector"
     },
@@ -3943,7 +2809,7 @@
       "file_type": "rationale",
       "source_file": "tests/test_rbac_redteam.py",
       "source_location": "L71",
-      "community": 50,
+      "community": 12,
       "norm_label": "secondary rbac gate (module-4 \u00a73.3 layer 2).     drops any chunk whose classific",
       "id": "tests_test_rbac_redteam_rationale_71"
     },
@@ -3961,7 +2827,7 @@
       "file_type": "rationale",
       "source_file": "tests/test_rbac_redteam.py",
       "source_location": "L115",
-      "community": 10,
+      "community": 1,
       "norm_label": "threat model: direct title attack     a helpdesk user knows the exact title of a",
       "id": "tests_test_rbac_redteam_rationale_115"
     },
@@ -4051,7 +2917,7 @@
       "file_type": "rationale",
       "source_file": "tests/test_rbac_redteam.py",
       "source_location": "L293",
-      "community": 1,
+      "community": 61,
       "norm_label": "sanity check: changing only the role in the payload changes the hash.         if",
       "id": "tests_test_rbac_redteam_rationale_293"
     },
@@ -4195,7 +3061,7 @@
       "file_type": "rationale",
       "source_file": "tests/test_rbac_redteam.py",
       "source_location": "L594",
-      "community": 50,
+      "community": 12,
       "norm_label": "validates that the secondary rbac gate (redaction_guard) correctly     identifie",
       "id": "tests_test_rbac_redteam_rationale_594"
     },
@@ -4204,7 +3070,7 @@
       "file_type": "rationale",
       "source_file": "tests/test_rbac_redteam.py",
       "source_location": "L605",
-      "community": 50,
+      "community": 12,
       "norm_label": "guard drops fiod chunk that somehow slipped through layer 1.",
       "id": "tests_test_rbac_redteam_rationale_605"
     },
@@ -4213,7 +3079,7 @@
       "file_type": "rationale",
       "source_file": "tests/test_rbac_redteam.py",
       "source_location": "L615",
-      "community": 50,
+      "community": 12,
       "norm_label": "guard drops internal chunk for helpdesk user (ceiling=public).",
       "id": "tests_test_rbac_redteam_rationale_615"
     },
@@ -4222,7 +3088,7 @@
       "file_type": "rationale",
       "source_file": "tests/test_rbac_redteam.py",
       "source_location": "L624",
-      "community": 50,
+      "community": 12,
       "norm_label": "fiod analyst passes all classification levels through the guard.",
       "id": "tests_test_rbac_redteam_rationale_624"
     },
@@ -4231,7 +3097,7 @@
       "file_type": "rationale",
       "source_file": "tests/test_rbac_redteam.py",
       "source_location": "L631",
-      "community": 50,
+      "community": 12,
       "norm_label": "inspector (ceiling=internal) receives public+internal but not fiod.",
       "id": "tests_test_rbac_redteam_rationale_631"
     },
@@ -4537,7 +3403,7 @@
       "file_type": "code",
       "source_file": "tests/test_temporal_correctness.py",
       "source_location": "L43",
-      "community": 11,
+      "community": 1,
       "norm_label": "bool",
       "id": "tests_test_temporal_correctness_py_bool"
     },
@@ -4573,7 +3439,7 @@
       "file_type": "code",
       "source_file": "tests/test_temporal_correctness.py",
       "source_location": "L69",
-      "community": 11,
+      "community": 1,
       "norm_label": "str",
       "id": "tests_test_temporal_correctness_py_str"
     },
@@ -4717,7 +3583,7 @@
       "file_type": "code",
       "source_file": "tests/test_temporal_correctness.py",
       "source_location": "L276",
-      "community": 11,
+      "community": 17,
       "norm_label": "testsupersededdocumentdisclosure",
       "id": "tests_test_temporal_correctness_testsupersededdocumentdisclosure"
     },
@@ -4726,7 +3592,7 @@
       "file_type": "code",
       "source_file": "tests/test_temporal_correctness.py",
       "source_location": "L286",
-      "community": 11,
+      "community": 17,
       "norm_label": ".test_superseded_chunk_has_superseded_by_field()",
       "id": "tests_test_temporal_correctness_testsupersededdocumentdisclosure_test_superseded_chunk_has_superseded_by_field"
     },
@@ -4753,7 +3619,7 @@
       "file_type": "code",
       "source_file": "tests/test_temporal_correctness.py",
       "source_location": "L350",
-      "community": 11,
+      "community": 1,
       "norm_label": "testcrosslingualtemporal",
       "id": "tests_test_temporal_correctness_testcrosslingualtemporal"
     },
@@ -4924,7 +3790,7 @@
       "file_type": "rationale",
       "source_file": "tests/test_temporal_correctness.py",
       "source_location": "L277",
-      "community": 11,
+      "community": 17,
       "norm_label": "domain review check 4 (module-1-2-retrieval.md):     'the generation prompt shou",
       "id": "tests_test_temporal_correctness_rationale_277"
     },
@@ -4933,7 +3799,7 @@
       "file_type": "rationale",
       "source_file": "tests/test_temporal_correctness.py",
       "source_location": "L287",
-      "community": 11,
+      "community": 17,
       "norm_label": "the 2020 version of art. 3.114 should be marked as superseded by the 2021 versio",
       "id": "tests_test_temporal_correctness_rationale_287"
     },
@@ -4960,7 +3826,7 @@
       "file_type": "rationale",
       "source_file": "tests/test_temporal_correctness.py",
       "source_location": "L351",
-      "community": 11,
+      "community": 1,
       "norm_label": "english-language temporal queries must still retrieve dutch-law chunks     for t",
       "id": "tests_test_temporal_correctness_rationale_351"
     },
@@ -6040,7 +4906,7 @@
       "file_type": "document",
       "source_file": "design/FINAL-rag-architecture.md",
       "source_location": "L943",
-      "community": 80,
+      "community": 6,
       "norm_label": "module 4 \u2014 production ops, security & evaluation",
       "id": "design_final_rag_architecture_module_4_production_ops_security_evaluation"
     },
@@ -6049,7 +4915,7 @@
       "file_type": "document",
       "source_file": "design/FINAL-rag-architecture.md",
       "source_location": "L945",
-      "community": 80,
+      "community": 6,
       "norm_label": "4.1 threat model",
       "id": "design_final_rag_architecture_4_1_threat_model"
     },
@@ -6058,7 +4924,7 @@
       "file_type": "document",
       "source_file": "design/FINAL-rag-architecture.md",
       "source_location": "L958",
-      "community": 81,
+      "community": 6,
       "norm_label": "4.2 semantic cache",
       "id": "design_final_rag_architecture_4_2_semantic_cache"
     },
@@ -6067,7 +4933,7 @@
       "file_type": "document",
       "source_file": "design/FINAL-rag-architecture.md",
       "source_location": "L962",
-      "community": 81,
+      "community": 6,
       "norm_label": "cache key construction \u2014 role-bound, year-scoped",
       "id": "design_final_rag_architecture_cache_key_construction_role_bound_year_scoped"
     },
@@ -6076,7 +4942,7 @@
       "file_type": "document",
       "source_file": "design/FINAL-rag-architecture.md",
       "source_location": "L964",
-      "community": 81,
+      "community": 6,
       "norm_label": "code:python (import hashlib, json)",
       "id": "design_final_rag_architecture_codeblock_21"
     },
@@ -6085,7 +4951,7 @@
       "file_type": "document",
       "source_file": "design/FINAL-rag-architecture.md",
       "source_location": "L981",
-      "community": 81,
+      "community": 6,
       "norm_label": "cosine threshold \u2014 0.97 floor, 0.98 operational default",
       "id": "design_final_rag_architecture_cosine_threshold_0_97_floor_0_98_operational_default"
     },
@@ -6094,7 +4960,7 @@
       "file_type": "document",
       "source_file": "design/FINAL-rag-architecture.md",
       "source_location": "L994",
-      "community": 81,
+      "community": 6,
       "norm_label": "ttl strategy",
       "id": "design_final_rag_architecture_ttl_strategy"
     },
@@ -6175,7 +5041,7 @@
       "file_type": "document",
       "source_file": "design/FINAL-rag-architecture.md",
       "source_location": "L1123",
-      "community": 80,
+      "community": 6,
       "norm_label": "4.4 ci/cd evaluation gates",
       "id": "design_final_rag_architecture_4_4_ci_cd_evaluation_gates"
     },
@@ -6184,7 +5050,7 @@
       "file_type": "document",
       "source_file": "design/FINAL-rag-architecture.md",
       "source_location": "L1125",
-      "community": 80,
+      "community": 6,
       "norm_label": "golden test set \u2014 500 q&a pairs",
       "id": "design_final_rag_architecture_golden_test_set_500_q_a_pairs"
     },
@@ -6193,7 +5059,7 @@
       "file_type": "document",
       "source_file": "design/FINAL-rag-architecture.md",
       "source_location": "L1139",
-      "community": 80,
+      "community": 6,
       "norm_label": "promotion gate thresholds",
       "id": "design_final_rag_architecture_promotion_gate_thresholds"
     },
@@ -6202,7 +5068,7 @@
       "file_type": "document",
       "source_file": "design/FINAL-rag-architecture.md",
       "source_location": "L1153",
-      "community": 80,
+      "community": 6,
       "norm_label": "github actions ci gate",
       "id": "design_final_rag_architecture_github_actions_ci_gate"
     },
@@ -6211,7 +5077,7 @@
       "file_type": "document",
       "source_file": "design/FINAL-rag-architecture.md",
       "source_location": "L1155",
-      "community": 80,
+      "community": 6,
       "norm_label": "code:yaml (name: rag evaluation gate)",
       "id": "design_final_rag_architecture_codeblock_26"
     },
@@ -6346,7 +5212,7 @@
       "file_type": "document",
       "source_file": "design/module-1-2-retrieval.md",
       "source_location": "L1",
-      "community": 31,
+      "community": 37,
       "norm_label": "module-1-2-retrieval.md",
       "id": "design_module_1_2_retrieval_md"
     },
@@ -6409,7 +5275,7 @@
       "file_type": "document",
       "source_file": "design/module-1-2-retrieval.md",
       "source_location": "L132",
-      "community": 31,
+      "community": 40,
       "norm_label": "1.3 vector database \u2014 amazon opensearch service",
       "id": "design_module_1_2_retrieval_1_3_vector_database_amazon_opensearch_service"
     },
@@ -6418,7 +5284,7 @@
       "file_type": "document",
       "source_file": "design/module-1-2-retrieval.md",
       "source_location": "L138",
-      "community": 31,
+      "community": 40,
       "norm_label": "opensearch index mapping (excerpt)",
       "id": "design_module_1_2_retrieval_opensearch_index_mapping_excerpt"
     },
@@ -6427,7 +5293,7 @@
       "file_type": "document",
       "source_file": "design/module-1-2-retrieval.md",
       "source_location": "L140",
-      "community": 31,
+      "community": 40,
       "norm_label": "code:json ({)",
       "id": "design_module_1_2_retrieval_codeblock_2"
     },
@@ -6436,7 +5302,7 @@
       "file_type": "document",
       "source_file": "design/module-1-2-retrieval.md",
       "source_location": "L182",
-      "community": 31,
+      "community": 40,
       "norm_label": "hnsw parameters \u2014 defended values",
       "id": "design_module_1_2_retrieval_hnsw_parameters_defended_values"
     },
@@ -6481,7 +5347,7 @@
       "file_type": "document",
       "source_file": "design/module-1-2-retrieval.md",
       "source_location": "L229",
-      "community": 31,
+      "community": 37,
       "norm_label": "module 2 \u2014 retrieval strategy",
       "id": "design_module_1_2_retrieval_module_2_retrieval_strategy"
     },
@@ -6490,7 +5356,7 @@
       "file_type": "document",
       "source_file": "design/module-1-2-retrieval.md",
       "source_location": "L231",
-      "community": 31,
+      "community": 40,
       "norm_label": "2.1 hybrid search design",
       "id": "design_module_1_2_retrieval_2_1_hybrid_search_design"
     },
@@ -6499,7 +5365,7 @@
       "file_type": "document",
       "source_file": "design/module-1-2-retrieval.md",
       "source_location": "L239",
-      "community": 31,
+      "community": 40,
       "norm_label": "hybrid + filtered k-nn query dsl",
       "id": "design_module_1_2_retrieval_hybrid_filtered_k_nn_query_dsl"
     },
@@ -6508,7 +5374,7 @@
       "file_type": "document",
       "source_file": "design/module-1-2-retrieval.md",
       "source_location": "L300",
-      "community": 31,
+      "community": 37,
       "norm_label": "2.2 embeddings",
       "id": "design_module_1_2_retrieval_2_2_embeddings"
     },
@@ -6517,7 +5383,7 @@
       "file_type": "document",
       "source_file": "design/module-1-2-retrieval.md",
       "source_location": "L312",
-      "community": 31,
+      "community": 37,
       "norm_label": "2.3 reranker",
       "id": "design_module_1_2_retrieval_2_3_reranker"
     },
@@ -6526,7 +5392,7 @@
       "file_type": "document",
       "source_file": "design/module-1-2-retrieval.md",
       "source_location": "L329",
-      "community": 31,
+      "community": 37,
       "norm_label": "2.4 parent-document retrieval at generation time",
       "id": "design_module_1_2_retrieval_2_4_parent_document_retrieval_at_generation_time"
     },
@@ -6535,7 +5401,7 @@
       "file_type": "document",
       "source_file": "design/module-1-2-retrieval.md",
       "source_location": "L342",
-      "community": 31,
+      "community": 37,
       "norm_label": "code:block5 ({)",
       "id": "design_module_1_2_retrieval_codeblock_5"
     },
@@ -6544,7 +5410,7 @@
       "file_type": "document",
       "source_file": "design/module-1-2-retrieval.md",
       "source_location": "L369",
-      "community": 31,
+      "community": 37,
       "norm_label": "2.5 latency budget",
       "id": "design_module_1_2_retrieval_2_5_latency_budget"
     },
@@ -7147,7 +6013,7 @@
       "file_type": "document",
       "source_file": "design/module-4-ops-security.md",
       "source_location": "L25",
-      "community": 87,
+      "community": 6,
       "norm_label": "2. semantic cache",
       "id": "design_module_4_ops_security_2_semantic_cache"
     },
@@ -7156,7 +6022,7 @@
       "file_type": "document",
       "source_file": "design/module-4-ops-security.md",
       "source_location": "L27",
-      "community": 87,
+      "community": 6,
       "norm_label": "2.1 stack choice: redis stack 7.4",
       "id": "design_module_4_ops_security_2_1_stack_choice_redis_stack_7_4"
     },
@@ -7165,7 +6031,7 @@
       "file_type": "document",
       "source_file": "design/module-4-ops-security.md",
       "source_location": "L36",
-      "community": 87,
+      "community": 6,
       "norm_label": "2.2 warning \u2014 the cache must not be role-blind",
       "id": "design_module_4_ops_security_2_2_warning_the_cache_must_not_be_role_blind"
     },
@@ -7174,7 +6040,7 @@
       "file_type": "document",
       "source_file": "design/module-4-ops-security.md",
       "source_location": "L49",
-      "community": 87,
+      "community": 6,
       "norm_label": "code:python (import hashlib, json)",
       "id": "design_module_4_ops_security_codeblock_1"
     },
@@ -7183,7 +6049,7 @@
       "file_type": "document",
       "source_file": "design/module-4-ops-security.md",
       "source_location": "L74",
-      "community": 87,
+      "community": 6,
       "norm_label": "2.3 cosine threshold \u2014 why 0.97 is the floor",
       "id": "design_module_4_ops_security_2_3_cosine_threshold_why_0_97_is_the_floor"
     },
@@ -7192,7 +6058,7 @@
       "file_type": "document",
       "source_file": "design/module-4-ops-security.md",
       "source_location": "L107",
-      "community": 81,
+      "community": 6,
       "norm_label": "2.4 ttl strategy tied to legislative effective dates",
       "id": "design_module_4_ops_security_2_4_ttl_strategy_tied_to_legislative_effective_dates"
     },
@@ -7201,7 +6067,7 @@
       "file_type": "document",
       "source_file": "design/module-4-ops-security.md",
       "source_location": "L118",
-      "community": 81,
+      "community": 6,
       "norm_label": "code:block2 (cache entry ttl = min()",
       "id": "design_module_4_ops_security_codeblock_2"
     },
@@ -7210,7 +6076,7 @@
       "file_type": "document",
       "source_file": "design/module-4-ops-security.md",
       "source_location": "L128",
-      "community": 77,
+      "community": 4,
       "norm_label": "3. rbac \u2014 the load-bearing section",
       "id": "design_module_4_ops_security_3_rbac_the_load_bearing_section"
     },
@@ -7219,7 +6085,7 @@
       "file_type": "document",
       "source_file": "design/module-4-ops-security.md",
       "source_location": "L130",
-      "community": 77,
+      "community": 4,
       "norm_label": "3.1 pipeline diagram with rbac pre-filter stage highlighted",
       "id": "design_module_4_ops_security_3_1_pipeline_diagram_with_rbac_pre_filter_stage_highlighted"
     },
@@ -7228,7 +6094,7 @@
       "file_type": "document",
       "source_file": "design/module-4-ops-security.md",
       "source_location": "L132",
-      "community": 77,
+      "community": 4,
       "norm_label": "code:mermaid (flowchart td)",
       "id": "design_module_4_ops_security_codeblock_3"
     },
@@ -7237,7 +6103,7 @@
       "file_type": "document",
       "source_file": "design/module-4-ops-security.md",
       "source_location": "L158",
-      "community": 77,
+      "community": 4,
       "norm_label": "3.2 mathematical proof: why post-filtering leaks",
       "id": "design_module_4_ops_security_3_2_mathematical_proof_why_post_filtering_leaks"
     },
@@ -7246,7 +6112,7 @@
       "file_type": "document",
       "source_file": "design/module-4-ops-security.md",
       "source_location": "L186",
-      "community": 77,
+      "community": 4,
       "norm_label": "3.3 three enforcement layers (defense in depth)",
       "id": "design_module_4_ops_security_3_3_three_enforcement_layers_defense_in_depth"
     },
@@ -7255,7 +6121,7 @@
       "file_type": "document",
       "source_file": "design/module-4-ops-security.md",
       "source_location": "L196",
-      "community": 77,
+      "community": 4,
       "norm_label": "code:python (def redaction_guard(chunks: list[chunk], user: user) -> list)",
       "id": "design_module_4_ops_security_codeblock_4"
     },
@@ -7264,7 +6130,7 @@
       "file_type": "document",
       "source_file": "design/module-4-ops-security.md",
       "source_location": "L220",
-      "community": 77,
+      "community": 4,
       "norm_label": "code:json ({)",
       "id": "design_module_4_ops_security_codeblock_5"
     },
@@ -7273,7 +6139,7 @@
       "file_type": "document",
       "source_file": "design/module-4-ops-security.md",
       "source_location": "L239",
-      "community": 77,
+      "community": 4,
       "norm_label": "3.4 opensearch dsl \u2014 filtered k-nn query",
       "id": "design_module_4_ops_security_3_4_opensearch_dsl_filtered_k_nn_query"
     },
@@ -7282,7 +6148,7 @@
       "file_type": "document",
       "source_file": "design/module-4-ops-security.md",
       "source_location": "L276",
-      "community": 77,
+      "community": 4,
       "norm_label": "3.5 role matrix",
       "id": "design_module_4_ops_security_3_5_role_matrix"
     },
@@ -7291,7 +6157,7 @@
       "file_type": "document",
       "source_file": "design/module-4-ops-security.md",
       "source_location": "L289",
-      "community": 82,
+      "community": 4,
       "norm_label": "4. ci/cd evaluation gates",
       "id": "design_module_4_ops_security_4_ci_cd_evaluation_gates"
     },
@@ -7300,7 +6166,7 @@
       "file_type": "document",
       "source_file": "design/module-4-ops-security.md",
       "source_location": "L291",
-      "community": 82,
+      "community": 4,
       "norm_label": "4.1 golden test set \u2014 500 q&a pairs",
       "id": "design_module_4_ops_security_4_1_golden_test_set_500_q_a_pairs"
     },
@@ -7309,7 +6175,7 @@
       "file_type": "document",
       "source_file": "design/module-4-ops-security.md",
       "source_location": "L303",
-      "community": 82,
+      "community": 4,
       "norm_label": "4.2 promotion gate thresholds",
       "id": "design_module_4_ops_security_4_2_promotion_gate_thresholds"
     },
@@ -7318,7 +6184,7 @@
       "file_type": "document",
       "source_file": "design/module-4-ops-security.md",
       "source_location": "L319",
-      "community": 82,
+      "community": 4,
       "norm_label": "4.3 frameworks",
       "id": "design_module_4_ops_security_4_3_frameworks"
     },
@@ -7327,7 +6193,7 @@
       "file_type": "document",
       "source_file": "design/module-4-ops-security.md",
       "source_location": "L324",
-      "community": 82,
+      "community": 4,
       "norm_label": "4.4 github actions ci gate",
       "id": "design_module_4_ops_security_4_4_github_actions_ci_gate"
     },
@@ -7336,7 +6202,7 @@
       "file_type": "document",
       "source_file": "design/module-4-ops-security.md",
       "source_location": "L326",
-      "community": 82,
+      "community": 4,
       "norm_label": "code:yaml (name: rag evaluation gate)",
       "id": "design_module_4_ops_security_codeblock_7"
     },
@@ -7345,7 +6211,7 @@
       "file_type": "document",
       "source_file": "design/module-4-ops-security.md",
       "source_location": "L401",
-      "community": 82,
+      "community": 4,
       "norm_label": "4.5 shadow deployment / champion-challenger",
       "id": "design_module_4_ops_security_4_5_shadow_deployment_champion_challenger"
     },
@@ -7471,7 +6337,7 @@
       "file_type": "document",
       "source_file": "design/module-4-ops-security.md",
       "source_location": "L580",
-      "community": 78,
+      "community": 4,
       "norm_label": "domain review findings",
       "id": "design_module_4_ops_security_domain_review_findings"
     },
@@ -7480,7 +6346,7 @@
       "file_type": "document",
       "source_file": "design/module-4-ops-security.md",
       "source_location": "L582",
-      "community": 78,
+      "community": 4,
       "norm_label": "citation format (check 1)",
       "id": "design_module_4_ops_security_citation_format_check_1"
     },
@@ -7489,7 +6355,7 @@
       "file_type": "document",
       "source_file": "design/module-4-ops-security.md",
       "source_location": "L586",
-      "community": 78,
+      "community": 4,
       "norm_label": "hierarchy depth (check 2)",
       "id": "design_module_4_ops_security_hierarchy_depth_check_2"
     },
@@ -7498,7 +6364,7 @@
       "file_type": "document",
       "source_file": "design/module-4-ops-security.md",
       "source_location": "L590",
-      "community": 78,
+      "community": 4,
       "norm_label": "temporal validity (check 3)",
       "id": "design_module_4_ops_security_temporal_validity_check_3"
     },
@@ -7507,7 +6373,7 @@
       "file_type": "document",
       "source_file": "design/module-4-ops-security.md",
       "source_location": "L594",
-      "community": 78,
+      "community": 4,
       "norm_label": "superseded / consolidated versions (check 4)",
       "id": "design_module_4_ops_security_superseded_consolidated_versions_check_4"
     },
@@ -7516,7 +6382,7 @@
       "file_type": "document",
       "source_file": "design/module-4-ops-security.md",
       "source_location": "L598",
-      "community": 78,
+      "community": 4,
       "norm_label": "fiod classification (check 5)",
       "id": "design_module_4_ops_security_fiod_classification_check_5"
     },
@@ -7525,7 +6391,7 @@
       "file_type": "document",
       "source_file": "design/module-4-ops-security.md",
       "source_location": "L603",
-      "community": 78,
+      "community": 4,
       "norm_label": "multilinguality (check 6)",
       "id": "design_module_4_ops_security_multilinguality_check_6"
     },
@@ -7534,7 +6400,7 @@
       "file_type": "document",
       "source_file": "design/module-4-ops-security.md",
       "source_location": "L608",
-      "community": 78,
+      "community": 4,
       "norm_label": "legal counsel role (check 7)",
       "id": "design_module_4_ops_security_legal_counsel_role_check_7"
     },
@@ -7543,7 +6409,7 @@
       "file_type": "document",
       "source_file": "design/module-4-ops-security.md",
       "source_location": "L612",
-      "community": 78,
+      "community": 4,
       "norm_label": "cache poisoning / tax-year ambiguity (check 8)",
       "id": "design_module_4_ops_security_cache_poisoning_tax_year_ambiguity_check_8"
     },
@@ -8731,7 +7597,7 @@
       "file_type": "document",
       "source_file": "reports/test-results.md",
       "source_location": "L1",
-      "community": 73,
+      "community": 13,
       "norm_label": "test-results.md",
       "id": "reports_test_results_md"
     },
@@ -8740,7 +7606,7 @@
       "file_type": "document",
       "source_file": "reports/test-results.md",
       "source_location": "L10",
-      "community": 73,
+      "community": 13,
       "norm_label": "stack",
       "id": "reports_test_results_stack"
     },
@@ -8749,7 +7615,7 @@
       "file_type": "document",
       "source_file": "reports/test-results.md",
       "source_location": "L32",
-      "community": 73,
+      "community": 13,
       "norm_label": "summary",
       "id": "reports_test_results_summary"
     },
@@ -8758,7 +7624,7 @@
       "file_type": "document",
       "source_file": "reports/test-results.md",
       "source_location": "L50",
-      "community": 73,
+      "community": 13,
       "norm_label": "real bedrock integration test run \u2014 2026-05-07",
       "id": "reports_test_results_real_bedrock_integration_test_run_2026_05_07"
     },
@@ -8767,7 +7633,7 @@
       "file_type": "document",
       "source_file": "reports/test-results.md",
       "source_location": "L57",
-      "community": 73,
+      "community": 13,
       "norm_label": "real bedrock findings",
       "id": "reports_test_results_real_bedrock_findings"
     },
@@ -8776,7 +7642,7 @@
       "file_type": "document",
       "source_file": "reports/test-results.md",
       "source_location": "L69",
-      "community": 73,
+      "community": 13,
       "norm_label": "analysis",
       "id": "reports_test_results_analysis"
     },
@@ -8785,7 +7651,7 @@
       "file_type": "document",
       "source_file": "reports/test-results.md",
       "source_location": "L82",
-      "community": 73,
+      "community": 13,
       "norm_label": "recommendations",
       "id": "reports_test_results_recommendations"
     },
@@ -8794,7 +7660,7 @@
       "file_type": "document",
       "source_file": "reports/test-results.md",
       "source_location": "L90",
-      "community": 73,
+      "community": 13,
       "norm_label": "failures",
       "id": "reports_test_results_failures"
     },
@@ -8803,7 +7669,7 @@
       "file_type": "document",
       "source_file": "reports/test-results.md",
       "source_location": "L104",
-      "community": 73,
+      "community": 13,
       "norm_label": "performance",
       "id": "reports_test_results_performance"
     },
@@ -8812,7 +7678,7 @@
       "file_type": "document",
       "source_file": "reports/test-results.md",
       "source_location": "L113",
-      "community": 73,
+      "community": 13,
       "norm_label": "observability sanity",
       "id": "reports_test_results_observability_sanity"
     },
@@ -8821,7 +7687,7 @@
       "file_type": "document",
       "source_file": "reports/test-results.md",
       "source_location": "L122",
-      "community": 73,
+      "community": 13,
       "norm_label": "recommendations for the design document",
       "id": "reports_test_results_recommendations_for_the_design_document"
     },
@@ -8906,9 +7772,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
+      "id": "plans_master_plan",
       "community": 22,
-      "norm_label": "master plan \u2014 tax authority rag assignment",
-      "id": "plans_master_plan"
+      "norm_label": "master plan \u2014 tax authority rag assignment"
     },
     {
       "label": "Module 4 Plan \u2014 Production Ops, Security & Evaluation",
@@ -8919,9 +7785,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
+      "id": "plans_mlops_security_architect_plan",
       "community": 14,
-      "norm_label": "module 4 plan \u2014 production ops, security & evaluation",
-      "id": "plans_mlops_security_architect_plan"
+      "norm_label": "module 4 plan \u2014 production ops, security & evaluation"
     },
     {
       "label": "RAG Evaluation Engineer \u2014 Test Suite Plan",
@@ -8932,9 +7798,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
+      "id": "plans_rag_evaluation_engineer_plan",
       "community": 13,
-      "norm_label": "rag evaluation engineer \u2014 test suite plan",
-      "id": "plans_rag_evaluation_engineer_plan"
+      "norm_label": "rag evaluation engineer \u2014 test suite plan"
     },
     {
       "label": "Plan \u2014 RAG Retrieval Architect (Modules 1 & 2)",
@@ -8945,9 +7811,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
+      "id": "plans_rag_retrieval_architect_plan",
       "community": 35,
-      "norm_label": "plan \u2014 rag retrieval architect (modules 1 & 2)",
-      "id": "plans_rag_retrieval_architect_plan"
+      "norm_label": "plan \u2014 rag retrieval architect (modules 1 & 2)"
     },
     {
       "label": "Observability Report \u2014 Jaeger Distributed Tracing",
@@ -8958,9 +7824,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
+      "id": "reports_jaeger_observability",
       "community": 14,
-      "norm_label": "observability report \u2014 jaeger distributed tracing",
-      "id": "reports_jaeger_observability"
+      "norm_label": "observability report \u2014 jaeger distributed tracing"
     },
     {
       "label": "Process Report: How the Tax Authority RAG Architecture Was Built",
@@ -8971,9 +7837,9 @@
       "captured_at": null,
       "author": "process-report-author",
       "contributor": null,
+      "id": "reports_process_report",
       "community": 2,
-      "norm_label": "process report: how the tax authority rag architecture was built",
-      "id": "reports_process_report"
+      "norm_label": "process report: how the tax authority rag architecture was built"
     },
     {
       "label": "Test Execution Results \u2014 Tax Authority RAG",
@@ -8984,9 +7850,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 73,
-      "norm_label": "test execution results \u2014 tax authority rag",
-      "id": "reports_test_results"
+      "id": "reports_test_results",
+      "community": 13,
+      "norm_label": "test execution results \u2014 tax authority rag"
     },
     {
       "label": "Test Plan \u2014 Tax Authority RAG Evaluation Suite",
@@ -8997,9 +7863,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
+      "id": "tests_test_plan",
       "community": 13,
-      "norm_label": "test plan \u2014 tax authority rag evaluation suite",
-      "id": "tests_test_plan"
+      "norm_label": "test plan \u2014 tax authority rag evaluation suite"
     },
     {
       "label": "AWS Bedrock",
@@ -9010,9 +7876,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
+      "id": "aws_bedrock",
       "community": 22,
-      "norm_label": "aws bedrock",
-      "id": "aws_bedrock"
+      "norm_label": "aws bedrock"
     },
     {
       "label": "Amazon OpenSearch Service",
@@ -9023,9 +7889,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
+      "id": "amazon_opensearch",
       "community": 35,
-      "norm_label": "amazon opensearch service",
-      "id": "amazon_opensearch"
+      "norm_label": "amazon opensearch service"
     },
     {
       "label": "Jaeger",
@@ -9036,9 +7902,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
+      "id": "jaeger",
       "community": 14,
-      "norm_label": "jaeger",
-      "id": "jaeger"
+      "norm_label": "jaeger"
     },
     {
       "label": "Redis Stack",
@@ -9049,9 +7915,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
+      "id": "redis_stack",
       "community": 4,
-      "norm_label": "redis stack",
-      "id": "redis_stack"
+      "norm_label": "redis stack"
     },
     {
       "label": "Claude Haiku 4.5",
@@ -9062,9 +7928,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
+      "id": "claude_haiku_4_5",
       "community": 13,
-      "norm_label": "claude haiku 4.5",
-      "id": "claude_haiku_4_5"
+      "norm_label": "claude haiku 4.5"
     },
     {
       "label": "Cohere embed-multilingual-v3",
@@ -9075,9 +7941,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
+      "id": "cohere_embed_multilingual_v3",
       "community": 35,
-      "norm_label": "cohere embed-multilingual-v3",
-      "id": "cohere_embed_multilingual_v3"
+      "norm_label": "cohere embed-multilingual-v3"
     },
     {
       "label": "Cohere rerank-v3-5",
@@ -9088,9 +7954,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
+      "id": "cohere_rerank_v3_5",
       "community": 30,
-      "norm_label": "cohere rerank-v3-5",
-      "id": "cohere_rerank_v3_5"
+      "norm_label": "cohere rerank-v3-5"
     },
     {
       "label": "graphify",
@@ -9101,9 +7967,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
+      "id": "claude_graphify",
       "community": 52,
-      "norm_label": "graphify",
-      "id": "claude_graphify"
+      "norm_label": "graphify"
     },
     {
       "label": "Enterprise RAG Architecture for the National Tax Authority",
@@ -9114,9 +7980,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
+      "id": "final_rag_architecture_final_rag_architecture",
       "community": 23,
-      "norm_label": "enterprise rag architecture for the national tax authority",
-      "id": "final_rag_architecture_final_rag_architecture"
+      "norm_label": "enterprise rag architecture for the national tax authority"
     },
     {
       "label": "Module 1 \u2014 Ingestion & Knowledge Structuring",
@@ -9127,9 +7993,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
+      "id": "module_1_2_retrieval_module_1_2_retrieval",
       "community": 30,
-      "norm_label": "module 1 \u2014 ingestion & knowledge structuring",
-      "id": "module_1_2_retrieval_module_1_2_retrieval"
+      "norm_label": "module 1 \u2014 ingestion & knowledge structuring"
     },
     {
       "label": "Module 3 \u2014 Agentic RAG & Self-Healing",
@@ -9140,9 +8006,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
+      "id": "module_3_agentic_module_3_agentic",
       "community": 24,
-      "norm_label": "module 3 \u2014 agentic rag & self-healing",
-      "id": "module_3_agentic_module_3_agentic"
+      "norm_label": "module 3 \u2014 agentic rag & self-healing"
     },
     {
       "label": "Module 4 \u2014 Production Ops, Security & Evaluation",
@@ -9153,9 +8019,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
+      "id": "module_4_ops_security_module_4_ops_security",
       "community": 4,
-      "norm_label": "module 4 \u2014 production ops, security & evaluation",
-      "id": "module_4_ops_security_module_4_ops_security"
+      "norm_label": "module 4 \u2014 production ops, security & evaluation"
     },
     {
       "label": "Docker Compose Stack",
@@ -9166,9 +8032,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
+      "id": "docker_compose_docker_compose",
       "community": 4,
-      "norm_label": "docker compose stack",
-      "id": "docker_compose_docker_compose"
+      "norm_label": "docker compose stack"
     },
     {
       "label": "Amazon OpenSearch Service",
@@ -9179,9 +8045,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
+      "id": "opensearch_opensearch",
       "community": 4,
-      "norm_label": "amazon opensearch service",
-      "id": "opensearch_opensearch"
+      "norm_label": "amazon opensearch service"
     },
     {
       "label": "Jaeger Tracing",
@@ -9192,9 +8058,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
+      "id": "jaeger_jaeger",
       "community": 4,
-      "norm_label": "jaeger tracing",
-      "id": "jaeger_jaeger"
+      "norm_label": "jaeger tracing"
     },
     {
       "label": "Claude Haiku 4.5",
@@ -9205,9 +8071,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
+      "id": "claude_haiku_claude_haiku",
       "community": 24,
-      "norm_label": "claude haiku 4.5",
-      "id": "claude_haiku_claude_haiku"
+      "norm_label": "claude haiku 4.5"
     },
     {
       "label": "Cohere embed-multilingual-v3",
@@ -9218,9 +8084,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
+      "id": "cohere_embed_cohere_embed",
       "community": 30,
-      "norm_label": "cohere embed-multilingual-v3",
-      "id": "cohere_embed_cohere_embed"
+      "norm_label": "cohere embed-multilingual-v3"
     },
     {
       "label": "Corrective RAG (CRAG)",
@@ -9231,9 +8097,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
+      "id": "crag_crag",
       "community": 24,
-      "norm_label": "corrective rag (crag)",
-      "id": "crag_crag"
+      "norm_label": "corrective rag (crag)"
     },
     {
       "label": "Role-Based Access Control (RBAC)",
@@ -9244,9 +8110,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
+      "id": "rbac_rbac",
       "community": 4,
-      "norm_label": "role-based access control (rbac)",
-      "id": "rbac_rbac"
+      "norm_label": "role-based access control (rbac)"
     },
     {
       "label": "OpenSearch efficient_filter",
@@ -9257,9 +8123,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
+      "id": "efficient_filter_efficient_filter",
       "community": 4,
-      "norm_label": "opensearch efficient_filter",
-      "id": "efficient_filter_efficient_filter"
+      "norm_label": "opensearch efficient_filter"
     },
     {
       "label": "UserContext",
@@ -9270,9 +8136,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
+      "id": "user_context_user_context",
       "community": 4,
-      "norm_label": "usercontext",
-      "id": "user_context_user_context"
+      "norm_label": "usercontext"
     },
     {
       "label": "ChunkMeta",
@@ -9283,1252 +8149,12 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
+      "id": "chunk_meta_chunk_meta",
       "community": 30,
-      "norm_label": "chunkmeta",
-      "id": "chunk_meta_chunk_meta"
+      "norm_label": "chunkmeta"
     }
   ],
   "links": [
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "source": "docs_graphify_api_enrichment_md",
-      "target": "docs_graphify_api_enrichment_graphify_ast_only_vs_gemini_api_enrichment",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L10",
-      "weight": 1.0,
-      "source": "docs_graphify_api_enrichment_graphify_ast_only_vs_gemini_api_enrichment",
-      "target": "docs_graphify_api_enrichment_what_changed_numbers",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L23",
-      "weight": 1.0,
-      "source": "docs_graphify_api_enrichment_graphify_ast_only_vs_gemini_api_enrichment",
-      "target": "docs_graphify_api_enrichment_which_files_were_affected",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L71",
-      "weight": 1.0,
-      "source": "docs_graphify_api_enrichment_graphify_ast_only_vs_gemini_api_enrichment",
-      "target": "docs_graphify_api_enrichment_how_the_queries_changed",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L96",
-      "weight": 1.0,
-      "source": "docs_graphify_api_enrichment_graphify_ast_only_vs_gemini_api_enrichment",
-      "target": "docs_graphify_api_enrichment_what_the_api_enrichment_physically_did",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L115",
-      "weight": 1.0,
-      "source": "docs_graphify_api_enrichment_graphify_ast_only_vs_gemini_api_enrichment",
-      "target": "docs_graphify_api_enrichment_new_surprising_connection_discovered_by_gemini",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L133",
-      "weight": 1.0,
-      "source": "docs_graphify_api_enrichment_graphify_ast_only_vs_gemini_api_enrichment",
-      "target": "docs_graphify_api_enrichment_what_did_not_change",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L142",
-      "weight": 1.0,
-      "source": "docs_graphify_api_enrichment_graphify_ast_only_vs_gemini_api_enrichment",
-      "target": "docs_graphify_api_enrichment_when_to_re_run_graphify_extract",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L155",
-      "weight": 1.0,
-      "source": "docs_graphify_api_enrichment_graphify_ast_only_vs_gemini_api_enrichment",
-      "target": "docs_graphify_api_enrichment_summary_is_the_api_worth_it",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L27",
-      "weight": 1.0,
-      "source": "docs_graphify_api_enrichment_which_files_were_affected",
-      "target": "docs_graphify_api_enrichment_design_docs_biggest_gain",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L35",
-      "weight": 1.0,
-      "source": "docs_graphify_api_enrichment_which_files_were_affected",
-      "target": "docs_graphify_api_enrichment_docs_i_wrote_newly_indexed",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L48",
-      "weight": 1.0,
-      "source": "docs_graphify_api_enrichment_which_files_were_affected",
-      "target": "docs_graphify_api_enrichment_new_concept_nodes_semantic_only_didn_t_exist_in_ast",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L73",
-      "weight": 1.0,
-      "source": "docs_graphify_api_enrichment_how_the_queries_changed",
-      "target": "docs_graphify_api_enrichment_before_ast_only_graphify_query_authentication_boundary_enforcement",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L82",
-      "weight": 1.0,
-      "source": "docs_graphify_api_enrichment_how_the_queries_changed",
-      "target": "docs_graphify_api_enrichment_after_gemini_enriched_same_query",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L75",
-      "weight": 1.0,
-      "source": "docs_graphify_api_enrichment_before_ast_only_graphify_query_authentication_boundary_enforcement",
-      "target": "docs_graphify_api_enrichment_codeblock_1",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L84",
-      "weight": 1.0,
-      "source": "docs_graphify_api_enrichment_after_gemini_enriched_same_query",
-      "target": "docs_graphify_api_enrichment_codeblock_2",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L98",
-      "weight": 1.0,
-      "source": "docs_graphify_api_enrichment_what_the_api_enrichment_physically_did",
-      "target": "docs_graphify_api_enrichment_step_1_ast_extraction_same_as_before_free",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L101",
-      "weight": 1.0,
-      "source": "docs_graphify_api_enrichment_what_the_api_enrichment_physically_did",
-      "target": "docs_graphify_api_enrichment_step_2_semantic_extraction_new_costs_tokens",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L107",
-      "weight": 1.0,
-      "source": "docs_graphify_api_enrichment_what_the_api_enrichment_physically_did",
-      "target": "docs_graphify_api_enrichment_step_3_deduplication",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L110",
-      "weight": 1.0,
-      "source": "docs_graphify_api_enrichment_what_the_api_enrichment_physically_did",
-      "target": "docs_graphify_api_enrichment_step_4_community_re_clustering",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_API_ENRICHMENT.md",
-      "source_location": "L119",
-      "weight": 1.0,
-      "source": "docs_graphify_api_enrichment_new_surprising_connection_discovered_by_gemini",
-      "target": "docs_graphify_api_enrichment_codeblock_3",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_md",
-      "target": "docs_graphify_complete_guide_graphify_complete_student_guide",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L2",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_graphify_complete_student_guide",
-      "target": "docs_graphify_complete_guide_from_zero_to_knowledge_graph_everything_you_need_to_know",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L10",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_graphify_complete_student_guide",
-      "target": "docs_graphify_complete_guide_table_of_contents",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L28",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_graphify_complete_student_guide",
-      "target": "docs_graphify_complete_guide_1_what_is_graphify",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L56",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_graphify_complete_student_guide",
-      "target": "docs_graphify_complete_guide_2_what_graphify_is_not",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L106",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_graphify_complete_student_guide",
-      "target": "docs_graphify_complete_guide_3_installation",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L153",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_graphify_complete_student_guide",
-      "target": "docs_graphify_complete_guide_4_the_three_integrations_graphify_installs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L194",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_graphify_complete_student_guide",
-      "target": "docs_graphify_complete_guide_5_core_commands",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L271",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_graphify_complete_student_guide",
-      "target": "docs_graphify_complete_guide_6_understanding_the_outputs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L308",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_graphify_complete_student_guide",
-      "target": "docs_graphify_complete_guide_7_ast_only_vs_gemini_api_extraction",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L370",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_graphify_complete_student_guide",
-      "target": "docs_graphify_complete_guide_8_can_claude_cli_replace_the_api_key",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L421",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_graphify_complete_student_guide",
-      "target": "docs_graphify_complete_guide_9_common_errors_and_fixes",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L476",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_graphify_complete_student_guide",
-      "target": "docs_graphify_complete_guide_10_saving_the_graph_as_an_image",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L514",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_graphify_complete_student_guide",
-      "target": "docs_graphify_complete_guide_11_day_to_day_workflow",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L576",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_graphify_complete_student_guide",
-      "target": "docs_graphify_complete_guide_12_the_benefit_concrete_numbers",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L603",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_graphify_complete_student_guide",
-      "target": "docs_graphify_complete_guide_13_full_q_a_reference",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L738",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_graphify_complete_student_guide",
-      "target": "docs_graphify_complete_guide_quick_reference_card",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L32",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_1_what_is_graphify",
-      "target": "docs_graphify_complete_guide_codeblock_1",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L46",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_1_what_is_graphify",
-      "target": "docs_graphify_complete_guide_install",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L48",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_install",
-      "target": "docs_graphify_complete_guide_codeblock_2",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L60",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_2_what_graphify_is_not",
-      "target": "docs_graphify_complete_guide_not_an_nlp_tool",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L72",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_2_what_graphify_is_not",
-      "target": "docs_graphify_complete_guide_not_a_question_answering_system",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L86",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_2_what_graphify_is_not",
-      "target": "docs_graphify_complete_guide_not_aware_of_meaning_without_api_key",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L96",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_2_what_graphify_is_not",
-      "target": "docs_graphify_complete_guide_what_graphify_is_accurately",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L61",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_not_an_nlp_tool",
-      "target": "docs_graphify_complete_guide_codeblock_3",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L87",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_not_aware_of_meaning_without_api_key",
-      "target": "docs_graphify_complete_guide_codeblock_4",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L97",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_what_graphify_is_accurately",
-      "target": "docs_graphify_complete_guide_codeblock_5",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L108",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_3_installation",
-      "target": "docs_graphify_complete_guide_step_1_install_the_python_package",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L120",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_3_installation",
-      "target": "docs_graphify_complete_guide_step_2_verify_installation",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L127",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_3_installation",
-      "target": "docs_graphify_complete_guide_step_3_install_claude_code_integration",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L138",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_3_installation",
-      "target": "docs_graphify_complete_guide_step_4_build_the_initial_graph",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L110",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_step_1_install_the_python_package",
-      "target": "docs_graphify_complete_guide_codeblock_6",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L122",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_step_2_verify_installation",
-      "target": "docs_graphify_complete_guide_codeblock_7",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L129",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_step_3_install_claude_code_integration",
-      "target": "docs_graphify_complete_guide_codeblock_8",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L140",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_step_4_build_the_initial_graph",
-      "target": "docs_graphify_complete_guide_codeblock_9",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L146",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_step_4_build_the_initial_graph",
-      "target": "docs_graphify_complete_guide_codeblock_10",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L157",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_4_the_three_integrations_graphify_installs",
-      "target": "docs_graphify_complete_guide_integration_1_claude_code_hook_installed_by_graphify_claude_install",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L169",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_4_the_three_integrations_graphify_installs",
-      "target": "docs_graphify_complete_guide_integration_2_git_hooks_installed_by_graphify_hook_install",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L179",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_4_the_three_integrations_graphify_installs",
-      "target": "docs_graphify_complete_guide_integration_3_claude_md_rules_installed_by_graphify_claude_install",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L184",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_4_the_three_integrations_graphify_installs",
-      "target": "docs_graphify_complete_guide_summary_table",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L161",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_integration_1_claude_code_hook_installed_by_graphify_claude_install",
-      "target": "docs_graphify_complete_guide_codeblock_11",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L174",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_integration_2_git_hooks_installed_by_graphify_hook_install",
-      "target": "docs_graphify_complete_guide_codeblock_12",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L196",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_5_core_commands",
-      "target": "docs_graphify_complete_guide_graphify_update_rebuild_graph_free_ast_only",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L205",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_5_core_commands",
-      "target": "docs_graphify_complete_guide_graphify_query_question_search_the_graph",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L217",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_5_core_commands",
-      "target": "docs_graphify_complete_guide_graphify_explain_symbol_expand_one_node",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L226",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_5_core_commands",
-      "target": "docs_graphify_complete_guide_graphify_affected_symbol_depth_2_blast_radius",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L235",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_5_core_commands",
-      "target": "docs_graphify_complete_guide_graphify_path_a_b_connection_between_two_concepts",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L243",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_5_core_commands",
-      "target": "docs_graphify_complete_guide_graphify_extract_backend_gemini_full_llm_enrichment",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L253",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_5_core_commands",
-      "target": "docs_graphify_complete_guide_graphify_watch_auto_rebuild_on_file_save",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L261",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_5_core_commands",
-      "target": "docs_graphify_complete_guide_graphify_hook_install_auto_rebuild_on_git_commit",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L197",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_graphify_update_rebuild_graph_free_ast_only",
-      "target": "docs_graphify_complete_guide_codeblock_13",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L206",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_graphify_query_question_search_the_graph",
-      "target": "docs_graphify_complete_guide_codeblock_14",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L218",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_graphify_explain_symbol_expand_one_node",
-      "target": "docs_graphify_complete_guide_codeblock_15",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L227",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_graphify_affected_symbol_depth_2_blast_radius",
-      "target": "docs_graphify_complete_guide_codeblock_16",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L236",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_graphify_path_a_b_connection_between_two_concepts",
-      "target": "docs_graphify_complete_guide_codeblock_17",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L244",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_graphify_extract_backend_gemini_full_llm_enrichment",
-      "target": "docs_graphify_complete_guide_codeblock_18",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L254",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_graphify_watch_auto_rebuild_on_file_save",
-      "target": "docs_graphify_complete_guide_codeblock_19",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L262",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_graphify_hook_install_auto_rebuild_on_git_commit",
-      "target": "docs_graphify_complete_guide_codeblock_20",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L273",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_6_understanding_the_outputs",
-      "target": "docs_graphify_complete_guide_graphify_out_graph_json",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L276",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_6_understanding_the_outputs",
-      "target": "docs_graphify_complete_guide_graphify_out_graph_html",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L279",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_6_understanding_the_outputs",
-      "target": "docs_graphify_complete_guide_graphify_out_graph_report_md",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L289",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_6_understanding_the_outputs",
-      "target": "docs_graphify_complete_guide_graphify_out_graphify_analysis_json",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L292",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_6_understanding_the_outputs",
-      "target": "docs_graphify_complete_guide_what_to_commit_vs_ignore",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L293",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_what_to_commit_vs_ignore",
-      "target": "docs_graphify_complete_guide_codeblock_21",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L310",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_7_ast_only_vs_gemini_api_extraction",
-      "target": "docs_graphify_complete_guide_what_ast_extraction_does_free",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L320",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_7_ast_only_vs_gemini_api_extraction",
-      "target": "docs_graphify_complete_guide_what_api_extraction_adds_0_06_for_49_files",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L328",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_7_ast_only_vs_gemini_api_extraction",
-      "target": "docs_graphify_complete_guide_real_numbers_from_this_session",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L338",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_7_ast_only_vs_gemini_api_extraction",
-      "target": "docs_graphify_complete_guide_query_result_comparison",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L348",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_7_ast_only_vs_gemini_api_extraction",
-      "target": "docs_graphify_complete_guide_which_backend_to_use",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L359",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_7_ast_only_vs_gemini_api_extraction",
-      "target": "docs_graphify_complete_guide_when_to_re_run_api_extraction",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L374",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_8_can_claude_cli_replace_the_api_key",
-      "target": "docs_graphify_complete_guide_codeblock_22",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L400",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_8_can_claude_cli_replace_the_api_key",
-      "target": "docs_graphify_complete_guide_the_one_thing_claude_cannot_do_that_api_extraction_can",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L410",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_8_can_claude_cli_replace_the_api_key",
-      "target": "docs_graphify_complete_guide_summary",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L403",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_the_one_thing_claude_cannot_do_that_api_extraction_can",
-      "target": "docs_graphify_complete_guide_codeblock_23",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L423",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_9_common_errors_and_fixes",
-      "target": "docs_graphify_complete_guide_error_no_unique_node_match_for_usercontext",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L444",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_9_common_errors_and_fixes",
-      "target": "docs_graphify_complete_guide_error_modulenotfounderror_no_module_named_graphify_after_install",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L455",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_9_common_errors_and_fixes",
-      "target": "docs_graphify_complete_guide_error_graphify_query_returns_irrelevant_nodes",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L464",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_9_common_errors_and_fixes",
-      "target": "docs_graphify_complete_guide_warning_graphify_watch_command_substitution_ignored_null_byte_in_input",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L468",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_9_common_errors_and_fixes",
-      "target": "docs_graphify_complete_guide_graph_html_shows_nothing_blank",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L430",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_error_no_unique_node_match_for_usercontext",
-      "target": "docs_graphify_complete_guide_codeblock_24",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L435",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_error_no_unique_node_match_for_usercontext",
-      "target": "docs_graphify_complete_guide_codeblock_25",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L440",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_error_no_unique_node_match_for_usercontext",
-      "target": "docs_graphify_complete_guide_codeblock_26",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L449",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_error_modulenotfounderror_no_module_named_graphify_after_install",
-      "target": "docs_graphify_complete_guide_codeblock_27",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L480",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_10_saving_the_graph_as_an_image",
-      "target": "docs_graphify_complete_guide_save_as_png_works_confirmed",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L498",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_10_saving_the_graph_as_an_image",
-      "target": "docs_graphify_complete_guide_higher_resolution_export",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L502",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_10_saving_the_graph_as_an_image",
-      "target": "docs_graphify_complete_guide_why_svg_export_fails",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L487",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_save_as_png_works_confirmed",
-      "target": "docs_graphify_complete_guide_codeblock_28",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L505",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_why_svg_export_fails",
-      "target": "docs_graphify_complete_guide_codeblock_29",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L516",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_11_day_to_day_workflow",
-      "target": "docs_graphify_complete_guide_before_starting_any_task",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L530",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_11_day_to_day_workflow",
-      "target": "docs_graphify_complete_guide_before_changing_code",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L538",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_11_day_to_day_workflow",
-      "target": "docs_graphify_complete_guide_for_god_nodes_highest_blast_radius_in_this_repo",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L553",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_11_day_to_day_workflow",
-      "target": "docs_graphify_complete_guide_after_changing_code",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L565",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_11_day_to_day_workflow",
-      "target": "docs_graphify_complete_guide_for_onboarding_understanding_an_unfamiliar_area",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L518",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_before_starting_any_task",
-      "target": "docs_graphify_complete_guide_codeblock_30",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L532",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_before_changing_code",
-      "target": "docs_graphify_complete_guide_codeblock_31",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L555",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_after_changing_code",
-      "target": "docs_graphify_complete_guide_codeblock_32",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L560",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_after_changing_code",
-      "target": "docs_graphify_complete_guide_codeblock_33",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L567",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_for_onboarding_understanding_an_unfamiliar_area",
-      "target": "docs_graphify_complete_guide_codeblock_34",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L587",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_12_the_benefit_concrete_numbers",
-      "target": "docs_graphify_complete_guide_where_graphify_adds_the_most_value",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L595",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_12_the_benefit_concrete_numbers",
-      "target": "docs_graphify_complete_guide_where_graphify_adds_less_value",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L636",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_13_full_q_a_reference",
-      "target": "docs_graphify_complete_guide_codeblock_35",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L725",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_13_full_q_a_reference",
-      "target": "docs_graphify_complete_guide_codeblock_36",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/GRAPHIFY_COMPLETE_GUIDE.md",
-      "source_location": "L740",
-      "weight": 1.0,
-      "source": "docs_graphify_complete_guide_quick_reference_card",
-      "target": "docs_graphify_complete_guide_codeblock_37",
-      "confidence_score": 1.0
-    },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
@@ -23250,5 +20876,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "590555da73827b3125c9fd0751cdbc1ef2f26e27"
+  "built_at_commit": "8e65021a40b68f131e8c9e9558ae82d7dd4cd4d8"
 }

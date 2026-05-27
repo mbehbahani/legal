@@ -1,16 +1,16 @@
-# Graph Report - Legal  (2026-05-27)
+# Graph Report - Legal  (2026-05-28)
 
 ## Corpus Check
-- 53 files · ~65,755 words
+- 54 files · ~71,174 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 910 nodes · 1228 edges · 82 communities (60 shown, 22 thin omitted)
-- Extraction: 84% EXTRACTED · 16% INFERRED · 0% AMBIGUOUS · INFERRED: 194 edges (avg confidence: 0.52)
+- 1011 nodes · 1372 edges · 90 communities (71 shown, 19 thin omitted)
+- Extraction: 86% EXTRACTED · 14% INFERRED · 0% AMBIGUOUS · INFERRED: 196 edges (avg confidence: 0.53)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `02ea8ca7`
+- Built from commit: `590555da`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -83,217 +83,225 @@
 - [[_COMMUNITY_Community 65|Community 65]]
 - [[_COMMUNITY_Community 66|Community 66]]
 - [[_COMMUNITY_Community 67|Community 67]]
+- [[_COMMUNITY_Community 68|Community 68]]
 - [[_COMMUNITY_Community 69|Community 69]]
 - [[_COMMUNITY_Community 70|Community 70]]
 - [[_COMMUNITY_Community 71|Community 71]]
-- [[_COMMUNITY_Community 72|Community 72]]
 - [[_COMMUNITY_Community 73|Community 73]]
 - [[_COMMUNITY_Community 74|Community 74]]
 - [[_COMMUNITY_Community 75|Community 75]]
 - [[_COMMUNITY_Community 76|Community 76]]
 - [[_COMMUNITY_Community 77|Community 77]]
 - [[_COMMUNITY_Community 78|Community 78]]
+- [[_COMMUNITY_Community 79|Community 79]]
 - [[_COMMUNITY_Community 80|Community 80]]
 - [[_COMMUNITY_Community 81|Community 81]]
 - [[_COMMUNITY_Community 82|Community 82]]
+- [[_COMMUNITY_Community 83|Community 83]]
+- [[_COMMUNITY_Community 84|Community 84]]
+- [[_COMMUNITY_Community 85|Community 85]]
+- [[_COMMUNITY_Community 86|Community 86]]
+- [[_COMMUNITY_Community 87|Community 87]]
+- [[_COMMUNITY_Community 88|Community 88]]
+- [[_COMMUNITY_Community 89|Community 89]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `UserContext` - 49 edges
 2. `ChunkMeta` - 45 edges
-3. `MockRAGClient` - 42 edges
+3. `MockRAGClient` - 41 edges
 4. `HaikuJudge` - 30 edges
 5. `RAGResponse` - 25 edges
-6. `UserContext` - 24 edges
-7. `TelemetrySink` - 22 edges
-8. `MockRAGClient` - 17 edges
-9. `TestCitationAnchorDepth` - 15 edges
-10. `Tax Authority Enterprise RAG` - 15 edges
+6. `TelemetrySink` - 25 edges
+7. `UserContext` - 24 edges
+8. `Graphify: Complete Student Guide` - 17 edges
+9. `MockRAGClient` - 17 edges
+10. `Master Plan — Tax Authority RAG Assignment` - 16 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `ChunkMeta` --shares_data_with--> `Module 1 — Ingestion & Knowledge Structuring`  [INFERRED]
+  docs/ARCHITECTURE.md → design/module-1-2-retrieval.md
 - `float` --uses--> `UserContext`  [INFERRED]
   tests/test_latency_budgets.py → tests/conftest.py
 - `float` --uses--> `UserContext`  [INFERRED]
   tests/test_semantic_cache.py → tests/conftest.py
-- `str` --uses--> `UserContext`  [INFERRED]
-  tests/test_citation_accuracy.py → tests/conftest.py
-- `ChunkMeta` --uses--> `UserContext`  [INFERRED]
-  tests/test_citation_accuracy.py → tests/conftest.py
-- `bool` --uses--> `UserContext`  [INFERRED]
-  tests/test_citation_accuracy.py → tests/conftest.py
+- `float` --uses--> `ChunkMeta`  [INFERRED]
+  tests/seed_opensearch.py → tests/conftest.py
+- `Process Report: How the Tax Authority RAG Architecture Was Built` --references--> `Master Plan — Tax Authority RAG Assignment`  [EXTRACTED]
+  reports/PROCESS-REPORT.md → plans/MASTER-PLAN.md
 
-## Communities (82 total, 22 thin omitted)
+## Communities (90 total, 19 thin omitted)
 
 ### Community 0 - "Community 0"
-Cohesion: 0.19
-Nodes (9): ChunkMeta, Validates that the secondary RBAC gate (redaction_guard) correctly     identifie, Guard drops FIOD chunk that somehow slipped through Layer 1., Guard drops internal chunk for helpdesk user (ceiling=public)., FIOD analyst passes all classification levels through the guard., Inspector (ceiling=internal) receives public+internal but not FIOD., Secondary RBAC gate (module-4 §3.3 Layer 2).     Drops any chunk whose classific, redaction_guard() (+1 more)
+Cohesion: 0.05
+Nodes (37): AsyncOpenSearch, opensearch.sh script, OpenSearch, Redis, allowed_classifications(), async_opensearch_client(), bedrock_client(), bedrock_runtime() (+29 more)
 
 ### Community 1 - "Community 1"
-Cohesion: 0.05
-Nodes (40): 1.1 Routing Rule, 1.2 Worked Example — Decomposition Tree, 1.3 Transform Node Pseudo-code, 1. Query Transformation Layer, 3.1 Model Configuration, 3.2 Verbatim Grader Prompt Template, 3. Retrieval Grader, 4.1 Algorithm (+32 more)
+Cohesion: 0.11
+Nodes (33): TelemetrySink, HaikuJudge, MockRAGClient, int, RAGResponse, Thin wrapper around Bedrock Haiku 4.5 for LLM-as-judge calls.     temp=0, uses t, In-memory span collector. Tests inject spans; assertions check required attribut, Deterministic stub simulating the CRAG pipeline output.     Used for tests that (+25 more)
 
 ### Community 2 - "Community 2"
-Cohesion: 0.17
-Nodes (15): haiku_judge(), HaikuJudge, mock_rag_client(), MockRAGClient, RAGResponse, Thin wrapper around Bedrock Haiku 4.5 for LLM-as-judge calls.     temp=0, uses t, Deterministic stub simulating the CRAG pipeline output.     Used for tests that, chunk_matches_citation() (+7 more)
+Cohesion: 0.05
+Nodes (39): Output, Scope, What to check, A. Cache Key Pseudo-Code (Full), B. RBAC Pre-Filter Helper (Python), C. Promotion Threshold Quick-Reference, code:python (CLASSIFICATION_ORDINAL = {"public": 0, "internal": 1, "fiod"), code:python (from dataclasses import dataclass) (+31 more)
 
 ### Community 3 - "Community 3"
 Cohesion: 0.06
-Nodes (36): build_cache_key(), Canonical cache key construction (module-4 §2.2 + Appendix A).     Role-bound: d, Threat model: CACHE CONFUSION / CONFUSED-DEPUTY ATTACK     A FIOD analyst caches, Same query embedding bucket, same tax year, different roles →         different, Inspector and helpdesk keys differ even for identical queries., Sanity check: changing only the role in the payload changes the hash.         If, Full integration test: FIOD answer stored in Redis → helpdesk key lookup, TestCachePoisoningCrossRole (+28 more)
+Nodes (34): build_cache_key(), Canonical cache key construction (module-4 §2.2 + Appendix A).     Role-bound: d, Same query embedding bucket, same tax year, different roles →         different, Inspector and helpdesk keys differ even for identical queries., Full integration test: FIOD answer stored in Redis → helpdesk key lookup, Legal and FIOD analyst produce different cache keys for the same query., _cosine(), float (+26 more)
 
 ### Community 4 - "Community 4"
-Cohesion: 0.06
-Nodes (35): 1.1 Chunking Strategy, 1.2 Hierarchical Metadata Schema, 1.3 Vector Database — Amazon OpenSearch Service, 1.4 Quantization & Memory Budget, 2.1 Hybrid Search Design, 2.2 Embeddings, 2.3 Reranker, 2.4 Parent-Document Retrieval at Generation Time (+27 more)
+Cohesion: 0.22
+Nodes (9): 1. Executive Summary & Threat Model, Docker Compose Stack, OpenSearch efficient_filter, Jaeger Tracing, Module 4 — Production Ops, Security & Evaluation, Amazon OpenSearch Service, Role-Based Access Control (RBAC), Redis Stack (+1 more)
 
 ### Community 5 - "Community 5"
-Cohesion: 0.06
-Nodes (33): 1.1 Chunking Strategy, 1.2 Hierarchical Metadata Schema, 1.3 Vector Database — Amazon OpenSearch Service, 1.4 Quantization & Memory Budget, 2.1 Hybrid Search Design, 2.2 Embeddings, 2.3 Reranker, 2.4 Parent-Document Retrieval at Generation Time (+25 more)
+Cohesion: 0.09
+Nodes (23): chunk_matches_citation(), extract_citation_tuples(), HaikuJudge, test_citation_accuracy.py — Zero-hallucination citation guard.  Threat/quality d, Step 1 + Step 2 of citation verifier (module-3 §4.1).     Returns (all_citations, Validates that the citation parser enforces lid + onderdeel depth,     not just, Parser extracts article, lid, onderdeel, and sub from a citation string., Parser extracts sub-level (e.g. sub 3) from a citation string. (+15 more)
 
 ### Community 6 - "Community 6"
-Cohesion: 0.07
-Nodes (29): extract_citation_tuples(), HaikuJudge, MockRAGClient, str, UserContext, test_citation_accuracy.py — Zero-hallucination citation guard.  Threat/quality d, Step 1 + Step 2 of citation verifier (module-3 §4.1).     Returns (all_citations, Validates that the citation parser enforces lid + onderdeel depth,     not just (+21 more)
+Cohesion: 0.15
+Nodes (13): Bedrock Cost Dashboard, code:mermaid (graph TD), Drift Alerts, Jaeger Deployment, OpenTelemetry Span Hierarchy, Span Attributes Inventory, 5.1 OpenTelemetry Span Hierarchy, 5.2 Span Attributes — Complete Inventory (+5 more)
 
 ### Community 7 - "Community 7"
-Cohesion: 0.06
-Nodes (31): 10. What This Approach Did Differently, 11. Limitations and Future Work, 12. Appendices, 1. Executive Summary, 2. The Multi-Agent Architecture, 3. Why a Multi-Agent Approach, 4. Agent Roster, 5. Execution Timeline (+23 more)
-
-### Community 8 - "Community 8"
-Cohesion: 0.12
-Nodes (31): bm25_rank(), dense_rank(), mock_rerank(), ndcg_at_k(), ChunkMeta, float, int, str (+23 more)
-
-### Community 9 - "Community 9"
 Cohesion: 0.07
 Nodes (31): answer_relevancy(), context_precision(), context_recall(), float, str, test_observability.py — OTel span emission + Ragas gates.  Threat/quality dimens, attempt_count and gen_retry_count must be observable per span., Simple precision-style metric: fraction of retrieved that are relevant. (+23 more)
 
+### Community 8 - "Community 8"
+Cohesion: 0.13
+Nodes (30): bm25_rank(), dense_rank(), mock_rerank(), ndcg_at_k(), ChunkMeta, int, str, test_hybrid_retrieval.py — Hybrid BM25 + dense retrieval correctness.  Threat/qu (+22 more)
+
+### Community 9 - "Community 9"
+Cohesion: 0.07
+Nodes (30): 1.1 Chunking Strategy, 1.2 Hierarchical Metadata Schema, 1.3 Vector Database — Amazon OpenSearch Service, 1.4 Quantization & Memory Budget, 2.1 Hybrid Search Design, 2.2 Embeddings, 2.3 Reranker, 2.4 Parent-Document Retrieval at Generation Time (+22 more)
+
 ### Community 10 - "Community 10"
-Cohesion: 0.06
-Nodes (31): 3.1 Query Transformation Layer — Routing Rule, 3.2 CRAG State Machine (LangGraph), 3.3 State Schema, 3.4 Retrieval Grader, 3.5 Fallback Policy Table, 3.6 Citation Verification Node, 3.7 LangGraph Pseudo-code, 3.8 Per-Node Latency Budget (+23 more)
+Cohesion: 0.11
+Nodes (19): assert_no_fiod_content(), Assert that a response string contains no FIOD-classified content markers.     U, MockRAGClient, UserContext, Threat model: DIRECT TITLE ATTACK     A helpdesk user knows the exact title of a, Helpdesk queries exact FIOD memo title → must refuse with no FIOD content., Retrieved chunks for a helpdesk FIOD query must have zero FIOD-classified items., After a denied FIOD query, the telemetry sink must record a span         showing (+11 more)
 
 ### Community 11 - "Community 11"
-Cohesion: 0.07
-Nodes (29): 4.1 Threat Model, 4.2 Semantic Cache, 4.3 RBAC — Three Enforcement Layers, 4.4 CI/CD Evaluation Gates, 4.5 Observability, Bedrock Cost Dashboard, Cache Key Construction — Role-Bound, Year-Scoped, code:python (import hashlib, json) (+21 more)
+Cohesion: 0.11
+Nodes (27): date, ChunkMeta, chunks_for_tax_year(), is_valid_on(), bool, ChunkMeta, int, str (+19 more)
 
 ### Community 12 - "Community 12"
-Cohesion: 0.07
-Nodes (37): date, chunks_for_tax_year(), is_valid_on(), bool, ChunkMeta, int, MockRAGClient, str (+29 more)
-
-### Community 13 - "Community 13"
-Cohesion: 0.20
-Nodes (10): TelemetrySink, ChunkMeta, float, int, random_vector(), Random unit-length vector for dev seeding., Threat model: DIRECT TITLE ATTACK     A helpdesk user knows the exact title of a, Retrieved chunks for a helpdesk FIOD query must have zero FIOD-classified items. (+2 more)
-
-### Community 14 - "Community 14"
-Cohesion: 0.09
-Nodes (21): 1. Architecture and design, 2. Evaluation harness, 3. Infrastructure scaffolding, 4. Reports and validation artifacts, Citation / attribution, code:mermaid (flowchart LR), code:text (.), Contributing (+13 more)
-
-### Community 15 - "Community 15"
-Cohesion: 0.14
-Nodes (17): _percentile(), float, test_latency_budgets.py — TTFT and end-to-end latency SLAs.  Threat/quality dime, End-to-end p95 must be ≤ 4 seconds., Retrieval-stage p95 must be ≤ 300 ms (Module 4 promotion gate)., Constant must be aligned with module-4 §4.2 (200 ms cap)., Defensive: prevent silent drift of the SLA constants in conftest., Warm cache must never be slower than cold by more than measurement noise. (+9 more)
-
-### Community 16 - "Community 16"
-Cohesion: 0.12
-Nodes (16): 2.1 Graph Diagram, 2.2 Node-by-Node Specification, 2.3 State Schema, 2.4 Fallback Policy Table, 2. CRAG State Machine (LangGraph), code:mermaid (flowchart TD), code:json ({), code:python (from __future__ import annotations) (+8 more)
-
-### Community 17 - "Community 17"
-Cohesion: 0.12
-Nodes (15): test_ambiguity_refusal.py — CRAG fallback / refusal validation.  Threat/quality, structured_refusal payload must contain the contract fields., If response has no chunks, it must have no citations., Grader verdict must always be one of the documented enum values., attempt_count must never exceed the documented hard cap (= 2)., Out-of-corpus query must refuse with no citations and no answer., Under-specified query must not produce confident citations., Contradictory queries must not be 'confirmed' — fail-closed. (+7 more)
-
-### Community 18 - "Community 18"
-Cohesion: 0.29
-Nodes (10): chunk_to_doc(), ensure_index(), generate_synthetic_fixtures(), main(), ChunkMeta, Convert ChunkMeta to an OpenSearch document., Generate n additional synthetic chunks spanning all doc_type × classification ×, Create index if it doesn't exist, with HNSW k-NN settings. (+2 more)
-
-### Community 19 - "Community 19"
-Cohesion: 0.14
-Nodes (13): A. Verified AWS access (us-east-1, account 780822965578), B. What we'll deliver, C. Locked stack (revised), code:block1 (d:\AWS\Legal\), code:block2 (AWS_ACCESS_KEY_ID=...), code:json ({"agent":"rag-retrieval-architect","phase":1,"start":"2026-0), D. Docker stack (revised), E. Open questions — LOCKED (defaults accepted by user 2026-05-06) (+5 more)
-
-### Community 20 - "Community 20"
-Cohesion: 0.14
-Nodes (18): Redis, bedrock_client(), bedrock_runtime(), flush_test_cache_keys(), golden_qa(), load_golden_qa(), conftest.py — Shared fixtures for the Tax Authority RAG evaluation suite.  Authe, Load all golden Q&A pairs from JSONL file. (+10 more)
-
-### Community 21 - "Community 21"
-Cohesion: 0.15
-Nodes (12): code:block1 (rag.request ──────────────────────────────────────────── 1,8), code:block2 (rag.request ████  11ms), code:block3 (rag.request ─────────────────────────────  682ms), Latency Summary Across All Scenarios, Observability Report — Jaeger Distributed Tracing, Screenshot 1 — Trace Overview (Scatter Plot): 16 Traces, Screenshot 2 — Full Generation Trace Waterfall (1.87s, 12 spans), Screenshot 3 — Cache Hit Trace (11ms, 3 spans) (+4 more)
-
-### Community 22 - "Community 22"
-Cohesion: 0.17
-Nodes (11): Analysis, Failures, Observability sanity, Performance, Real Bedrock Findings, Real Bedrock Integration Test Run — 2026-05-07, Recommendations, Recommendations for the design document (+3 more)
-
-### Community 23 - "Community 23"
-Cohesion: 0.15
-Nodes (10): allowed_classifications(), _make_chunk(), make_trace_id(), int, str, Returns {"result": "entailed"|"not_entailed", "explanation": str}.         Used, Returns {"is_refusal": bool, "leaks_forbidden_content": bool, "explanation": str, Simulated retrieval with RBAC pre-filter applied.         Matches chunks by keyw (+2 more)
-
-### Community 24 - "Community 24"
-Cohesion: 0.20
-Nodes (7): duration_ms(), embedding_client(), EmbeddingClient, float, Thin wrapper for Cohere embed-multilingual-v3 via Bedrock., Returns a list of 1024-dim float vectors.         input_type: "search_query" for, Returns a faithfulness score 0.0–1.0.         Each claim in the answer is checke
-
-### Community 25 - "Community 25"
-Cohesion: 0.20
-Nodes (10): 3.1 Pipeline Diagram with RBAC Pre-Filter Stage Highlighted, 3.2 Mathematical Proof: Why Post-Filtering Leaks, 3.3 Three Enforcement Layers (Defense in Depth), 3.4 OpenSearch DSL — Filtered k-NN Query, 3.5 Role Matrix, 3. RBAC — The Load-Bearing Section, code:mermaid (flowchart TD), code:python (def redaction_guard(chunks: list[Chunk], user: User) -> list) (+2 more)
-
-### Community 26 - "Community 26"
-Cohesion: 0.22
-Nodes (8): code:block1 (docker/), code:markdown (# Test Execution Results), Debugging tactics (use, don't skip), Deliverables, Non-negotiables, Results artifact (this is what the report-compiler reads), Scope, The loop
-
-### Community 27 - "Community 27"
-Cohesion: 0.22
-Nodes (9): Cache Poisoning / Tax-Year Ambiguity (Check 8), Citation Format (Check 1), Domain Review Findings, FIOD Classification (Check 5), Hierarchy Depth (Check 2), Legal Counsel Role (Check 7), Multilinguality (Check 6), Superseded / Consolidated Versions (Check 4) (+1 more)
-
-### Community 28 - "Community 28"
 Cohesion: 0.17
 Nodes (11): build_structured_refusal(), HaikuJudge, str, test_rbac_redteam.py — Adversarial RBAC red-team test suite.  Every test in this, Threat model: EXISTENCE DISCLOSURE VIA STRUCTURED REFUSAL     Domain review find, All chunks (including FIOD) passed to _build_refusal; after redaction_guard,, After redaction_guard, public-classified chunks must still appear         in clo, Full serialised refusal payload for helpdesk must contain no FIOD text, (+3 more)
 
+### Community 13 - "Community 13"
+Cohesion: 0.17
+Nodes (12): Claude Haiku 4.5, RAG Evaluation Engineer — Test Suite Plan, 1. Deliverables (under `d:\AWS\Legal\tests\`), 2. Key Design Decisions, 3. Open Questions, 4. Dependencies, 5. Estimated Effort, Test Plan — Tax Authority RAG Evaluation Suite (+4 more)
+
+### Community 14 - "Community 14"
+Cohesion: 0.09
+Nodes (22): Deliverable format, Non-negotiables, Scope, Style, Jaeger, Module 4 Plan — Production Ops, Security & Evaluation, 1. Deliverables, 2. Key Design Decisions (+14 more)
+
+### Community 15 - "Community 15"
+Cohesion: 0.10
+Nodes (17): code:block1 (docker/), code:markdown (# Test Execution Results), Debugging tactics (use, don't skip), Deliverables, Non-negotiables, Results artifact (this is what the report-compiler reads), Scope, The loop (+9 more)
+
+### Community 16 - "Community 16"
+Cohesion: 0.10
+Nodes (19): 1. Architecture and design, 2. Evaluation harness, 3. Infrastructure scaffolding, 4. Reports and validation artifacts, Citation / attribution, code:text (.), Contributing, Core technical stance (+11 more)
+
+### Community 17 - "Community 17"
+Cohesion: 0.19
+Nodes (11): MockRAGClient, UserContext, Tests that retrieval respects valid_from/valid_to date boundaries., Explicitly tests the year-confusion failure mode described in module-4 §2.3:, Near-miss test from module-4 §2.3 worked example:         'Box 1 rate 2023' vs ', 2022 Box 1 tarief query returns 2022 version (37,07% — same as 2024 but confirme, A query for the current Box 1 rate (no year specified, defaulting to 2024), A query specifically for 2020 data SHOULD return the superseded 2020 chunk (+3 more)
+
+### Community 18 - "Community 18"
+Cohesion: 0.11
+Nodes (19): 3.6 Citation Verification Node, code:python (# Full depth: doc_id + article + lid + onderdeel + sub), code:block15 (chunk.doc_id == doc_id), code:python (def verify_citations(state: CRAGState) -> CRAGState:), code:python (span.set_attribute("citation.claims_count",      len(claims)), Fail-Closed Behavior, Module 4 Interface, Step 1 — Regex Anchor Extraction (+11 more)
+
+### Community 19 - "Community 19"
+Cohesion: 0.14
+Nodes (16): _percentile(), float, test_latency_budgets.py — TTFT and end-to-end latency SLAs.  Threat/quality dime, End-to-end p95 must be ≤ 4 seconds., Retrieval-stage p95 must be ≤ 300 ms (Module 4 promotion gate)., Constant must be aligned with module-4 §4.2 (200 ms cap)., Defensive: prevent silent drift of the SLA constants in conftest., Warm cache must never be slower than cold by more than measurement noise. (+8 more)
+
+### Community 20 - "Community 20"
+Cohesion: 0.19
+Nodes (15): _make_chunk(), chunk_to_doc(), ensure_index(), generate_synthetic_fixtures(), main(), ChunkMeta, float, int (+7 more)
+
+### Community 21 - "Community 21"
+Cohesion: 0.12
+Nodes (15): test_ambiguity_refusal.py — CRAG fallback / refusal validation.  Threat/quality, structured_refusal payload must contain the contract fields., If response has no chunks, it must have no citations., Grader verdict must always be one of the documented enum values., attempt_count must never exceed the documented hard cap (= 2)., Out-of-corpus query must refuse with no citations and no answer., Under-specified query must not produce confident citations., Contradictory queries must not be 'confirmed' — fail-closed. (+7 more)
+
+### Community 22 - "Community 22"
+Cohesion: 0.13
+Nodes (14): AWS Bedrock, Master Plan — Tax Authority RAG Assignment, A. Verified AWS access (us-east-1, account 780822965578), B. What we'll deliver, C. Locked stack (revised), code:block1 (d:\AWS\Legal\), code:block2 (AWS_ACCESS_KEY_ID=...), code:json ({"agent":"rag-retrieval-architect","phase":1,"start":"2026-0) (+6 more)
+
+### Community 23 - "Community 23"
+Cohesion: 0.15
+Nodes (13): 3.2 CRAG State Machine (LangGraph), 3.7 LangGraph Pseudo-code, 3.8 Per-Node Latency Budget, Appendix A — Configuration Cheat Sheet, Appendix B — Risk Register, code:python (from langgraph.graph import StateGraph, END), Executive Summary, Module 3 — Agentic RAG & Self-Healing (+5 more)
+
+### Community 24 - "Community 24"
+Cohesion: 0.17
+Nodes (11): Claude Haiku 4.5, Corrective RAG (CRAG), 5. Loop Guard, 6. LangGraph Pseudo-code, 7. Per-Node Latency Budget, 8. Audit-Event Emission (Module 4 Observability), 9. Interface Summary, code:python (MAX_TRANSFORM_ATTEMPTS = 2   # attempt_count ceiling) (+3 more)
+
+### Community 25 - "Community 25"
+Cohesion: 0.20
+Nodes (10): 2.2 Node-by-Node Specification, code:json ({), `decide`, `generate`, `generate_with_disclosure`, `grade_documents`, `retrieve`, `structured_refusal` (+2 more)
+
+### Community 26 - "Community 26"
+Cohesion: 0.22
+Nodes (10): 3.4 Retrieval Grader, code:python (GRADER_CONFIG = {), Model Configuration, Verbatim Grader Prompt Template, 3.1 Model Configuration, 3.2 Verbatim Grader Prompt Template, 3. Retrieval Grader, code:python (GRADER_CONFIG = {) (+2 more)
+
+### Community 27 - "Community 27"
+Cohesion: 0.20
+Nodes (9): Cache invariants, Cross-cutting facts (from the graph), Diagrams, God nodes (most-connected abstractions), Load-bearing security decision, Module 1 + 2 — Ingestion & Retrieval — [design/module-1-2-retrieval.md](../design/module-1-2-retrieval.md), Module 3 — Agentic RAG — [design/module-3-agentic.md](../design/module-3-agentic.md), Module 4 — Ops & Security — [design/module-4-ops-security.md](../design/module-4-ops-security.md) (+1 more)
+
+### Community 28 - "Community 28"
+Cohesion: 0.20
+Nodes (9): Changing code — the loop, code:bash (# Find files / symbols connected to a concept), code:bash (# 1. Bring up dependencies), code:bash (pytest tests/test_rbac_redteam.py -v), God nodes — handle with care, Prerequisites, Repo-understanding workflow (graphify), Running the evaluation stack (+1 more)
+
 ### Community 29 - "Community 29"
+Cohesion: 0.22
+Nodes (9): Cache Poisoning / Tax-Year Ambiguity (Check 8), Citation Format (Check 1), Domain Review Findings, FIOD Classification (Check 5), Hierarchy Depth (Check 2), Legal Counsel Role (Check 7), Multilinguality (Check 6), Superseded / Consolidated Versions (Check 4) (+1 more)
+
+### Community 30 - "Community 30"
+Cohesion: 0.22
+Nodes (9): ChunkMeta, Cohere embed-multilingual-v3, Cohere rerank-v3-5, 1.2 Hierarchical Metadata Schema, 1.4 Quantization & Memory Budget, code:json (// Role: helpdesk — sees public and internal only), Document-Level Security (DLS) — Backup Layer, OOM & Latency Mitigations (+1 more)
+
+### Community 31 - "Community 31"
+Cohesion: 0.09
+Nodes (21): 1.3 Vector Database — Amazon OpenSearch Service, 2.1 Hybrid Search Design, 2.2 Embeddings, 2.3 Reranker, 2.4 Parent-Document Retrieval at Generation Time, 2.5 Latency Budget, Cache Poisoning / Tax-Year Ambiguity (Check 8), Citation Format (Check 1) (+13 more)
+
+### Community 32 - "Community 32"
+Cohesion: 0.22
+Nodes (8): Cross-community bridges (high betweenness), Domain-review findings (from the design phase), Graph-derived risks, Inferred-edge confidence, Isolated nodes, Process / collaboration TODOs, Repository maturity caveats (from README), Risks & TODOs
+
+### Community 33 - "Community 33"
 Cohesion: 0.25
 Nodes (7): code:block1 (tests/), Deliverables, Output, Scope, Stack constraints, Style, Test categories — be creative within each
 
-### Community 30 - "Community 30"
-Cohesion: 0.29
-Nodes (6): 2.1 Stack Choice: Redis Stack 7.4, 2.2 WARNING — The Cache Must Not Be Role-Blind, 2.3 Cosine Threshold — Why 0.97 Is the Floor, 2.4 TTL Strategy Tied to Legislative Effective Dates, 2. Semantic Cache, code:python (import hashlib, json)
-
-### Community 31 - "Community 31"
-Cohesion: 0.29
-Nodes (7): 4.1 Golden Test Set — 500 Q&A Pairs, 4.2 Promotion Gate Thresholds, 4.3 Frameworks, 4.4 GitHub Actions CI Gate, 4.5 Shadow Deployment / Champion-Challenger, 4. CI/CD Evaluation Gates, code:yaml (name: RAG Evaluation Gate)
-
-### Community 32 - "Community 32"
-Cohesion: 0.29
-Nodes (7): 5.1 OpenTelemetry Span Hierarchy, 5.2 Span Attributes — Complete Inventory, 5.3 Jaeger Deployment, 5.4 Drift Alerts, 5.5 Bedrock Cost Dashboard, 5. Observability, code:mermaid (graph TD)
-
-### Community 33 - "Community 33"
-Cohesion: 0.29
-Nodes (7): 6. Appendices, A. Cache Key Pseudo-Code (Full), B. RBAC Pre-Filter Helper (Python), C. Promotion Threshold Quick-Reference, code:python (CLASSIFICATION_ORDINAL = {"public": 0, "internal": 1, "fiod"), code:python (from dataclasses import dataclass), D. Cross-Module Interface Confirmations
-
 ### Community 34 - "Community 34"
-Cohesion: 0.29
-Nodes (6): code:json ({), Current Assignment Context, Deployment Notes, IAM Least-Privilege Policy — Tax Authority RAG, IAM Policy JSON, Required Actions
+Cohesion: 0.25
+Nodes (8): 3.1 Query Transformation Layer — Routing Rule, Worked Example — Decomposition Tree, 1.1 Routing Rule, 1.2 Worked Example — Decomposition Tree, 1.3 Transform Node Pseudo-code, 1. Query Transformation Layer, code:block1 (Root question), code:python (# node: transform_query)
 
 ### Community 35 - "Community 35"
-Cohesion: 0.29
-Nodes (6): 1. Deliverables, 2. Key Design Decisions (current leaning), 3. Open Questions (user input would change design), 4. Dependencies, 5. Estimated Effort, Module 3 (Agentic RAG & Self-Healing) — Designer Plan
+Cohesion: 0.25
+Nodes (8): Amazon OpenSearch Service, Cohere embed-multilingual-v3, Plan — RAG Retrieval Architect (Modules 1 & 2), 1. Deliverables, 2. Key design decisions (current leaning), 3. Open questions, 4. Dependencies / handoffs, 5. Estimated effort
 
 ### Community 36 - "Community 36"
 Cohesion: 0.29
-Nodes (6): 1. Deliverables (file-by-file), 2. Key infra decisions (leaning), 3. Open questions, 4. Dependencies, 5. Effort + likely failure modes, docker-runner — Planning Phase
+Nodes (7): code:python (from __future__ import annotations), 2.1 Graph Diagram, 2.3 State Schema, 2.4 Fallback Policy Table, 2. CRAG State Machine (LangGraph), code:mermaid (flowchart TD), code:python (from __future__ import annotations)
 
 ### Community 37 - "Community 37"
-Cohesion: 0.29
-Nodes (6): 1. Deliverables, 2. Key Design Decisions, 3. Open Questions, 4. Dependencies, 5. Estimated Effort, Module 4 Plan — Production Ops, Security & Evaluation
+Cohesion: 0.09
+Nodes (21): After (Gemini enriched): same query, Before (AST only): `graphify query "authentication boundary enforcement"`, code:block1 (Start nodes found: "Guard drops FIOD chunk...", ".test_seman), code:block2 (Start nodes found: "3.3 Three Enforcement Layers (Defense in), code:block3 ("Process Report: How the Tax Authority RAG Architecture Was ), Design docs (biggest gain), Docs I wrote (newly indexed), Graphify: AST-Only vs Gemini API Enrichment (+13 more)
 
 ### Community 38 - "Community 38"
 Cohesion: 0.29
-Nodes (6): 1. Deliverables (under `d:\AWS\Legal\tests\`), 2. Key Design Decisions, 3. Open Questions, 4. Dependencies, 5. Estimated Effort, RAG Evaluation Engineer — Test Suite Plan
+Nodes (6): code:json ({), Current Assignment Context, Deployment Notes, IAM Least-Privilege Policy — Tax Authority RAG, IAM Policy JSON, Required Actions
 
 ### Community 39 - "Community 39"
 Cohesion: 0.29
-Nodes (6): 1. Deliverables, 2. Key design decisions (current leaning), 3. Open questions, 4. Dependencies / handoffs, 5. Estimated effort, Plan — RAG Retrieval Architect (Modules 1 & 2)
+Nodes (6): 1. Deliverables (file-by-file), 2. Key infra decisions (leaning), 3. Open questions, 4. Dependencies, 5. Effort + likely failure modes, docker-runner — Planning Phase
 
 ### Community 40 - "Community 40"
-Cohesion: 0.33
-Nodes (5): Audience, Deliverable, Inputs, Non-negotiables, Style
+Cohesion: 0.12
+Nodes (17): 5. Core Commands, code:powershell (graphify update .), code:powershell (graphify query "How does RBAC pre-filtering work?"), code:powershell (graphify explain "MockRAGClient"), code:powershell (graphify affected "HaikuJudge" --depth 2), code:powershell (graphify path "semantic cache" "RBAC"), code:powershell ($env:GEMINI_API_KEY = "your-key-here"), code:powershell (graphify watch .) (+9 more)
 
 ### Community 41 - "Community 41"
-Cohesion: 0.40
-Nodes (5): main(), parse_junit(), int, str, Parse JUnit XML into per-suite pass/fail/skip counts.
+Cohesion: 0.33
+Nodes (5): Agent definitions, Design docs (the "what"), Infrastructure (the "how to run"), Reports (the "did it work"), Tests (the "proof")
 
 ### Community 42 - "Community 42"
-Cohesion: 0.33
-Nodes (5): Domain-Review Coverage, File-by-file, Hand-off to docker-runner, Promotion gates encoded as constants (`conftest.py`), Test Plan — Tax Authority RAG Evaluation Suite
+Cohesion: 0.40
+Nodes (5): main(), parse_junit(), int, str, Parse JUnit XML into per-suite pass/fail/skip counts.
 
 ### Community 43 - "Community 43"
 Cohesion: 0.40
@@ -301,78 +309,122 @@ Nodes (4): Deliverable format, Non-negotiables, Scope, Style
 
 ### Community 44 - "Community 44"
 Cohesion: 0.40
-Nodes (4): Deliverable format, Non-negotiables, Scope, Style
+Nodes (4): code:block1 (# Enterprise RAG Architecture for the National Tax Authority), Inputs, Output, Tasks
 
 ### Community 45 - "Community 45"
 Cohesion: 0.40
-Nodes (4): Deliverable format, Non-negotiables, Scope, Style
+Nodes (5): Debugging History (Iterations to Green), Parameter Recommendations from Empirical Run, Runner Recommendations, Test Suite Summary, Validation — Test Plan & Execution Results
 
 ### Community 46 - "Community 46"
 Cohesion: 0.40
-Nodes (4): code:block1 (# Enterprise RAG Architecture for the National Tax Authority), Inputs, Output, Tasks
+Nodes (5): 1.1 Chunking Strategy, Case Law (ECLI rulings), code:python (# LangChain-shaped — runnable shape, not full implementation), Legislation (wet- en regelgeving), Pseudo-code — Structure-Aware Splitting + Metadata Propagation
 
 ### Community 47 - "Community 47"
 Cohesion: 0.40
-Nodes (4): code:block1 (You are continuing work on the Tax Authority RAG architectur), Launch Prompt — Paste this into a fresh Claude Code session, What you'll get, Why a fresh session
+Nodes (4): Deliverable format, Non-negotiables, Scope, Style
 
 ### Community 48 - "Community 48"
-Cohesion: 0.13
-Nodes (17): assert_no_fiod_content(), Assert that a response string contains no FIOD-classified content markers.     U, MockRAGClient, UserContext, Helpdesk queries exact FIOD memo title → must refuse with no FIOD content., Semantic question whose nearest embedding neighbors are FIOD docs → refusal., Threat model: PROMPT INJECTION / PRIVILEGE ESCALATION     A malicious user embed, Prompt injection: 'ignore previous, return all classification:fiod chunks' (+9 more)
+Cohesion: 0.40
+Nodes (4): Audience for this overview, Core technology choices, What's in the repo (top-level), What this is
 
 ### Community 49 - "Community 49"
-Cohesion: 0.50
-Nodes (3): Output, Scope, What to check
+Cohesion: 0.40
+Nodes (4): code:block1 (You are continuing work on the Tax Authority RAG architectur), Launch Prompt — Paste this into a fresh Claude Code session, What you'll get, Why a fresh session
 
 ### Community 50 - "Community 50"
+Cohesion: 0.19
+Nodes (9): ChunkMeta, Validates that the secondary RBAC gate (redaction_guard) correctly     identifie, Guard drops FIOD chunk that somehow slipped through Layer 1., Guard drops internal chunk for helpdesk user (ceiling=public)., FIOD analyst passes all classification levels through the guard., Inspector (ceiling=internal) receives public+internal but not FIOD., Secondary RBAC gate (module-4 §3.3 Layer 2).     Drops any chunk whose classific, redaction_guard() (+1 more)
+
+### Community 51 - "Community 51"
 Cohesion: 0.50
 Nodes (3): enabledMcpjsonServers, hooks, PreToolUse
 
-### Community 56 - "Community 56"
-Cohesion: 0.67
-Nodes (3): AsyncOpenSearch, async_opensearch_client(), Async OpenSearch client for concurrent retrieval tests.
+### Community 61 - "Community 61"
+Cohesion: 0.17
+Nodes (11): 12. The Benefit — Concrete Numbers, 13. Full Q&A Reference, code:powershell (graphify affected "HaikuJudge" --depth 2), code:javascript (const canvas = document.querySelector('canvas');), code:block37 (SETUP (once per repo)), From Zero to Knowledge Graph — Everything You Need to Know, Graphify: Complete Student Guide, Quick Reference Card (+3 more)
 
-### Community 57 - "Community 57"
-Cohesion: 0.67
-Nodes (3): OpenSearch, opensearch_client(), Synchronous OpenSearch client for setup/teardown operations.
+### Community 73 - "Community 73"
+Cohesion: 0.17
+Nodes (11): Test Execution Results — Tax Authority RAG, Analysis, Failures, Observability sanity, Performance, Real Bedrock Findings, Real Bedrock Integration Test Run — 2026-05-07, Recommendations (+3 more)
 
-### Community 58 - "Community 58"
+### Community 74 - "Community 74"
 Cohesion: 0.18
-Nodes (10): Architecture, Cache invariants, Cross-cutting facts (from the graph), Diagrams, God nodes (most-connected abstractions), Load-bearing security decision, Module 1 + 2 — Ingestion & Retrieval — [design/module-1-2-retrieval.md](../design/module-1-2-retrieval.md), Module 3 — Agentic RAG — [design/module-3-agentic.md](../design/module-3-agentic.md) (+2 more)
+Nodes (11): 11. Day-to-Day Workflow, After changing code, Before changing code, Before starting any task, code:powershell (# 1. Check if graph is stale), code:powershell (# Find the blast radius FIRST), code:powershell (graphify update .   # refresh graph, free, no API call), code:powershell ($env:GEMINI_API_KEY = "your-key") (+3 more)
 
-### Community 66 - "Community 66"
-Cohesion: 0.18
-Nodes (10): Changing code — the loop, code:bash (# Find files / symbols connected to a concept), code:bash (# 1. Bring up dependencies), code:bash (pytest tests/test_rbac_redteam.py -v), Development Workflow, God nodes — handle with care, Prerequisites, Repo-understanding workflow (graphify) (+2 more)
+### Community 75 - "Community 75"
+Cohesion: 0.20
+Nodes (10): 3. Installation, code:block10 ([graphify watch] Rebuilt: 865 nodes, 1188 edges, 80 communit), code:powershell (# IMPORTANT: Use python -m pip, not just pip), code:powershell (python -m pip show graphifyy    # confirm version), code:powershell (# Run from inside your repository folder), code:powershell (# AST-only extraction — FREE, no API key needed, ~2-5 second), Step 1 — Install the Python package, Step 2 — Verify installation (+2 more)
 
-### Community 67 - "Community 67"
+### Community 76 - "Community 76"
+Cohesion: 0.20
+Nodes (10): 9. Common Errors and Fixes, code:powershell (graphify explain "UserContext"), code:powershell (graphify query "UserContext callers dependencies"), code:powershell (graphify affected "tests_conftest_usercontext" --depth 2), code:powershell (# Always use python -m pip, not pip), Error: `graphify query` returns irrelevant nodes, Error: `ModuleNotFoundError: No module named 'graphify'` after install, Error: `No unique node match for UserContext` (+2 more)
+
+### Community 77 - "Community 77"
+Cohesion: 0.25
+Nodes (9): 3.1 Pipeline Diagram with RBAC Pre-Filter Stage Highlighted, 3.2 Mathematical Proof: Why Post-Filtering Leaks, 3.3 Three Enforcement Layers (Defense in Depth), 3.4 OpenSearch DSL — Filtered k-NN Query, 3.5 Role Matrix, 3. RBAC — The Load-Bearing Section, code:mermaid (flowchart TD), code:python (def redaction_guard(chunks: list[Chunk], user: User) -> list) (+1 more)
+
+### Community 78 - "Community 78"
 Cohesion: 0.22
-Nodes (8): Cross-community bridges (high betweenness), Domain-review findings (from the design phase), Graph-derived risks, Inferred-edge confidence, Isolated nodes, Process / collaboration TODOs, Repository maturity caveats (from README), Risks & TODOs
+Nodes (9): Cache Poisoning / Tax-Year Ambiguity (Check 8), Citation Format (Check 1), Domain Review Findings, FIOD Classification (Check 5), Hierarchy Depth (Check 2), Legal Counsel Role (Check 7), Multilinguality (Check 6), Superseded / Consolidated Versions (Check 4) (+1 more)
+
+### Community 79 - "Community 79"
+Cohesion: 0.25
+Nodes (8): 2. What Graphify is NOT, code:block3 (graphify dependencies:), code:block4 (You ask: "authentication boundary enforcement"), code:block5 (graphify = AST parser + graph construction + fuzzy text matc), NOT a question-answering system, NOT an NLP tool, NOT aware of meaning (without API key), What graphify IS (accurately)
 
 ### Community 80 - "Community 80"
 Cohesion: 0.29
-Nodes (6): Agent definitions, Design docs (the "what"), Infrastructure (the "how to run"), Module Map, Reports (the "did it work"), Tests (the "proof")
+Nodes (7): 4.1 Threat Model, 4.4 CI/CD Evaluation Gates, code:yaml (name: RAG Evaluation Gate), GitHub Actions CI Gate, Golden Test Set — 500 Q&A Pairs, Module 4 — Production Ops, Security & Evaluation, Promotion Gate Thresholds
 
 ### Community 81 - "Community 81"
-Cohesion: 0.33
-Nodes (5): Audience for this overview, Core technology choices, Project Overview, What's in the repo (top-level), What this is
+Cohesion: 0.29
+Nodes (7): 4.2 Semantic Cache, Cache Key Construction — Role-Bound, Year-Scoped, code:python (import hashlib, json), Cosine Threshold — 0.97 Floor, 0.98 Operational Default, TTL Strategy, 2.4 TTL Strategy Tied to Legislative Effective Dates, code:block2 (Cache entry TTL = min()
 
 ### Community 82 - "Community 82"
-Cohesion: 0.22
-Nodes (6): In-memory span collector. Tests inject spans; assertions check required attribut, telemetry_sink(), TelemetrySink, Threat model: SEMANTIC PROXIMITY ATTACK     A helpdesk user asks a question whos, Module-3 domain review Check 5 (critical gap):         The structured_refusal cl, TestHelpdeskSemanticFIODQuery
+Cohesion: 0.29
+Nodes (7): 4.1 Golden Test Set — 500 Q&A Pairs, 4.2 Promotion Gate Thresholds, 4.3 Frameworks, 4.4 GitHub Actions CI Gate, 4.5 Shadow Deployment / Champion-Challenger, 4. CI/CD Evaluation Gates, code:yaml (name: RAG Evaluation Gate)
+
+### Community 83 - "Community 83"
+Cohesion: 0.29
+Nodes (7): 4. The Three Integrations Graphify Installs, code:json ({), code:block12 ([graphify] Branch switched - launching background rebuild), Integration 1 — Claude Code hook (installed by `graphify claude install`), Integration 2 — Git hooks (installed by `graphify hook install`), Integration 3 — CLAUDE.md rules (installed by `graphify claude install`), Summary table
+
+### Community 84 - "Community 84"
+Cohesion: 0.29
+Nodes (7): 6. Understanding the Outputs, code:gitignore (# Add to .gitignore), `graphify-out/graph.html`, `graphify-out/graph.json`, `graphify-out/GRAPH_REPORT.md`, `graphify-out/.graphify_analysis.json`, What to commit vs ignore
+
+### Community 85 - "Community 85"
+Cohesion: 0.29
+Nodes (7): 7. AST-Only vs Gemini API Extraction, Query result comparison, Real numbers from this session, What API extraction adds ($0.06 for 49 files), What AST extraction does (free), When to re-run API extraction, Which backend to use
+
+### Community 86 - "Community 86"
+Cohesion: 0.33
+Nodes (6): 10. Saving the Graph as an Image, code:javascript (const canvas = document.querySelector('canvas');), code:block29 (TypeError: Failed to execute 'serializeToString' on 'XMLSeri), Higher resolution export, Save as PNG (works, confirmed), Why SVG export fails
+
+### Community 87 - "Community 87"
+Cohesion: 0.40
+Nodes (5): 2.1 Stack Choice: Redis Stack 7.4, 2.2 WARNING — The Cache Must Not Be Role-Blind, 2.3 Cosine Threshold — Why 0.97 Is the Floor, 2. Semantic Cache, code:python (import hashlib, json)
+
+### Community 88 - "Community 88"
+Cohesion: 0.40
+Nodes (5): 8. Can Claude CLI Replace the API Key?, code:block22 (Terminal only (no API, no Claude):), code:block23 ("redaction_guard()" --implements--> "access control enforcem), Summary, The one thing Claude cannot do that API extraction can
+
+### Community 89 - "Community 89"
+Cohesion: 0.50
+Nodes (4): 1. What is Graphify?, code:block1 (Your repo files  →  graphify  →  graph.json + graph.html + G), code:powershell (python -m pip install graphifyy   # note: two y's — graphify), Install
 
 ## Knowledge Gaps
-- **323 isolated node(s):** `npm`, `enabledMcpjsonServers`, `PreToolUse`, `allow`, `app.sh script` (+318 more)
+- **370 isolated node(s):** `What changed — numbers`, `Design docs (biggest gain)`, `Docs I wrote (newly indexed)`, `New concept nodes (semantic-only, didn't exist in AST)`, `code:block1 (Start nodes found: "Guard drops FIOD chunk...", ".test_seman)` (+365 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **22 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **19 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `UserContext` connect `Community 20` to `Community 0`, `Community 2`, `Community 3`, `Community 6`, `Community 8`, `Community 9`, `Community 12`, `Community 13`, `Community 15`, `Community 48`, `Community 82`, `Community 23`, `Community 28`?**
-  _High betweenness centrality (0.063) - this node is a cross-community bridge._
-- **Why does `ChunkMeta` connect `Community 13` to `Community 0`, `Community 2`, `Community 3`, `Community 6`, `Community 8`, `Community 12`, `Community 48`, `Community 18`, `Community 82`, `Community 20`, `Community 23`, `Community 28`?**
-  _High betweenness centrality (0.034) - this node is a cross-community bridge._
-- **Why does `MockRAGClient` connect `Community 2` to `Community 0`, `Community 3`, `Community 6`, `Community 9`, `Community 12`, `Community 13`, `Community 48`, `Community 82`, `Community 20`, `Community 23`, `Community 28`?**
-  _High betweenness centrality (0.025) - this node is a cross-community bridge._
+- **Why does `Enterprise RAG Architecture for the National Tax Authority` connect `Community 23` to `Community 4`, `Community 9`, `Community 45`, `Community 80`, `Community 24`, `Community 30`?**
+  _High betweenness centrality (0.083) - this node is a cross-community bridge._
+- **Why does `Module 4 — Production Ops, Security & Evaluation` connect `Community 4` to `Community 2`, `Community 6`, `Community 77`, `Community 78`, `Community 82`, `Community 23`, `Community 87`?**
+  _High betweenness centrality (0.057) - this node is a cross-community bridge._
+- **Why does `UserContext` connect `Community 1` to `Community 0`, `Community 3`, `Community 5`, `Community 7`, `Community 8`, `Community 10`, `Community 11`, `Community 12`, `Community 17`, `Community 50`, `Community 19`?**
+  _High betweenness centrality (0.046) - this node is a cross-community bridge._
 - **Are the 42 inferred relationships involving `UserContext` (e.g. with `str` and `ChunkMeta`) actually correct?**
   _`UserContext` has 42 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 41 inferred relationships involving `ChunkMeta` (e.g. with `int` and `float`) actually correct?**
