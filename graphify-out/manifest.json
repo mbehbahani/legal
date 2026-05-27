@@ -2,12 +2,12 @@
   "D:\\AWS\\Legal\\.mcp.json": {
     "mtime": 1778013456.2723863,
     "ast_hash": "11b803e930d001fb400c236512f07162",
-    "semantic_hash": ""
+    "semantic_hash": "11b803e930d001fb400c236512f07162"
   },
   "D:\\AWS\\Legal\\.claude\\settings.json": {
     "mtime": 1779835761.3293984,
     "ast_hash": "a2af1b80547aafebf69142bbb37ec82c",
-    "semantic_hash": ""
+    "semantic_hash": "a2af1b80547aafebf69142bbb37ec82c"
   },
   "D:\\AWS\\Legal\\.claude\\settings.local.json": {
     "mtime": 1779890900.230196,
@@ -17,97 +17,97 @@
   "D:\\AWS\\Legal\\docker\\healthchecks\\app.sh": {
     "mtime": 1778054386.7506196,
     "ast_hash": "65b518b7128e7832f348e48b8449d29c",
-    "semantic_hash": ""
+    "semantic_hash": "65b518b7128e7832f348e48b8449d29c"
   },
   "D:\\AWS\\Legal\\docker\\healthchecks\\jaeger.sh": {
     "mtime": 1778054381.674423,
     "ast_hash": "7dc2bf7b3c0975f99c67b431f2096b43",
-    "semantic_hash": ""
+    "semantic_hash": "7dc2bf7b3c0975f99c67b431f2096b43"
   },
   "D:\\AWS\\Legal\\docker\\healthchecks\\opensearch.sh": {
     "mtime": 1778054375.091545,
     "ast_hash": "10ea9a1fe46bbeba0c106f00f4bbed19",
-    "semantic_hash": ""
+    "semantic_hash": "10ea9a1fe46bbeba0c106f00f4bbed19"
   },
   "D:\\AWS\\Legal\\docker\\healthchecks\\redis.sh": {
     "mtime": 1778054379.2311752,
     "ast_hash": "49d2a2f2d2a7f582b2a414df638c09be",
-    "semantic_hash": ""
+    "semantic_hash": "49d2a2f2d2a7f582b2a414df638c09be"
   },
   "D:\\AWS\\Legal\\scripts\\assert_thresholds.py": {
     "mtime": 1778054510.747824,
     "ast_hash": "903c214240c6cb635c95f551eef58746",
-    "semantic_hash": ""
+    "semantic_hash": "903c214240c6cb635c95f551eef58746"
   },
   "D:\\AWS\\Legal\\scripts\\debug-shell.sh": {
     "mtime": 1778054472.9685793,
     "ast_hash": "dc908592be1558d276b2a7c6250dfa0d",
-    "semantic_hash": ""
+    "semantic_hash": "dc908592be1558d276b2a7c6250dfa0d"
   },
   "D:\\AWS\\Legal\\scripts\\emit_demo_traces.py": {
     "mtime": 1778183696.0725904,
     "ast_hash": "8a13907b4cb09deea2979b4e60494787",
-    "semantic_hash": ""
+    "semantic_hash": "8a13907b4cb09deea2979b4e60494787"
   },
   "D:\\AWS\\Legal\\scripts\\run-eval.sh": {
     "mtime": 1778054463.2530735,
     "ast_hash": "163dfee5e50edd85eb24900abfb63573",
-    "semantic_hash": ""
+    "semantic_hash": "163dfee5e50edd85eb24900abfb63573"
   },
   "D:\\AWS\\Legal\\scripts\\seed-corpus.sh": {
     "mtime": 1778054485.0671625,
     "ast_hash": "63ee030c6f730b88ef1bbb858bcf02ba",
-    "semantic_hash": ""
+    "semantic_hash": "63ee030c6f730b88ef1bbb858bcf02ba"
   },
   "D:\\AWS\\Legal\\tests\\conftest.py": {
     "mtime": 1778076859.6045775,
     "ast_hash": "4f8c2c7494d3788d53ba9743f11b97cd",
-    "semantic_hash": ""
+    "semantic_hash": "4f8c2c7494d3788d53ba9743f11b97cd"
   },
   "D:\\AWS\\Legal\\tests\\seed_opensearch.py": {
     "mtime": 1778054553.631104,
     "ast_hash": "01c589e425a98bde7587e96a82e23410",
-    "semantic_hash": ""
+    "semantic_hash": "01c589e425a98bde7587e96a82e23410"
   },
   "D:\\AWS\\Legal\\tests\\test_ambiguity_refusal.py": {
     "mtime": 1778053974.3989568,
     "ast_hash": "9e8cd0f8c75e179e0ad35c759991c4ad",
-    "semantic_hash": ""
+    "semantic_hash": "9e8cd0f8c75e179e0ad35c759991c4ad"
   },
   "D:\\AWS\\Legal\\tests\\test_citation_accuracy.py": {
     "mtime": 1778026591.1802566,
     "ast_hash": "fbeb603c00fdeb88d468398c1af31e2c",
-    "semantic_hash": ""
+    "semantic_hash": "fbeb603c00fdeb88d468398c1af31e2c"
   },
   "D:\\AWS\\Legal\\tests\\test_hybrid_retrieval.py": {
     "mtime": 1778076779.0174546,
     "ast_hash": "ed214408c5272909940489b4670b8c41",
-    "semantic_hash": ""
+    "semantic_hash": "ed214408c5272909940489b4670b8c41"
   },
   "D:\\AWS\\Legal\\tests\\test_latency_budgets.py": {
     "mtime": 1778054078.2316725,
     "ast_hash": "1f0cb4f816f79c64886bf30c7442156a",
-    "semantic_hash": ""
+    "semantic_hash": "1f0cb4f816f79c64886bf30c7442156a"
   },
   "D:\\AWS\\Legal\\tests\\test_observability.py": {
     "mtime": 1778076889.9825766,
     "ast_hash": "e1d14f20ba8e883dfb982417e8e898d7",
-    "semantic_hash": ""
+    "semantic_hash": "e1d14f20ba8e883dfb982417e8e898d7"
   },
   "D:\\AWS\\Legal\\tests\\test_rbac_redteam.py": {
     "mtime": 1778026711.1442988,
     "ast_hash": "ab3d4f74fb8be50760bf5008a5668c6b",
-    "semantic_hash": ""
+    "semantic_hash": "ab3d4f74fb8be50760bf5008a5668c6b"
   },
   "D:\\AWS\\Legal\\tests\\test_semantic_cache.py": {
     "mtime": 1778054048.2046754,
     "ast_hash": "48319798a18b5e02f1142f14262d0733",
-    "semantic_hash": ""
+    "semantic_hash": "48319798a18b5e02f1142f14262d0733"
   },
   "D:\\AWS\\Legal\\tests\\test_temporal_correctness.py": {
     "mtime": 1778026781.1125393,
     "ast_hash": "681d2f06f703d6dbbfc941b708f2d77d",
-    "semantic_hash": ""
+    "semantic_hash": "681d2f06f703d6dbbfc941b708f2d77d"
   },
   "D:\\AWS\\Legal\\CLAUDE.md": {
     "mtime": 1779835910.439806,
