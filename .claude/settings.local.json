@@ -52,7 +52,9 @@
       "PowerShell($env:GEMINI_API_KEY = \"AIzaSyCaDcDU1M2AvLmNzH0QmhlDFER3SMs7isg\"; graphify extract . --backend gemini 2>&1 | Out-String)",
       "PowerShell($env:GEMINI_API_KEY = \"AIzaSyCaDcDU1M2AvLmNzH0QmhlDFER3SMs7isg\"; graphify query \"cache key construction role-bound\" --budget 1500 2>&1 | Out-String)",
       "Bash(stat -c \"%y %s\" d:/AWS/Legal/graphify-out/graph.html 2>/dev/null || ls -la d:/AWS/Legal/graphify-out/graph.html)",
-      "Read(//d/AWS/Legal/**)"
+      "Read(//d/AWS/Legal/**)",
+      "Bash(git log *)",
+      "Bash(ls graphify-out/2026-05-28/)"
     ]
   }
 }
