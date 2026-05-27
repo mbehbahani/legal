@@ -5,7 +5,7 @@
     "semantic_hash": "11b803e930d001fb400c236512f07162"
   },
   "D:\\AWS\\Legal\\.claude\\settings.json": {
-    "mtime": 1779835761.3293984,
+    "mtime": 1779924225.0507476,
     "ast_hash": "a2af1b80547aafebf69142bbb37ec82c",
     "semantic_hash": "a2af1b80547aafebf69142bbb37ec82c"
   },
@@ -110,7 +110,7 @@
     "semantic_hash": "681d2f06f703d6dbbfc941b708f2d77d"
   },
   "D:\\AWS\\Legal\\CLAUDE.md": {
-    "mtime": 1779835910.439806,
+    "mtime": 1779924225.0527487,
     "ast_hash": "5b322c629fd4576c080a4e56142c0d6b",
     "semantic_hash": ""
   },
@@ -260,38 +260,38 @@
     "semantic_hash": ""
   },
   "D:\\AWS\\Legal\\docs\\ARCHITECTURE.md": {
-    "mtime": 1779835848.048311,
-    "ast_hash": "384f2aa425daaea7382aa33f51627201",
+    "mtime": 1779924225.0527487,
+    "ast_hash": "4d0d228cb627fc866f17acb946f43588",
     "semantic_hash": ""
   },
   "D:\\AWS\\Legal\\docs\\DEVELOPMENT_WORKFLOW.md": {
-    "mtime": 1779835882.1780145,
-    "ast_hash": "3eceb01e9a38d8d7d1a9e86e57446beb",
+    "mtime": 1779924225.0537503,
+    "ast_hash": "cafef842a6bc5f3d69a021961c515171",
     "semantic_hash": ""
   },
   "D:\\AWS\\Legal\\docs\\MODULE_MAP.md": {
-    "mtime": 1779835865.1881645,
-    "ast_hash": "629d078f90833cbce9ea20546fa83faf",
+    "mtime": 1779924225.0557506,
+    "ast_hash": "76a09102fa8ea3f103742669e29274af",
     "semantic_hash": ""
   },
   "D:\\AWS\\Legal\\docs\\PROJECT_OVERVIEW.md": {
-    "mtime": 1779835833.322111,
-    "ast_hash": "e2d7a8201f2e7c35a2772d33f63b99fc",
+    "mtime": 1779924225.0557506,
+    "ast_hash": "0a61baebdebc30f2163fe3c7709b1b75",
     "semantic_hash": ""
   },
   "D:\\AWS\\Legal\\docs\\TODO_RISKS.md": {
-    "mtime": 1779835899.0919662,
-    "ast_hash": "57a34f98a0b4631bd0424d601801040d",
+    "mtime": 1779924225.0567484,
+    "ast_hash": "e1047f12099be6a9f800888e6c027aa9",
     "semantic_hash": ""
   },
   "D:\\AWS\\Legal\\docs\\GRAPHIFY_API_ENRICHMENT.md": {
-    "mtime": 1779894540.651562,
-    "ast_hash": "c58495259468ae0c33d8394931c90e05",
+    "mtime": 1779924225.0537503,
+    "ast_hash": "643b10c2b50631800d6b746a260a3911",
     "semantic_hash": ""
   },
   "D:\\AWS\\Legal\\docs\\GRAPHIFY_COMPLETE_GUIDE.md": {
-    "mtime": 1779895446.7409024,
-    "ast_hash": "a44ea6648f102b93d6a38da3c26325cf",
+    "mtime": 1779924225.0547507,
+    "ast_hash": "8394c2dc1ef644d727deb6842ee7acd1",
     "semantic_hash": ""
   }
 }
