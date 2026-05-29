@@ -1,0 +1,2753 @@
+{
+  "version": "1.0.0",
+  "gitCommitHash": "02ea8ca7b122240eb70d722fabe0cfeff87e83b4",
+  "generatedAt": "2026-05-29T21:19:18.826Z",
+  "files": {
+    ".gitignore": {
+      "filePath": ".gitignore",
+      "contentHash": "5e1aa732d9bda8fc2483e70105db507cc4678be1abb274253fb14e680b28142e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 10,
+      "hasStructuralAnalysis": false
+    },
+    ".mcp.json": {
+      "filePath": ".mcp.json",
+      "contentHash": "7186f18346ac0b42cebfd74a82b82d3513c57a2c41785110e0c7ba361cf1eaad",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 15,
+      "hasStructuralAnalysis": true
+    },
+    "assignment": {
+      "filePath": "assignment",
+      "contentHash": "475a2da804bae1731355056a701a007cf4330954475365e49441f58ec6e34408",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 58,
+      "hasStructuralAnalysis": false
+    },
+    "launch-dashboard.ps1": {
+      "filePath": "launch-dashboard.ps1",
+      "contentHash": "7e5f806879596262bed141f2694390887b0d968c15a3314279cd172616009a19",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 10,
+      "hasStructuralAnalysis": false
+    },
+    "NEXT-SESSION-PROMPT.md": {
+      "filePath": "NEXT-SESSION-PROMPT.md",
+      "contentHash": "0405a3b2e344139fb05600d33b35bc5dfdf9964e2b103386d85d3742c5655e2d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 69,
+      "hasStructuralAnalysis": true
+    },
+    "README.md": {
+      "filePath": "README.md",
+      "contentHash": "bb9a4c514d928817e3b6689fde3bc108e8cabe5b451c20e89ae56a5069d919b0",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 203,
+      "hasStructuralAnalysis": true
+    },
+    ".claude/settings.json": {
+      "filePath": ".claude/settings.json",
+      "contentHash": "3c52c33aa819951eba2767961b90bb37e2d76c2b92a8f4bacddf0a96e1e17026",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 4,
+      "hasStructuralAnalysis": true
+    },
+    ".claude/settings.local.json": {
+      "filePath": ".claude/settings.local.json",
+      "contentHash": "e931c540025c56fde4f7ea8d08c054a334ce69fa7b0934ff4da3c6d9662be2b8",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 78,
+      "hasStructuralAnalysis": true
+    },
+    ".claude/agents/agentic-rag-designer.md": {
+      "filePath": ".claude/agents/agentic-rag-designer.md",
+      "contentHash": "e72597595df01a7ca68dd7ed8ef1a513ec558c61d776aac417db076fb2b47558",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 47,
+      "hasStructuralAnalysis": true
+    },
+    ".claude/agents/docker-runner.md": {
+      "filePath": ".claude/agents/docker-runner.md",
+      "contentHash": "cfada5f40c3ce94031a2811b21fd725379b7476d901649eaac02a6f946f23719",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 93,
+      "hasStructuralAnalysis": true
+    },
+    ".claude/agents/legal-domain-reviewer.md": {
+      "filePath": ".claude/agents/legal-domain-reviewer.md",
+      "contentHash": "5d2ce7dcb8fcaf07da833660c350e51d87123f61f197ce6cb89884d7a4ec9e14",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 33,
+      "hasStructuralAnalysis": true
+    },
+    ".claude/agents/mlops-security-architect.md": {
+      "filePath": ".claude/agents/mlops-security-architect.md",
+      "contentHash": "0eb4ac48adb253be2f74ae47a9398aa10186dda622dbb8fb66c1ba1345e2a295",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 61,
+      "hasStructuralAnalysis": true
+    },
+    ".claude/agents/process-report-author.md": {
+      "filePath": ".claude/agents/process-report-author.md",
+      "contentHash": "dcf2882d9eefc8bd24c791284f0789aaf4ab8bdad0d075fc62c545b72d6667ec",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 58,
+      "hasStructuralAnalysis": true
+    },
+    ".claude/agents/rag-evaluation-engineer.md": {
+      "filePath": ".claude/agents/rag-evaluation-engineer.md",
+      "contentHash": "fea20aa283617fc89c2fc733ded2280f8d96a5d75563832674d9eefa5e278d21",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 60,
+      "hasStructuralAnalysis": true
+    },
+    ".claude/agents/rag-retrieval-architect.md": {
+      "filePath": ".claude/agents/rag-retrieval-architect.md",
+      "contentHash": "09fcee066a6685cb42f868d9ec9eff25e5ae94aca6bbd4faa242fcd38ccf903a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 46,
+      "hasStructuralAnalysis": true
+    },
+    ".claude/agents/report-compiler.md": {
+      "filePath": ".claude/agents/report-compiler.md",
+      "contentHash": "2072beddbd7a4545fdd2005e7d53373f0b6ad82b17e53729f282d80c9236ab64",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 51,
+      "hasStructuralAnalysis": true
+    },
+    "design/FINAL-rag-architecture.md": {
+      "filePath": "design/FINAL-rag-architecture.md",
+      "contentHash": "5b4c5417983ac7cb2ec8d4dc57235f9b00e5807e287af917aa168c017632c182",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1424,
+      "hasStructuralAnalysis": true
+    },
+    "design/module-1-2-retrieval.md": {
+      "filePath": "design/module-1-2-retrieval.md",
+      "contentHash": "dec9ca78f8ce26a3a0cb968243e021c4a541c5c86e7f347a54d0d999a6c14b69",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 426,
+      "hasStructuralAnalysis": true
+    },
+    "design/module-3-agentic.md": {
+      "filePath": "design/module-3-agentic.md",
+      "contentHash": "41013bf14c3263a4af2034a00cb7f2c909e5dab09c0865f9812dfb33b11ff27e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 623,
+      "hasStructuralAnalysis": true
+    },
+    "design/module-4-ops-security.md": {
+      "filePath": "design/module-4-ops-security.md",
+      "contentHash": "0f4cb3618c6b984a1144af05da7ec9b6466357e92c91ad08a04ca1598723cc3c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 615,
+      "hasStructuralAnalysis": true
+    },
+    "docker/.dockerignore": {
+      "filePath": "docker/.dockerignore",
+      "contentHash": "ff972368463ba076e2d03c3a904e0993018c5e810a73de1286c5bcf46885b244",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 62,
+      "hasStructuralAnalysis": false
+    },
+    "docker/.env": {
+      "filePath": "docker/.env",
+      "contentHash": "25c63647d4766b4d2a4ff95f5074cf83ffad9965291485e2e2651aadfcac108a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 15,
+      "hasStructuralAnalysis": true
+    },
+    "docker/.env.example": {
+      "filePath": "docker/.env.example",
+      "contentHash": "d1f16a3ba32473afaa868a536e5411548033a49f23b06726032f50ac1168f0ee",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 39,
+      "hasStructuralAnalysis": true
+    },
+    "docker/compose.override.yml": {
+      "filePath": "docker/compose.override.yml",
+      "contentHash": "8395cba0a16fe10fa955d970707744d029db883467a255a9e6dd2b776ae0bb22",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 40,
+      "hasStructuralAnalysis": true
+    },
+    "docker/docker-compose.yml": {
+      "filePath": "docker/docker-compose.yml",
+      "contentHash": "f26d3d0c8237d484dfd4950d9b7c699b4b6d34c00717374ac2d97640f0c1d2ca",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 147,
+      "hasStructuralAnalysis": true
+    },
+    "docker/Dockerfile": {
+      "filePath": "docker/Dockerfile",
+      "contentHash": "12a9158618b9657a556ce69cf91c623a1599644ae4071e69b7cc87a68f22a5a6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 63,
+      "hasStructuralAnalysis": true
+    },
+    "docker/IAM-POLICY.md": {
+      "filePath": "docker/IAM-POLICY.md",
+      "contentHash": "1dc40a5a8a98c57c4bc529a63ed5b371e8c8cb2f827245c145222e549c8989cc",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 69,
+      "hasStructuralAnalysis": true
+    },
+    "docker/requirements.txt": {
+      "filePath": "docker/requirements.txt",
+      "contentHash": "47593659e381c48da04493c45ea81548f3e43c94483de0976e1a40d678ea7832",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 26,
+      "hasStructuralAnalysis": false
+    },
+    "docker/healthchecks/app.sh": {
+      "filePath": "docker/healthchecks/app.sh",
+      "contentHash": "77b45460367bf064cc51dadc841d5320aff328837830df1b53fb5793b538f909",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 22,
+      "hasStructuralAnalysis": true
+    },
+    "docker/healthchecks/jaeger.sh": {
+      "filePath": "docker/healthchecks/jaeger.sh",
+      "contentHash": "ef6e1d8a235ab3ead4bcaa71aedc99ac73375423ca7769a558a73a5e48e6b2de",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 6,
+      "hasStructuralAnalysis": true
+    },
+    "docker/healthchecks/opensearch.sh": {
+      "filePath": "docker/healthchecks/opensearch.sh",
+      "contentHash": "c0a2c09affd752ffed803d037ee3675fbeb58b85c953bc3e6224fcf77f53d18d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 16,
+      "hasStructuralAnalysis": true
+    },
+    "docker/healthchecks/redis.sh": {
+      "filePath": "docker/healthchecks/redis.sh",
+      "contentHash": "8dda81ccad8f9a50b8ef1509a720fc614bd311c05b946d73cfd3b72008aa42a9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 8,
+      "hasStructuralAnalysis": true
+    },
+    "plans/agentic-rag-designer-plan.md": {
+      "filePath": "plans/agentic-rag-designer-plan.md",
+      "contentHash": "f96d4e25cc960d4805172295d98c857e189d4689163cbd281cbba1307b5a9237",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 45,
+      "hasStructuralAnalysis": true
+    },
+    "plans/docker-runner-plan.md": {
+      "filePath": "plans/docker-runner-plan.md",
+      "contentHash": "b6a2bce8387d974976b9ffe0ec99c7eb08efd4f4c884e9b2e0ab18b43fdd00b3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 43,
+      "hasStructuralAnalysis": true
+    },
+    "plans/MASTER-PLAN.md": {
+      "filePath": "plans/MASTER-PLAN.md",
+      "contentHash": "98d1cddd13bfc3c09e2c370ddc44b7f25b2c1a39f7473b485675fd8b699f8b6a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 147,
+      "hasStructuralAnalysis": true
+    },
+    "plans/mlops-security-architect-plan.md": {
+      "filePath": "plans/mlops-security-architect-plan.md",
+      "contentHash": "d7087bbabccfe93865a4d9972ae23792416225f1e1b1e1b1233a60d466f28a45",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 37,
+      "hasStructuralAnalysis": true
+    },
+    "plans/rag-evaluation-engineer-plan.md": {
+      "filePath": "plans/rag-evaluation-engineer-plan.md",
+      "contentHash": "a169d341de6b2e8f8d83f5047fa86228b9704787d96c1f59cf20c814419c4eaa",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 42,
+      "hasStructuralAnalysis": true
+    },
+    "plans/rag-retrieval-architect-plan.md": {
+      "filePath": "plans/rag-retrieval-architect-plan.md",
+      "contentHash": "ce1ada98752ce75028cfe86b2af31885a1b0a210806fd6acf3e7e0ae81e43e60",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 31,
+      "hasStructuralAnalysis": true
+    },
+    "Present/module-1-ingestion.md": {
+      "filePath": "Present/module-1-ingestion.md",
+      "contentHash": "6e0fb3b854e63569ed6ce5885de6373a1e3ad056c7f7ea3a63472d1556197f4e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 446,
+      "hasStructuralAnalysis": true
+    },
+    "Present/module-2-retrieval.md": {
+      "filePath": "Present/module-2-retrieval.md",
+      "contentHash": "baea372bc2e33f2bd3493b5e80f5a9063f5790d82735217f963aa4c8cec240cf",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 399,
+      "hasStructuralAnalysis": true
+    },
+    "Present/module-3-agentic.md": {
+      "filePath": "Present/module-3-agentic.md",
+      "contentHash": "619bb8f97a66c4625f17b71bdfe4d934b23982469512d0f52f598da50567c51b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 447,
+      "hasStructuralAnalysis": true
+    },
+    "Present/module-4-ops-security.md": {
+      "filePath": "Present/module-4-ops-security.md",
+      "contentHash": "998d38bfd0bd420b8fd44eeaf9dfc2e2401a88fae92ec0d93005b4b5b872c0d7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 593,
+      "hasStructuralAnalysis": true
+    },
+    "Present/presentation": {
+      "filePath": "Present/presentation",
+      "contentHash": "1305b54ba52bd0bbb677b543aa404f7ca2d550eb9d8d8b0011bae5664309d1c9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 120,
+      "hasStructuralAnalysis": false
+    },
+    "Present/presentation-answers.md": {
+      "filePath": "Present/presentation-answers.md",
+      "contentHash": "5769072d3b2d0bc055dfdd3087985d66c35d66fe4b114e099c4fe3a166c11025",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 311,
+      "hasStructuralAnalysis": true
+    },
+    "Present/slidev/.gitignore": {
+      "filePath": "Present/slidev/.gitignore",
+      "contentHash": "fb9b1d8d2eed86fa821ee4cd88572aefe6494f67ad1ae1c7f867ee0df4e24962",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 8,
+      "hasStructuralAnalysis": false
+    },
+    "Present/slidev/package.json": {
+      "filePath": "Present/slidev/package.json",
+      "contentHash": "1b31aae3eea6d5ca74ba2186719640af26fd756db3574772c5d1ba00359dd16f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 21,
+      "hasStructuralAnalysis": true
+    },
+    "Present/slidev/README.md": {
+      "filePath": "Present/slidev/README.md",
+      "contentHash": "3cd38da68c74604a33b9c5317c0e433a96dd2b83b80496daeb0132f87ce68d5f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 77,
+      "hasStructuralAnalysis": true
+    },
+    "Present/slidev/slides.md": {
+      "filePath": "Present/slidev/slides.md",
+      "contentHash": "86e2e45d416d349e0ced77d7828cfd72cd08ac45619fda11ba64a5a7c837910a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1086,
+      "hasStructuralAnalysis": true
+    },
+    "Present/slidev/components/AgentGantt.vue": {
+      "filePath": "Present/slidev/components/AgentGantt.vue",
+      "contentHash": "54e1ca220ff3a6024e05f3bcfdf6108aafa8ff67542b3d64b430a2f84a1519f6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 169,
+      "hasStructuralAnalysis": false
+    },
+    "Present/slidev/components/AgentGraph.vue": {
+      "filePath": "Present/slidev/components/AgentGraph.vue",
+      "contentHash": "9f8c548dd666df184fec63272e01ee128246900d7199c7ad5d9fa08cf7ce6a6a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 292,
+      "hasStructuralAnalysis": false
+    },
+    "Present/slidev/components/AgentPlanMap.vue": {
+      "filePath": "Present/slidev/components/AgentPlanMap.vue",
+      "contentHash": "9c18a9afd4d66b571328742ccee2696906c2188af548be403eb80f4890b59ff5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 228,
+      "hasStructuralAnalysis": false
+    },
+    "Present/slidev/components/Funnel.vue": {
+      "filePath": "Present/slidev/components/Funnel.vue",
+      "contentHash": "fb5367d68d4bdcfe5ef894bd22da55b2d49ca954774c58c57e3c6a13e8374ea3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 94,
+      "hasStructuralAnalysis": false
+    },
+    "Present/slidev/components/LayerStack.vue": {
+      "filePath": "Present/slidev/components/LayerStack.vue",
+      "contentHash": "faf43a3326500b785992482a8e6177884d04ba36695fff197d4e769e176f1cbb",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 120,
+      "hasStructuralAnalysis": false
+    },
+    "Present/slidev/components/PipeFlow.vue": {
+      "filePath": "Present/slidev/components/PipeFlow.vue",
+      "contentHash": "6a45428972dcca35b45fee80001d221635298d0fdee3c13ec83694944139627a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 80,
+      "hasStructuralAnalysis": false
+    },
+    "Present/slidev/components/PlanGraph.vue": {
+      "filePath": "Present/slidev/components/PlanGraph.vue",
+      "contentHash": "971c644daa9acd7beed5f7bc456a9f7235efe7a679d4db01590c8e4e0ee8323f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 215,
+      "hasStructuralAnalysis": false
+    },
+    "Present/slidev/components/Ribbon.vue": {
+      "filePath": "Present/slidev/components/Ribbon.vue",
+      "contentHash": "7d48b4e97dbfd348f58d89373a128c789738e7c9f6e6955dc40ab6f915fa0faa",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 71,
+      "hasStructuralAnalysis": false
+    },
+    "Present/slidev/components/StatTile.vue": {
+      "filePath": "Present/slidev/components/StatTile.vue",
+      "contentHash": "bf99d2c62170e172843c4b5732eb7cf43ac92f19eaa6f09956cd3138052b7128",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 56,
+      "hasStructuralAnalysis": false
+    },
+    "Present/slidev/components/TreeChunk.vue": {
+      "filePath": "Present/slidev/components/TreeChunk.vue",
+      "contentHash": "0550a0e607e978a091e18e438ca562d4656da3a08f0ebc9bf3e7e31baae50de9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 199,
+      "hasStructuralAnalysis": false
+    },
+    "Present/slidev/components/Waterfall.vue": {
+      "filePath": "Present/slidev/components/Waterfall.vue",
+      "contentHash": "a8f35f905791861cefe0f7dca4deb983cfbc3d0cb2b3b0827915f11f0b7f39f0",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 122,
+      "hasStructuralAnalysis": false
+    },
+    "Present/slidev/layouts/cover.vue": {
+      "filePath": "Present/slidev/layouts/cover.vue",
+      "contentHash": "84bed47d79a7b2c75ed65cbe7311257ee6603731ef4c587e517c293659c8fbcf",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 60,
+      "hasStructuralAnalysis": false
+    },
+    "Present/slidev/layouts/default.vue": {
+      "filePath": "Present/slidev/layouts/default.vue",
+      "contentHash": "7e80a0778fd03b814ebe34045333f606c2717857bc61d39d9418962dc0ce998f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 40,
+      "hasStructuralAnalysis": false
+    },
+    "Present/slidev/layouts/fullimage.vue": {
+      "filePath": "Present/slidev/layouts/fullimage.vue",
+      "contentHash": "4845e54475b5d3bc056876cc7c4dbd84808714cb5b39d7c2d19a8f850b1f4207",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 47,
+      "hasStructuralAnalysis": false
+    },
+    "Present/slidev/layouts/section.vue": {
+      "filePath": "Present/slidev/layouts/section.vue",
+      "contentHash": "49dee6933d2f7f32f7cdb41f4d77e86a74a0fce63a6c14e62bac5aa93729294b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 63,
+      "hasStructuralAnalysis": false
+    },
+    "Present/slidev/styles/index.css": {
+      "filePath": "Present/slidev/styles/index.css",
+      "contentHash": "15061443a0941171f79766eaca4f3c3d351adafdb89419b5843ad81c11bccaba",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 241,
+      "hasStructuralAnalysis": false
+    },
+    "reports/agent-timings.jsonl": {
+      "filePath": "reports/agent-timings.jsonl",
+      "contentHash": "d8f094147dc87021d4231fe5684404aecc6f8cb0eeac1fd9d5ab696db92f9248",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 10,
+      "hasStructuralAnalysis": false
+    },
+    "reports/jaeger-observability.md": {
+      "filePath": "reports/jaeger-observability.md",
+      "contentHash": "725fa027e8e4397d4140e5e14a5e0243a347f814b57625652ac7b48cd115ec4e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 193,
+      "hasStructuralAnalysis": true
+    },
+    "reports/junit.xml": {
+      "filePath": "reports/junit.xml",
+      "contentHash": "3825df87a2d3674c009327c1d3f48b949d07d84a4a1fc3df6f60f194a556ac01",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": false
+    },
+    "reports/PROCESS-REPORT.md": {
+      "filePath": "reports/PROCESS-REPORT.md",
+      "contentHash": "4f8c7125fccaf3e84d0136754c4916a3418a7505a7d243363d41dac91059c11c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 438,
+      "hasStructuralAnalysis": true
+    },
+    "reports/test-results.md": {
+      "filePath": "reports/test-results.md",
+      "contentHash": "66416220f6e5f11e4dd0be43f7a9da591ac28d22f09998545b0b8e87e54cc393",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 134,
+      "hasStructuralAnalysis": true
+    },
+    "reports/understand-session-report.md": {
+      "filePath": "reports/understand-session-report.md",
+      "contentHash": "d24363ebdf609f7ebb6f76738b415a4d8e52dfb9b46536366632191264d660b5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 240,
+      "hasStructuralAnalysis": true
+    },
+    "reports/youtube-script.md": {
+      "filePath": "reports/youtube-script.md",
+      "contentHash": "1c783a58e562205b905cf9bd1ec1a143addac2e03f3cd879a207317397d8e13f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 252,
+      "hasStructuralAnalysis": true
+    },
+    "reports/jaeger-screenshots/trace-cache-hit-raw.json": {
+      "filePath": "reports/jaeger-screenshots/trace-cache-hit-raw.json",
+      "contentHash": "5f014902c434549188d0b6bdfa5af2862c3a1a57c33319781f91be69fe190f38",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": true
+    },
+    "reports/jaeger-screenshots/trace-generation-raw.json": {
+      "filePath": "reports/jaeger-screenshots/trace-generation-raw.json",
+      "contentHash": "112cf962b21cb2c492f0b6aa81a22aab06dc5215590ac223cc3b97168ccfcd63",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": true
+    },
+    "reports/jaeger-screenshots/trace-refusal-raw.json": {
+      "filePath": "reports/jaeger-screenshots/trace-refusal-raw.json",
+      "contentHash": "79ae6cc1e833aa1de4459eb20839d3d4c4cc24ee1afe5b86da75581ce0bd1dd6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/assert_thresholds.py": {
+      "filePath": "scripts/assert_thresholds.py",
+      "contentHash": "5d1df396320870689cb99adf6fa92e185f698ed6ca36e7c03044fb3f2638d5e7",
+      "functions": [
+        {
+          "name": "parse_junit",
+          "params": [
+            "junit_path"
+          ],
+          "returnType": "dict",
+          "exported": true,
+          "lineCount": 36
+        },
+        {
+          "name": "main",
+          "params": [],
+          "returnType": "int",
+          "exported": true,
+          "lineCount": 73
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "argparse",
+          "specifiers": [
+            "argparse"
+          ]
+        },
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "xml.etree.ElementTree",
+          "specifiers": [
+            "ET"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        }
+      ],
+      "exports": [
+        "parse_junit",
+        "main"
+      ],
+      "totalLines": 149,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/cleanup-knowledge-graph.py": {
+      "filePath": "scripts/cleanup-knowledge-graph.py",
+      "contentHash": "2d6894cab23d93877cd0f7c35c33f23f7a942e3967ad2fd3a44ec3b707ecbf65",
+      "functions": [
+        {
+          "name": "flatten_node",
+          "params": [
+            "node"
+          ],
+          "returnType": "dict",
+          "exported": true,
+          "lineCount": 39
+        },
+        {
+          "name": "remap_edge",
+          "params": [
+            "edge"
+          ],
+          "returnType": "dict",
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "edge_count",
+          "params": [
+            "nodes",
+            "edges"
+          ],
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "main",
+          "params": [],
+          "exported": true,
+          "lineCount": 74
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "shutil",
+          "specifiers": [
+            "shutil"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "collections",
+          "specifiers": [
+            "Counter"
+          ]
+        }
+      ],
+      "exports": [
+        "flatten_node",
+        "remap_edge",
+        "edge_count",
+        "main"
+      ],
+      "totalLines": 210,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/debug-shell.sh": {
+      "filePath": "scripts/debug-shell.sh",
+      "contentHash": "b5e53a93af3af08a9cb2c66b2b7b49f7935079c1b61ae3a6fa4bda82056d5472",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 52,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/emit_demo_traces.py": {
+      "filePath": "scripts/emit_demo_traces.py",
+      "contentHash": "b76917e0aa4305744907cf173bdad1da6d1404c97450ac49489ead1c97558d0a",
+      "functions": [
+        {
+          "name": "emit_trace",
+          "params": [
+            "scenario"
+          ],
+          "exported": true,
+          "lineCount": 92
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "time",
+          "specifiers": [
+            "time"
+          ]
+        },
+        {
+          "source": "random",
+          "specifiers": [
+            "random"
+          ]
+        },
+        {
+          "source": "opentelemetry",
+          "specifiers": [
+            "trace"
+          ]
+        },
+        {
+          "source": "opentelemetry.sdk.trace",
+          "specifiers": [
+            "TracerProvider"
+          ]
+        },
+        {
+          "source": "opentelemetry.sdk.trace.export",
+          "specifiers": [
+            "BatchSpanProcessor"
+          ]
+        },
+        {
+          "source": "opentelemetry.exporter.otlp.proto.grpc.trace_exporter",
+          "specifiers": [
+            "OTLPSpanExporter"
+          ]
+        },
+        {
+          "source": "opentelemetry.sdk.resources",
+          "specifiers": [
+            "Resource"
+          ]
+        }
+      ],
+      "exports": [
+        "emit_trace"
+      ],
+      "totalLines": 177,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/run-eval.sh": {
+      "filePath": "scripts/run-eval.sh",
+      "contentHash": "78af4f7c46db27c6d53c1e23165598f0da09b8d42bf76b8c68b77a3b62cff641",
+      "functions": [
+        {
+          "name": "wait_for_service",
+          "params": [],
+          "exported": false,
+          "lineCount": 37
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 328,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/seed-corpus.sh": {
+      "filePath": "scripts/seed-corpus.sh",
+      "contentHash": "4a29fe66f41139335361098cd9aeacf4fe753de86ea40b29ea55ab92986bf172",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 55,
+      "hasStructuralAnalysis": true
+    },
+    "tests/conftest.py": {
+      "filePath": "tests/conftest.py",
+      "contentHash": "1126061a3a3dcd80b54f23f6d307aad4ff4be87c4002848e16d091c9c189dece",
+      "functions": [
+        {
+          "name": "_make_chunk",
+          "params": [
+            "doc_id",
+            "doc_type",
+            "text",
+            "classification",
+            "article",
+            "lid",
+            "onderdeel",
+            "sub",
+            "tax_year",
+            "eli",
+            "ecli",
+            "valid_from",
+            "valid_to",
+            "superseded_by",
+            "chunk_id"
+          ],
+          "returnType": "ChunkMeta",
+          "exported": true,
+          "lineCount": 53
+        },
+        {
+          "name": "user_helpdesk",
+          "params": [],
+          "returnType": "UserContext",
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "user_inspector",
+          "params": [],
+          "returnType": "UserContext",
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "user_legal",
+          "params": [],
+          "returnType": "UserContext",
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "user_fiod",
+          "params": [],
+          "returnType": "UserContext",
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "bedrock_runtime",
+          "params": [],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "bedrock_client",
+          "params": [],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "haiku_judge",
+          "params": [
+            "bedrock_runtime"
+          ],
+          "returnType": "HaikuJudge",
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "opensearch_client",
+          "params": [],
+          "returnType": "OpenSearch",
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "async_opensearch_client",
+          "params": [],
+          "returnType": "AsyncOpenSearch",
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "redis_client",
+          "params": [],
+          "returnType": "redis.Redis",
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "flush_test_cache_keys",
+          "params": [
+            "redis_client"
+          ],
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "telemetry_sink",
+          "params": [],
+          "returnType": "TelemetrySink",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "mock_rag_client",
+          "params": [
+            "telemetry_sink"
+          ],
+          "returnType": "MockRAGClient",
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "load_golden_qa",
+          "params": [],
+          "returnType": "list[dict]",
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "golden_qa",
+          "params": [],
+          "returnType": "list[dict]",
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "embedding_client",
+          "params": [
+            "bedrock_runtime"
+          ],
+          "returnType": "EmbeddingClient",
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "make_trace_id",
+          "params": [],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "assert_no_fiod_content",
+          "params": [
+            "text",
+            "fiod_doc_ids"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 17
+        },
+        {
+          "name": "build_cache_key",
+          "params": [
+            "query_embedding_bucket",
+            "user_role",
+            "classification_ceiling",
+            "tax_year_context"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 20
+        }
+      ],
+      "classes": [
+        {
+          "name": "UserContext",
+          "methods": [
+            "allowed_classifications"
+          ],
+          "properties": [
+            "user_id",
+            "role",
+            "classification_ceiling"
+          ],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "ChunkMeta",
+          "methods": [],
+          "properties": [
+            "chunk_id",
+            "doc_id",
+            "doc_type",
+            "text",
+            "classification",
+            "eli",
+            "ecli",
+            "article",
+            "paragraph",
+            "lid",
+            "onderdeel",
+            "sub",
+            "hierarchy_path",
+            "valid_from",
+            "valid_to",
+            "tax_year",
+            "superseded_by",
+            "score",
+            "parent_chunk_id",
+            "parent_text"
+          ],
+          "exported": true,
+          "lineCount": 21
+        },
+        {
+          "name": "RAGResponse",
+          "methods": [],
+          "properties": [
+            "trace_id",
+            "answer",
+            "citations",
+            "grader_verdict",
+            "chunks",
+            "refusal_payload",
+            "ttft_ms",
+            "total_ms",
+            "retrieval_ms",
+            "rerank_ms",
+            "cache_hit",
+            "attempt_count",
+            "gen_retry_count",
+            "bedrock_input_tokens",
+            "bedrock_output_tokens"
+          ],
+          "exported": true,
+          "lineCount": 16
+        },
+        {
+          "name": "HaikuJudge",
+          "methods": [
+            "__init__",
+            "judge_entailment",
+            "judge_refusal",
+            "judge_faithfulness"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 170
+        },
+        {
+          "name": "SpanRecord",
+          "methods": [
+            "duration_ms"
+          ],
+          "properties": [
+            "name",
+            "attributes",
+            "start_time_ns",
+            "end_time_ns"
+          ],
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "TelemetrySink",
+          "methods": [
+            "__init__",
+            "emit",
+            "spans",
+            "spans_by_name",
+            "clear"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 27
+        },
+        {
+          "name": "MockRAGClient",
+          "methods": [
+            "__init__",
+            "retrieve",
+            "query"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 272
+        },
+        {
+          "name": "EmbeddingClient",
+          "methods": [
+            "__init__",
+            "embed",
+            "cosine_similarity"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 34
+        }
+      ],
+      "imports": [
+        {
+          "source": "asyncio",
+          "specifiers": [
+            "asyncio"
+          ]
+        },
+        {
+          "source": "hashlib",
+          "specifiers": [
+            "hashlib"
+          ]
+        },
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "os",
+          "specifiers": [
+            "os"
+          ]
+        },
+        {
+          "source": "time",
+          "specifiers": [
+            "time"
+          ]
+        },
+        {
+          "source": "uuid",
+          "specifiers": [
+            "uuid"
+          ]
+        },
+        {
+          "source": "dataclasses",
+          "specifiers": [
+            "dataclass",
+            "field"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Any",
+            "Generator",
+            "Literal",
+            "Optional"
+          ]
+        },
+        {
+          "source": "boto3",
+          "specifiers": [
+            "boto3"
+          ]
+        },
+        {
+          "source": "pytest",
+          "specifiers": [
+            "pytest"
+          ]
+        },
+        {
+          "source": "pytest_asyncio",
+          "specifiers": [
+            "pytest_asyncio"
+          ]
+        },
+        {
+          "source": "redis",
+          "specifiers": [
+            "redis"
+          ]
+        },
+        {
+          "source": "opensearchpy",
+          "specifiers": [
+            "AsyncOpenSearch",
+            "OpenSearch"
+          ]
+        }
+      ],
+      "exports": [
+        "UserContext",
+        "ChunkMeta",
+        "RAGResponse",
+        "_make_chunk",
+        "user_helpdesk",
+        "user_inspector",
+        "user_legal",
+        "user_fiod",
+        "bedrock_runtime",
+        "bedrock_client",
+        "HaikuJudge",
+        "haiku_judge",
+        "opensearch_client",
+        "async_opensearch_client",
+        "redis_client",
+        "flush_test_cache_keys",
+        "SpanRecord",
+        "TelemetrySink",
+        "telemetry_sink",
+        "MockRAGClient",
+        "mock_rag_client",
+        "load_golden_qa",
+        "golden_qa",
+        "EmbeddingClient",
+        "embedding_client",
+        "make_trace_id",
+        "assert_no_fiod_content",
+        "build_cache_key"
+      ],
+      "totalLines": 1208,
+      "hasStructuralAnalysis": true
+    },
+    "tests/pytest.ini": {
+      "filePath": "tests/pytest.ini",
+      "contentHash": "80feddfa9c468f17dd45f8dc33d4724aa0c6b5f8ae1a49f7b6680673860bfceb",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 29,
+      "hasStructuralAnalysis": false
+    },
+    "tests/seed_opensearch.py": {
+      "filePath": "tests/seed_opensearch.py",
+      "contentHash": "74ea1843e3a4926ed1f4003924517ab6839bfeb8df3d4bb5cb331a0a0f2cf421",
+      "functions": [
+        {
+          "name": "random_vector",
+          "params": [
+            "dim"
+          ],
+          "returnType": "list[float]",
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "chunk_to_doc",
+          "params": [
+            "chunk"
+          ],
+          "returnType": "dict",
+          "exported": true,
+          "lineCount": 24
+        },
+        {
+          "name": "generate_synthetic_fixtures",
+          "params": [
+            "n"
+          ],
+          "returnType": "list[ChunkMeta]",
+          "exported": true,
+          "lineCount": 53
+        },
+        {
+          "name": "ensure_index",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "seed_chunks",
+          "params": [
+            "chunks"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 17
+        },
+        {
+          "name": "main",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 34
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "os",
+          "specifiers": [
+            "os"
+          ]
+        },
+        {
+          "source": "random",
+          "specifiers": [
+            "random"
+          ]
+        },
+        {
+          "source": "time",
+          "specifiers": [
+            "time"
+          ]
+        },
+        {
+          "source": "uuid",
+          "specifiers": [
+            "uuid"
+          ]
+        },
+        {
+          "source": "dataclasses",
+          "specifiers": [
+            "asdict"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Optional"
+          ]
+        },
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "opensearchpy",
+          "specifiers": [
+            "OpenSearch",
+            "RequestError"
+          ]
+        },
+        {
+          "source": "opensearchpy.helpers",
+          "specifiers": [
+            "bulk"
+          ]
+        },
+        {
+          "source": "conftest",
+          "specifiers": [
+            "MOCK_CORPUS",
+            "ChunkMeta"
+          ]
+        }
+      ],
+      "exports": [
+        "random_vector",
+        "chunk_to_doc",
+        "generate_synthetic_fixtures",
+        "ensure_index",
+        "seed_chunks",
+        "main"
+      ],
+      "totalLines": 263,
+      "hasStructuralAnalysis": true
+    },
+    "tests/TEST-PLAN.md": {
+      "filePath": "tests/TEST-PLAN.md",
+      "contentHash": "8e5c8d53c24f3b950703879ec5b940e4d45fabba34a283a8a6cd2f1c48ae82f6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 62,
+      "hasStructuralAnalysis": true
+    },
+    "tests/test_ambiguity_refusal.py": {
+      "filePath": "tests/test_ambiguity_refusal.py",
+      "contentHash": "9be9f013c4bd5b2c4058f03ce08653a84709db49d7d98505f7dea46d2c46bf78",
+      "functions": [
+        {
+          "name": "test_out_of_corpus_query_refuses",
+          "params": [
+            "mock_rag_client",
+            "user_helpdesk",
+            "query"
+          ],
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "test_underspecified_query_does_not_fabricate",
+          "params": [
+            "mock_rag_client",
+            "user_inspector",
+            "query"
+          ],
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "test_contradictory_query_refuses_or_disambiguates",
+          "params": [
+            "mock_rag_client",
+            "user_inspector",
+            "query"
+          ],
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "test_refusal_payload_shape",
+          "params": [
+            "mock_rag_client",
+            "user_helpdesk"
+          ],
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "test_no_citations_on_empty_grounding",
+          "params": [
+            "mock_rag_client",
+            "user_helpdesk"
+          ],
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "test_grader_verdict_propagated",
+          "params": [
+            "mock_rag_client",
+            "user_helpdesk"
+          ],
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "test_loop_guard_caps_attempts",
+          "params": [
+            "mock_rag_client",
+            "user_helpdesk"
+          ],
+          "exported": true,
+          "lineCount": 11
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "pytest",
+          "specifiers": [
+            "pytest"
+          ]
+        },
+        {
+          "source": "conftest",
+          "specifiers": [
+            "MockRAGClient",
+            "UserContext"
+          ]
+        }
+      ],
+      "exports": [
+        "test_out_of_corpus_query_refuses",
+        "test_underspecified_query_does_not_fabricate",
+        "test_contradictory_query_refuses_or_disambiguates",
+        "test_refusal_payload_shape",
+        "test_no_citations_on_empty_grounding",
+        "test_grader_verdict_propagated",
+        "test_loop_guard_caps_attempts"
+      ],
+      "totalLines": 153,
+      "hasStructuralAnalysis": true
+    },
+    "tests/test_citation_accuracy.py": {
+      "filePath": "tests/test_citation_accuracy.py",
+      "contentHash": "fdec96e726a81abf0d3cf4ad7c9466b226cecdc89becdcd2779ad73ab5acf502",
+      "functions": [
+        {
+          "name": "extract_citation_tuples",
+          "params": [
+            "answer_text"
+          ],
+          "returnType": "list[dict]",
+          "exported": true,
+          "lineCount": 25
+        },
+        {
+          "name": "chunk_matches_citation",
+          "params": [
+            "chunk",
+            "citation"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 38
+        },
+        {
+          "name": "verify_citations_deterministic",
+          "params": [
+            "answer_text",
+            "retrieved_chunks"
+          ],
+          "returnType": "tuple[list[dict], list[dict]]",
+          "exported": true,
+          "lineCount": 15
+        }
+      ],
+      "classes": [
+        {
+          "name": "TestCitationAnchorDepth",
+          "methods": [
+            "test_anchor_extracts_full_depth",
+            "test_anchor_extracts_sub_level",
+            "test_wrong_lid_is_unsupported",
+            "test_wrong_onderdeel_is_unsupported",
+            "test_correct_full_depth_citation_is_supported",
+            "test_sub_level_mismatch_is_unsupported",
+            "test_ecli_citation_matched_by_ecli_field",
+            "test_nonexistent_ecli_is_unsupported"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 97
+        },
+        {
+          "name": "TestCitationNLIJudge",
+          "methods": [
+            "test_faithful_claim_is_entailed",
+            "test_hallucinated_claim_is_not_entailed",
+            "test_wrong_year_claim_is_not_entailed",
+            "test_faithfulness_score_passes_threshold",
+            "test_faithfulness_score_fails_on_hallucination"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 86
+        },
+        {
+          "name": "TestCitationOnGoldenSet",
+          "methods": [
+            "test_mock_response_citations_are_grounded",
+            "test_expected_citations_match_lid_onderdeel"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 86
+        },
+        {
+          "name": "TestCitationOnEmptyGrounding",
+          "methods": [
+            "test_structured_refusal_has_no_citations",
+            "test_ambiguous_response_has_no_fabricated_article"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 41
+        }
+      ],
+      "imports": [
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Optional"
+          ]
+        },
+        {
+          "source": "pytest",
+          "specifiers": [
+            "pytest"
+          ]
+        },
+        {
+          "source": "conftest",
+          "specifiers": [
+            "CITATION_ACCURACY_THRESHOLD",
+            "FAITHFULNESS_THRESHOLD",
+            "MOCK_CORPUS",
+            "CORPUS_BY_DOC_ID",
+            "ChunkMeta",
+            "HaikuJudge",
+            "MockRAGClient",
+            "RAGResponse",
+            "UserContext",
+            "load_golden_qa"
+          ]
+        }
+      ],
+      "exports": [
+        "extract_citation_tuples",
+        "chunk_matches_citation",
+        "verify_citations_deterministic",
+        "TestCitationAnchorDepth",
+        "TestCitationNLIJudge",
+        "TestCitationOnGoldenSet",
+        "TestCitationOnEmptyGrounding"
+      ],
+      "totalLines": 481,
+      "hasStructuralAnalysis": true
+    },
+    "tests/test_hybrid_retrieval.py": {
+      "filePath": "tests/test_hybrid_retrieval.py",
+      "contentHash": "f30e254cafcd121ad055dd7a8e80a60de4e2c7f85541c9447b843c397017f1a9",
+      "functions": [
+        {
+          "name": "bm25_rank",
+          "params": [
+            "query",
+            "corpus",
+            "top_k"
+          ],
+          "returnType": "list[ChunkMeta]",
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "dense_rank",
+          "params": [
+            "query",
+            "corpus",
+            "top_k"
+          ],
+          "returnType": "list[ChunkMeta]",
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "rrf_fuse",
+          "params": [
+            "rankings",
+            "k",
+            "top_k"
+          ],
+          "returnType": "list[ChunkMeta]",
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "mock_rerank",
+          "params": [
+            "query",
+            "candidates",
+            "top_n"
+          ],
+          "returnType": "list[ChunkMeta]",
+          "exported": true,
+          "lineCount": 17
+        },
+        {
+          "name": "ndcg_at_k",
+          "params": [
+            "retrieved",
+            "relevant_chunk_ids",
+            "k"
+          ],
+          "returnType": "float",
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "test_ecli_exact_match_ranks_first",
+          "params": [
+            "query",
+            "expected_chunk_id"
+          ],
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "test_article_number_exact_match",
+          "params": [],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "test_semantic_query_hits_top5",
+          "params": [],
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "test_rrf_fusion_combines_arms",
+          "params": [],
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "test_rrf_handles_empty_arm",
+          "params": [],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "test_reranker_improves_ndcg_at_5",
+          "params": [],
+          "exported": true,
+          "lineCount": 16
+        },
+        {
+          "name": "test_top_k_cascade_sizes",
+          "params": [],
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "test_hybrid_routes_ecli_via_bm25_boost",
+          "params": [],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "math",
+          "specifiers": [
+            "math"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Optional"
+          ]
+        },
+        {
+          "source": "pytest",
+          "specifiers": [
+            "pytest"
+          ]
+        },
+        {
+          "source": "conftest",
+          "specifiers": [
+            "MOCK_CORPUS",
+            "ChunkMeta",
+            "UserContext",
+            "TOP_K_RERANK",
+            "TOP_K_RRF"
+          ]
+        }
+      ],
+      "exports": [
+        "bm25_rank",
+        "dense_rank",
+        "rrf_fuse",
+        "mock_rerank",
+        "ndcg_at_k",
+        "test_ecli_exact_match_ranks_first",
+        "test_article_number_exact_match",
+        "test_semantic_query_hits_top5",
+        "test_rrf_fusion_combines_arms",
+        "test_rrf_handles_empty_arm",
+        "test_reranker_improves_ndcg_at_5",
+        "test_top_k_cascade_sizes",
+        "test_hybrid_routes_ecli_via_bm25_boost"
+      ],
+      "totalLines": 215,
+      "hasStructuralAnalysis": true
+    },
+    "tests/test_latency_budgets.py": {
+      "filePath": "tests/test_latency_budgets.py",
+      "contentHash": "cae33f40bc4980122b205f8d7f351d82bec335f687e8b5f8a2d7b3a3acb65ff4",
+      "functions": [
+        {
+          "name": "_percentile",
+          "params": [
+            "values",
+            "pct"
+          ],
+          "returnType": "float",
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "test_ttft_p95_within_budget",
+          "params": [
+            "mock_rag_client",
+            "user_inspector"
+          ],
+          "exported": true,
+          "lineCount": 18
+        },
+        {
+          "name": "test_ttft_p99_within_budget",
+          "params": [
+            "mock_rag_client",
+            "user_inspector"
+          ],
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "test_e2e_p95_within_budget",
+          "params": [
+            "mock_rag_client",
+            "user_inspector"
+          ],
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "test_retrieval_p95_within_budget",
+          "params": [
+            "mock_rag_client",
+            "user_inspector"
+          ],
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "test_rerank_p95_budget_constant_is_set",
+          "params": [],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "test_latency_constants_match_module4_thresholds",
+          "params": [],
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "test_warm_cache_is_not_slower_than_cold",
+          "params": [
+            "mock_rag_client",
+            "user_inspector"
+          ],
+          "exported": true,
+          "lineCount": 20
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "statistics",
+          "specifiers": [
+            "statistics"
+          ]
+        },
+        {
+          "source": "time",
+          "specifiers": [
+            "time"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Callable",
+            "Iterable"
+          ]
+        },
+        {
+          "source": "pytest",
+          "specifiers": [
+            "pytest"
+          ]
+        },
+        {
+          "source": "conftest",
+          "specifiers": [
+            "LATENCY_P95_TTFT_MS",
+            "LATENCY_P99_TTFT_MS",
+            "LATENCY_P95_E2E_MS",
+            "RETRIEVAL_P95_MS",
+            "RERANK_P95_MS",
+            "MOCK_CORPUS",
+            "UserContext"
+          ]
+        }
+      ],
+      "exports": [
+        "_percentile",
+        "test_ttft_p95_within_budget",
+        "test_ttft_p99_within_budget",
+        "test_e2e_p95_within_budget",
+        "test_retrieval_p95_within_budget",
+        "test_rerank_p95_budget_constant_is_set",
+        "test_latency_constants_match_module4_thresholds",
+        "test_warm_cache_is_not_slower_than_cold"
+      ],
+      "totalLines": 174,
+      "hasStructuralAnalysis": true
+    },
+    "tests/test_observability.py": {
+      "filePath": "tests/test_observability.py",
+      "contentHash": "70c4b5de3d3c7894d6f04f44871c69757856fda77df2190ea2895b02cea66fbe",
+      "functions": [
+        {
+          "name": "test_request_emits_trace",
+          "params": [
+            "mock_rag_client",
+            "user_helpdesk",
+            "telemetry_sink"
+          ],
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "test_generate_span_has_bedrock_metadata",
+          "params": [
+            "mock_rag_client",
+            "user_inspector",
+            "telemetry_sink"
+          ],
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "test_user_role_propagates_to_every_span",
+          "params": [
+            "mock_rag_client",
+            "user_helpdesk",
+            "telemetry_sink"
+          ],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "test_refusal_span_emitted_on_irrelevant",
+          "params": [
+            "mock_rag_client",
+            "user_helpdesk",
+            "telemetry_sink"
+          ],
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "test_grader_verdict_attribute_present",
+          "params": [
+            "mock_rag_client",
+            "user_inspector",
+            "telemetry_sink"
+          ],
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "test_loop_guard_counters_in_span",
+          "params": [
+            "mock_rag_client",
+            "user_inspector",
+            "telemetry_sink"
+          ],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "context_precision",
+          "params": [
+            "retrieved_docs",
+            "relevant_docs"
+          ],
+          "returnType": "float",
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "context_recall",
+          "params": [
+            "retrieved_docs",
+            "relevant_docs"
+          ],
+          "returnType": "float",
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "answer_relevancy",
+          "params": [
+            "answer",
+            "query"
+          ],
+          "returnType": "float",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "test_context_precision_gate",
+          "params": [
+            "mock_rag_client",
+            "user_inspector",
+            "query",
+            "relevant_doc_ids"
+          ],
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "test_context_recall_gate",
+          "params": [
+            "mock_rag_client",
+            "user_inspector",
+            "query",
+            "relevant_doc_ids"
+          ],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "test_answer_relevancy_gate_threshold_constant",
+          "params": [],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "test_faithfulness_gate_threshold_constant",
+          "params": [],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "test_citation_count_emitted",
+          "params": [
+            "mock_rag_client",
+            "user_inspector",
+            "telemetry_sink"
+          ],
+          "exported": true,
+          "lineCount": 7
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "math",
+          "specifiers": [
+            "math"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Iterable"
+          ]
+        },
+        {
+          "source": "pytest",
+          "specifiers": [
+            "pytest"
+          ]
+        },
+        {
+          "source": "conftest",
+          "specifiers": [
+            "ANSWER_RELEVANCY_THRESHOLD",
+            "BEDROCK_LLM_ID",
+            "CTX_PRECISION_THRESHOLD",
+            "CTX_RECALL_THRESHOLD",
+            "FAITHFULNESS_THRESHOLD",
+            "MockRAGClient",
+            "UserContext"
+          ]
+        }
+      ],
+      "exports": [
+        "test_request_emits_trace",
+        "test_generate_span_has_bedrock_metadata",
+        "test_user_role_propagates_to_every_span",
+        "test_refusal_span_emitted_on_irrelevant",
+        "test_grader_verdict_attribute_present",
+        "test_loop_guard_counters_in_span",
+        "context_precision",
+        "context_recall",
+        "answer_relevancy",
+        "test_context_precision_gate",
+        "test_context_recall_gate",
+        "test_answer_relevancy_gate_threshold_constant",
+        "test_faithfulness_gate_threshold_constant",
+        "test_citation_count_emitted"
+      ],
+      "totalLines": 210,
+      "hasStructuralAnalysis": true
+    },
+    "tests/test_rbac_redteam.py": {
+      "filePath": "tests/test_rbac_redteam.py",
+      "contentHash": "0625ec4013d5bb83ad57f87d441e664beaa7dfe0bc12d84160a900b71c31b05f",
+      "functions": [
+        {
+          "name": "redaction_guard",
+          "params": [
+            "chunks",
+            "user"
+          ],
+          "returnType": "list[ChunkMeta]",
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "build_structured_refusal",
+          "params": [
+            "chunks",
+            "user",
+            "missing_aspects"
+          ],
+          "returnType": "dict",
+          "exported": true,
+          "lineCount": 25
+        }
+      ],
+      "classes": [
+        {
+          "name": "TestHelpdeskDirectFIODQuery",
+          "methods": [
+            "test_helpdesk_exact_fiod_title_query_refuses",
+            "test_helpdesk_fiod_query_produces_no_fiod_chunks",
+            "test_audit_log_records_denied_attempt"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 68
+        },
+        {
+          "name": "TestHelpdeskSemanticFIODQuery",
+          "methods": [
+            "test_helpdesk_semantic_fiod_query_refuses",
+            "test_semantic_fiod_response_does_not_leak_existence"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 54
+        },
+        {
+          "name": "TestCachePoisoningCrossRole",
+          "methods": [
+            "test_different_roles_produce_different_cache_keys",
+            "test_inspector_and_helpdesk_keys_differ",
+            "test_cache_key_includes_role_component",
+            "test_redis_cache_replay_blocked_across_roles"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 90
+        },
+        {
+          "name": "TestPromptInjection",
+          "methods": [
+            "test_instruction_override_returns_no_fiod",
+            "test_role_impersonation_returns_no_fiod",
+            "test_sql_injection_style_filter_override",
+            "test_jailbreak_via_hypothetical_framing"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 96
+        },
+        {
+          "name": "TestStructuredRefusalRedactionGuard",
+          "methods": [
+            "test_redaction_guard_removes_fiod_from_closest_hits",
+            "test_redaction_guard_preserves_public_hits",
+            "test_structured_refusal_payload_serialises_no_fiod_text",
+            "test_haiku_judge_confirms_no_fiod_leak_in_refusal"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 91
+        },
+        {
+          "name": "TestLegalCounselFIODEscalation",
+          "methods": [
+            "test_legal_counsel_cannot_retrieve_fiod_chunks",
+            "test_legal_counsel_fiod_query_refuses",
+            "test_legal_vs_fiod_cache_keys_differ"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 44
+        },
+        {
+          "name": "TestRedactionGuardAuditCounter",
+          "methods": [
+            "test_redaction_guard_drops_fiod_chunk_for_helpdesk",
+            "test_redaction_guard_drops_internal_chunk_for_helpdesk",
+            "test_redaction_guard_passes_all_for_fiod",
+            "test_redaction_guard_returns_correct_subset_for_inspector"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 45
+        }
+      ],
+      "imports": [
+        {
+          "source": "hashlib",
+          "specifiers": [
+            "hashlib"
+          ]
+        },
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "time",
+          "specifiers": [
+            "time"
+          ]
+        },
+        {
+          "source": "uuid",
+          "specifiers": [
+            "uuid"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Optional"
+          ]
+        },
+        {
+          "source": "pytest",
+          "specifiers": [
+            "pytest"
+          ]
+        },
+        {
+          "source": "conftest",
+          "specifiers": [
+            "ALLOWED_LEVELS",
+            "CACHE_COSINE_THRESHOLD",
+            "CLASSIFICATION_ORDINAL",
+            "CORPUS_BY_DOC_ID",
+            "MOCK_CORPUS",
+            "ChunkMeta",
+            "HaikuJudge",
+            "MockRAGClient",
+            "RAGResponse",
+            "TelemetrySink",
+            "UserContext",
+            "assert_no_fiod_content",
+            "build_cache_key"
+          ]
+        }
+      ],
+      "exports": [
+        "redaction_guard",
+        "build_structured_refusal",
+        "TestHelpdeskDirectFIODQuery",
+        "TestHelpdeskSemanticFIODQuery",
+        "TestCachePoisoningCrossRole",
+        "TestPromptInjection",
+        "TestStructuredRefusalRedactionGuard",
+        "TestLegalCounselFIODEscalation",
+        "TestRedactionGuardAuditCounter"
+      ],
+      "totalLines": 638,
+      "hasStructuralAnalysis": true
+    },
+    "tests/test_semantic_cache.py": {
+      "filePath": "tests/test_semantic_cache.py",
+      "contentHash": "4e9a245a4718fca07408a540245061bc8774bfbcdb38cf7777b377d71507ccd8",
+      "functions": [
+        {
+          "name": "test_cache_key_is_role_bound",
+          "params": [
+            "user_helpdesk",
+            "user_fiod"
+          ],
+          "exported": true,
+          "lineCount": 17
+        },
+        {
+          "name": "test_cache_key_is_year_bound",
+          "params": [],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "test_cache_key_is_classification_bound",
+          "params": [],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "test_cache_key_is_deterministic",
+          "params": [],
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "test_cache_key_format",
+          "params": [],
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "_cosine",
+          "params": [
+            "a",
+            "b"
+          ],
+          "returnType": "float",
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "test_year_confusion_does_not_collide",
+          "params": [
+            "sim",
+            "year_a",
+            "year_b",
+            "description"
+          ],
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "test_threshold_floor_is_at_least_0_97",
+          "params": [],
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "test_genuine_duplicate_within_threshold",
+          "params": [],
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "test_redis_cache_round_trip",
+          "params": [
+            "redis_client",
+            "flush_test_cache_keys"
+          ],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "test_cache_ttl_ceiling_24h",
+          "params": [
+            "redis_client",
+            "flush_test_cache_keys"
+          ],
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "test_role_partitioned_keys_do_not_collide",
+          "params": [
+            "redis_client",
+            "flush_test_cache_keys"
+          ],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "test_cosine_self_similarity_is_one",
+          "params": [],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "test_cosine_orthogonal_is_zero",
+          "params": [],
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "test_cosine_zero_vector_returns_zero",
+          "params": [],
+          "exported": true,
+          "lineCount": 2
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "hashlib",
+          "specifiers": [
+            "hashlib"
+          ]
+        },
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "time",
+          "specifiers": [
+            "time"
+          ]
+        },
+        {
+          "source": "pytest",
+          "specifiers": [
+            "pytest"
+          ]
+        },
+        {
+          "source": "conftest",
+          "specifiers": [
+            "CACHE_COSINE_THRESHOLD",
+            "CACHE_COSINE_DEFAULT",
+            "UserContext",
+            "build_cache_key"
+          ]
+        }
+      ],
+      "exports": [
+        "test_cache_key_is_role_bound",
+        "test_cache_key_is_year_bound",
+        "test_cache_key_is_classification_bound",
+        "test_cache_key_is_deterministic",
+        "test_cache_key_format",
+        "_cosine",
+        "test_year_confusion_does_not_collide",
+        "test_threshold_floor_is_at_least_0_97",
+        "test_genuine_duplicate_within_threshold",
+        "test_redis_cache_round_trip",
+        "test_cache_ttl_ceiling_24h",
+        "test_role_partitioned_keys_do_not_collide",
+        "test_cosine_self_similarity_is_one",
+        "test_cosine_orthogonal_is_zero",
+        "test_cosine_zero_vector_returns_zero"
+      ],
+      "totalLines": 191,
+      "hasStructuralAnalysis": true
+    },
+    "tests/test_temporal_correctness.py": {
+      "filePath": "tests/test_temporal_correctness.py",
+      "contentHash": "9435832b3ecb3d8b51b389f23f09e580ab0ca31ec50859e203eca858b3f308c0",
+      "functions": [
+        {
+          "name": "is_valid_on",
+          "params": [
+            "chunk",
+            "query_date"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "chunks_for_tax_year",
+          "params": [
+            "tax_year"
+          ],
+          "returnType": "list[ChunkMeta]",
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "top_chunk_for_article_year",
+          "params": [
+            "article",
+            "tax_year"
+          ],
+          "returnType": "Optional[ChunkMeta]",
+          "exported": true,
+          "lineCount": 7
+        }
+      ],
+      "classes": [
+        {
+          "name": "TestTemporalRetrieval",
+          "methods": [
+            "test_retrieved_year_matches_query_year",
+            "test_2021_rate_not_confused_with_2024",
+            "test_2023_rate_not_confused_with_2024",
+            "test_2022_rate_is_distinct_from_2024"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 100
+        },
+        {
+          "name": "TestValidFromValidToFilter",
+          "methods": [
+            "test_chunk_valid_on_date",
+            "test_chunk_invalid_before_valid_from",
+            "test_chunk_invalid_after_valid_to",
+            "test_chunk_valid_on_last_day",
+            "test_open_ended_validity",
+            "test_temporal_filter_excludes_all_wrong_year_versions",
+            "test_query_year_2023_excludes_2024_chunk"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 73
+        },
+        {
+          "name": "TestSupersededDocumentDisclosure",
+          "methods": [
+            "test_superseded_chunk_has_superseded_by_field",
+            "test_superseded_chunk_not_returned_for_current_queries",
+            "test_historical_query_may_return_superseded"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 72
+        },
+        {
+          "name": "TestCrossLingualTemporal",
+          "methods": [
+            "test_english_temporal_query_retrieves_correct_year"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 28
+        }
+      ],
+      "imports": [
+        {
+          "source": "datetime",
+          "specifiers": [
+            "date",
+            "datetime"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Optional"
+          ]
+        },
+        {
+          "source": "pytest",
+          "specifiers": [
+            "pytest"
+          ]
+        },
+        {
+          "source": "conftest",
+          "specifiers": [
+            "MOCK_CORPUS",
+            "CORPUS_BY_DOC_ID",
+            "ChunkMeta",
+            "MockRAGClient",
+            "UserContext",
+            "load_golden_qa"
+          ]
+        }
+      ],
+      "exports": [
+        "is_valid_on",
+        "chunks_for_tax_year",
+        "top_chunk_for_article_year",
+        "TestTemporalRetrieval",
+        "TestValidFromValidToFilter",
+        "TestSupersededDocumentDisclosure",
+        "TestCrossLingualTemporal"
+      ],
+      "totalLines": 378,
+      "hasStructuralAnalysis": true
+    },
+    "tests/golden/golden_qa.jsonl": {
+      "filePath": "tests/golden/golden_qa.jsonl",
+      "contentHash": "596792f929ea0dfa5a22bda1774997d70224682506a41ff04db2c80594dd588b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 60,
+      "hasStructuralAnalysis": false
+    }
+  }
+}

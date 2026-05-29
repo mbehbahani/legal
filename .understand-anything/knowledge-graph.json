@@ -1,0 +1,2380 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "Tax Authority Enterprise RAG",
+    "languages": [
+      "Python",
+      "Markdown",
+      "YAML",
+      "Shell",
+      "Dockerfile",
+      "JSON",
+      "JSONL",
+      "XML",
+      "PowerShell",
+      "Vue",
+      "CSS"
+    ],
+    "frameworks": [
+      "pytest",
+      "Docker",
+      "OpenSearch",
+      "Redis Stack",
+      "AWS Bedrock",
+      "OpenTelemetry",
+      "Ragas",
+      "DeepEval",
+      "LangGraph",
+      "boto3"
+    ],
+    "description": "Enterprise RAG system for a national tax authority with zero-hallucination citations, RBAC filtering inside HNSW, hybrid BM25+dense retrieval, AWS Bedrock, and OpenTelemetry observability.",
+    "analyzedAt": "2026-05-29T21:18:53.000Z",
+    "gitCommitHash": "02ea8ca7b122240eb70d722fabe0cfeff87e83b4"
+  },
+  "nodes": [
+    {
+      "id": "file:tests/conftest.py",
+      "type": "file",
+      "name": "conftest.py",
+      "filePath": "tests/conftest.py",
+      "summary": "Shared pytest fixtures and dataclasses for the Tax Authority RAG evaluation suite, including the MockRAGClient stub, UserContext/ChunkMeta/RAGResponse models, synthetic corpus, role-based user fixtures, AWS Bedrock clients, Redis/OpenSearch handles, and all promotion-gate threshold constants.",
+      "tags": [
+        "testing",
+        "fixtures",
+        "rbac",
+        "config"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:tests/seed_opensearch.py",
+      "type": "file",
+      "name": "seed_opensearch.py",
+      "filePath": "tests/seed_opensearch.py",
+      "summary": "Standalone script that creates the 'tax-docs-test' OpenSearch index with Lucene HNSW k-NN settings and bulk-indexes ~250 synthetic Dutch tax-law document chunks (MOCK_CORPUS plus generated fixtures) for integration test seeding.",
+      "tags": [
+        "seeding",
+        "infra",
+        "docker",
+        "scripts",
+        "tested"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_ambiguity_refusal.py",
+      "type": "file",
+      "name": "test_ambiguity_refusal.py",
+      "filePath": "tests/test_ambiguity_refusal.py",
+      "summary": "Tests that out-of-corpus, under-specified, and contradictory queries trigger structured refusals with zero citations and no hallucinated answers, validating the CRAG Irrelevant/Ambiguous verdict path and attempt-count caps.",
+      "tags": [
+        "testing",
+        "evaluation",
+        "citation",
+        "fixtures"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_citation_accuracy.py",
+      "type": "file",
+      "name": "test_citation_accuracy.py",
+      "filePath": "tests/test_citation_accuracy.py",
+      "summary": "Enforces the 1.00 citation-accuracy promotion gate by parsing citation anchors from generated answers, verifying full hierarchy depth (doc_id, article, lid, onderdeel, sub, ECLI), and running Haiku NLI entailment checks against retrieved chunks.",
+      "tags": [
+        "testing",
+        "citation",
+        "evaluation",
+        "fixtures"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:tests/test_hybrid_retrieval.py",
+      "type": "file",
+      "name": "test_hybrid_retrieval.py",
+      "filePath": "tests/test_hybrid_retrieval.py",
+      "summary": "Tests the hybrid BM25 + dense retrieval cascade with deterministic simulators, verifying ECLI exact-match boosting, RRF fusion correctness, nDCG@5 improvement after reranking, and top-K cascade sizing per MASTER-PLAN constants.",
+      "tags": [
+        "testing",
+        "retrieval",
+        "evaluation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_latency_budgets.py",
+      "type": "file",
+      "name": "test_latency_budgets.py",
+      "filePath": "tests/test_latency_budgets.py",
+      "summary": "Validates p95/p99 TTFT and end-to-end latency SLAs against the Module 4 promotion gates (p95 TTFT <= 1500 ms, p95 E2E <= 4000 ms, retrieval p95 <= 300 ms) using a 100-query smoke run against the mock client.",
+      "tags": [
+        "testing",
+        "latency",
+        "evaluation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:tests/test_observability.py",
+      "type": "file",
+      "name": "test_observability.py",
+      "filePath": "tests/test_observability.py",
+      "summary": "Verifies that every RAG request emits OTel spans with the required attribute set (trace_id, user_role, Bedrock token counts, grader verdict) and enforces Ragas-style ContextPrecision, ContextRecall, and AnswerRelevancy gates.",
+      "tags": [
+        "testing",
+        "observability",
+        "evaluation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_rbac_redteam.py",
+      "type": "file",
+      "name": "test_rbac_redteam.py",
+      "filePath": "tests/test_rbac_redteam.py",
+      "summary": "Adversarial RBAC red-team suite covering direct FIOD title attacks, semantic proximity attacks, cache poisoning across roles, prompt injection and role impersonation, structured-refusal existence-disclosure prevention, legal-counsel ceiling violations, and redaction guard audit integrity.",
+      "tags": [
+        "testing",
+        "rbac",
+        "evaluation",
+        "fixtures"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:tests/test_semantic_cache.py",
+      "type": "file",
+      "name": "test_semantic_cache.py",
+      "filePath": "tests/test_semantic_cache.py",
+      "summary": "Tests that the semantic cache key is role-bound, year-bound, and classification-bound via SHA-256, that the 0.97 cosine threshold correctly blocks year-confusion near-misses, and that Redis round-trip TTL stays within the 24-hour ceiling.",
+      "tags": [
+        "testing",
+        "cache",
+        "rbac"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_temporal_correctness.py",
+      "type": "file",
+      "name": "test_temporal_correctness.py",
+      "filePath": "tests/test_temporal_correctness.py",
+      "summary": "Validates that retrieval returns the legislatively correct version for a given tax year by enforcing valid_from/valid_to date-range filtering, testing year-confusion near-misses (2021 vs 2024 Box 1 rates), and verifying superseded-document disclosure metadata.",
+      "tags": [
+        "testing",
+        "temporal",
+        "evaluation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/conftest.py:ChunkMeta",
+      "type": "class",
+      "name": "ChunkMeta",
+      "filePath": "tests/conftest.py",
+      "summary": "Dataclass representing a retrieved document chunk with full citation hierarchy (doc_id, article, lid, onderdeel, sub, ECLI/ELI), classification level, temporal validity fields, and relevance score.",
+      "tags": [
+        "fixtures",
+        "citation",
+        "rbac"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/conftest.py:RAGResponse",
+      "type": "class",
+      "name": "RAGResponse",
+      "filePath": "tests/conftest.py",
+      "summary": "Dataclass capturing the full output of a RAG pipeline call: answer text, citation list, grader verdict, retrieved chunks, structured refusal payload, latency metrics, cache-hit flag, retry counters, and Bedrock token usage.",
+      "tags": [
+        "fixtures",
+        "evaluation",
+        "observability"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/conftest.py:UserContext",
+      "type": "class",
+      "name": "UserContext",
+      "filePath": "tests/conftest.py",
+      "summary": "Dataclass holding an authenticated user's identity, role (helpdesk/inspector/legal/fiod), and classification ceiling, with a property that resolves the allowed classification levels from the ALLOWED_LEVELS role matrix.",
+      "tags": [
+        "rbac",
+        "fixtures"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:tests/conftest.py:MockRAGClient",
+      "type": "class",
+      "name": "MockRAGClient",
+      "filePath": "tests/conftest.py",
+      "summary": "Deterministic RAG pipeline stub that applies real RBAC pre-filtering and temporal year-matching during retrieval, then produces grounded answers with structured citations or structured refusals without any live Bedrock calls.",
+      "tags": [
+        "testing",
+        "fixtures",
+        "rbac",
+        "retrieval"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:tests/conftest.py:HaikuJudge",
+      "type": "class",
+      "name": "HaikuJudge",
+      "filePath": "tests/conftest.py",
+      "summary": "LLM-as-judge wrapper around Bedrock Claude Haiku 4.5 that provides structured tool-use verdicts for entailment checking, refusal evaluation, and faithfulness scoring used in integration-marked citation and RBAC tests.",
+      "tags": [
+        "testing",
+        "evaluation",
+        "citation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:docker/.dockerignore",
+      "type": "config",
+      "name": ".dockerignore",
+      "filePath": "docker/.dockerignore",
+      "summary": "Excludes secrets, Python artifacts, raw corpus data, dev tooling, and documentation from the Docker build context to keep images lean and credential-safe.",
+      "tags": [
+        "docker",
+        "infra",
+        "security",
+        "config"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "service:docker/docker-compose.yml",
+      "type": "service",
+      "name": "docker-compose.yml",
+      "filePath": "docker/docker-compose.yml",
+      "summary": "Orchestrates the full Tax Authority RAG stack: OpenSearch (Lucene k-NN), Redis Stack, Jaeger tracing, and the app container, all on a shared bridge network with health-gated startup order.",
+      "tags": [
+        "docker",
+        "infra",
+        "orchestration",
+        "compose"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "service:docker/Dockerfile",
+      "type": "service",
+      "name": "Dockerfile",
+      "filePath": "docker/Dockerfile",
+      "summary": "Two-stage Python 3.12-slim image: builder stage compiles native wheels, runtime stage installs them into a minimal non-root image with tini as PID 1 and pytest as the default entrypoint.",
+      "tags": [
+        "docker",
+        "infra",
+        "build",
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "service:opensearch",
+      "type": "service",
+      "name": "OpenSearch",
+      "summary": "OpenSearch 2.18 single-node cluster with Lucene HNSW k-NN plugin, TLS security enabled, and 2 GB JVM heap — serves as the primary vector and keyword search store.",
+      "tags": [
+        "vector-store",
+        "search",
+        "infra",
+        "opensearch"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "service:redis-stack",
+      "type": "service",
+      "name": "Redis Stack",
+      "summary": "Redis Stack 7.4 instance providing semantic cache and session storage with a 1 GB LRU memory cap.",
+      "tags": [
+        "cache",
+        "session",
+        "infra",
+        "redis"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "service:jaeger",
+      "type": "service",
+      "name": "Jaeger",
+      "summary": "Jaeger all-in-one tracing backend accepting OTLP gRPC on port 4317 with in-memory span storage (up to 10 000 traces) and a UI on port 16686.",
+      "tags": [
+        "observability",
+        "tracing",
+        "infra",
+        "otel"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "service:app",
+      "type": "service",
+      "name": "App (pytest runner)",
+      "summary": "Application container built from the project Dockerfile that runs the full RAG test suite via pytest, injecting AWS Bedrock credentials at runtime and writing JUnit XML reports to a mounted volume.",
+      "tags": [
+        "app",
+        "testing",
+        "bedrock",
+        "infra"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:.claude/agents/agentic-rag-designer.md",
+      "type": "document",
+      "name": "agentic-rag-designer agent",
+      "filePath": ".claude/agents/agentic-rag-designer.md",
+      "summary": "Designs Module 3 (Agentic RAG & Self-Healing), specifying the LangGraph CRAG state machine with query transformation, retrieval grading, fallback policies, and citation verification to guarantee zero hallucination.",
+      "tags": [
+        "agent",
+        "claude",
+        "multi-agent",
+        "langgraph",
+        "crag",
+        "query-transformation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:.claude/agents/docker-runner.md",
+      "type": "document",
+      "name": "docker-runner agent",
+      "filePath": ".claude/agents/docker-runner.md",
+      "summary": "Owns containerization and the test-execution loop — builds the Docker stack (app, OpenSearch, Redis, Jaeger), runs the evaluation test suite, debugs failures, and produces the test-results artifact consumed by report-compiler.",
+      "tags": [
+        "agent",
+        "claude",
+        "multi-agent",
+        "devops",
+        "docker",
+        "testing"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:.claude/agents/legal-domain-reviewer.md",
+      "type": "document",
+      "name": "legal-domain-reviewer agent",
+      "filePath": ".claude/agents/legal-domain-reviewer.md",
+      "summary": "Reviews all module designs against Dutch tax law domain requirements (Belastingdienst, ECLI/ELI citations, FIOD classification, temporal tax-year validity), flagging gaps before the report-compiler finalises the document.",
+      "tags": [
+        "agent",
+        "claude",
+        "multi-agent",
+        "legal",
+        "domain-review",
+        "dutch-tax"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:.claude/agents/mlops-security-architect.md",
+      "type": "document",
+      "name": "mlops-security-architect agent",
+      "filePath": ".claude/agents/mlops-security-architect.md",
+      "summary": "Designs Module 4 (Production Ops, Security & Evaluation), covering role-blind-safe semantic caching, RBAC pre-filtering via OpenSearch efficient_filter, CI/CD evaluation gates with Ragas/DeepEval, and OpenTelemetry observability.",
+      "tags": [
+        "agent",
+        "claude",
+        "multi-agent",
+        "mlops",
+        "security",
+        "rbac",
+        "observability"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:.claude/agents/process-report-author.md",
+      "type": "document",
+      "name": "process-report-author agent",
+      "filePath": ".claude/agents/process-report-author.md",
+      "summary": "Produces the methodology/process report for non-engineering reviewers, narrating how all agents collaborated, their execution timeline, decision provenance, resource costs, and lessons learned from the multi-agent workflow.",
+      "tags": [
+        "agent",
+        "claude",
+        "multi-agent",
+        "reporting",
+        "documentation",
+        "process"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:.claude/agents/rag-evaluation-engineer.md",
+      "type": "document",
+      "name": "rag-evaluation-engineer agent",
+      "filePath": ".claude/agents/rag-evaluation-engineer.md",
+      "summary": "Builds the runnable pytest/Ragas/DeepEval test suite covering citation accuracy, RBAC red-teaming, temporal correctness, hybrid retrieval, semantic cache safety, latency budgets, and observability assertions.",
+      "tags": [
+        "agent",
+        "claude",
+        "multi-agent",
+        "testing",
+        "evaluation",
+        "ragas"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:.claude/agents/rag-retrieval-architect.md",
+      "type": "document",
+      "name": "rag-retrieval-architect agent",
+      "filePath": ".claude/agents/rag-retrieval-architect.md",
+      "summary": "Designs Modules 1 and 2 (Ingestion and Retrieval), specifying legal-corpus chunking, hierarchical metadata schema, OpenSearch HNSW configuration, Cohere multilingual embeddings/reranker, and hybrid BM25+dense fusion.",
+      "tags": [
+        "agent",
+        "claude",
+        "multi-agent",
+        "rag",
+        "retrieval",
+        "opensearch",
+        "ingestion"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:.claude/agents/report-compiler.md",
+      "type": "document",
+      "name": "report-compiler agent",
+      "filePath": ".claude/agents/report-compiler.md",
+      "summary": "Final assembly agent that resolves domain-review flags, enforces cross-module consistency, and compiles all module drafts plus test results into the single submission-ready FINAL-rag-architecture.md document.",
+      "tags": [
+        "agent",
+        "claude",
+        "multi-agent",
+        "reporting",
+        "compilation",
+        "final-output"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:.gitignore",
+      "type": "config",
+      "name": ".gitignore",
+      "filePath": ".gitignore",
+      "summary": "Excludes secrets, generated Jaeger traces, intermediate knowledge-graph artifacts, and the presentation folder from version control.",
+      "tags": [
+        "git",
+        "config",
+        "security"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.mcp.json",
+      "type": "config",
+      "name": ".mcp.json",
+      "filePath": ".mcp.json",
+      "summary": "Registers the local AWS MCP server (stdio, npm-launched) so Claude Code tools can call AWS APIs directly from this project.",
+      "tags": [
+        "mcp",
+        "aws",
+        "config",
+        "tooling"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:NEXT-SESSION-PROMPT.md",
+      "type": "document",
+      "name": "NEXT-SESSION-PROMPT",
+      "filePath": "NEXT-SESSION-PROMPT.md",
+      "summary": "A ready-to-paste session-bootstrap prompt that re-establishes the 6-phase multi-agent execution sequence, locked stack decisions, and guardrails in a fresh Claude Code session.",
+      "tags": [
+        "orchestration",
+        "multi-agent",
+        "session",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:README.md",
+      "type": "document",
+      "name": "README",
+      "filePath": "README.md",
+      "summary": "Top-level project overview documenting the repository structure, core AWS/Cohere/CRAG stack, evaluation status, and recommended reading order for the Tax Authority Enterprise RAG system.",
+      "tags": [
+        "documentation",
+        "overview",
+        "architecture",
+        "rag"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:assignment",
+      "type": "document",
+      "name": "assignment",
+      "filePath": "assignment",
+      "summary": "Original four-module engineering assignment specifying the RAG system requirements: ingestion strategy, hybrid retrieval, agentic CRAG control loop, and production ops/security for a national tax authority.",
+      "tags": [
+        "requirements",
+        "assignment",
+        "rag",
+        "security"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:launch-dashboard.ps1",
+      "type": "file",
+      "name": "launch-dashboard.ps1",
+      "filePath": "launch-dashboard.ps1",
+      "summary": "PowerShell script that sets the project root as GRAPH_DIR and starts the Vite-based knowledge graph dashboard from the understand-anything-plugin package.",
+      "tags": [
+        "script",
+        "dashboard",
+        "powershell",
+        "visualization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:Present/module-1-ingestion.md",
+      "type": "document",
+      "name": "Module 1 Ingestion (presentation)",
+      "filePath": "Present/module-1-ingestion.md",
+      "summary": "Interview study guide covering chunking strategy for Dutch legal text (structure-aware splitting, parent-document retrieval, metadata schema) and vector database selection for 20M+ chunks (OpenSearch HNSW with efficient_filter, FP16 quantization, RBAC-safe pre-filtering).",
+      "tags": [
+        "presentation",
+        "ingestion",
+        "chunking",
+        "vector-database",
+        "opensearch",
+        "hnsw",
+        "rbac"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:Present/module-2-retrieval.md",
+      "type": "document",
+      "name": "Module 2 Retrieval (presentation)",
+      "filePath": "Present/module-2-retrieval.md",
+      "summary": "Interview study guide covering hybrid search design (BM25 + dense k-NN, RRF fusion with adaptive regex router) and two-stage reranking (Cohere rerank-v3-5 on Bedrock, 100/100/60/8 Top-K cascade) for the Dutch fiscal corpus.",
+      "tags": [
+        "presentation",
+        "retrieval",
+        "hybrid-search",
+        "bm25",
+        "rrf",
+        "reranking",
+        "cohere"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:Present/module-3-agentic.md",
+      "type": "document",
+      "name": "Module 3 Agentic RAG (presentation)",
+      "filePath": "Present/module-3-agentic.md",
+      "summary": "Interview study guide covering query transformation routing (direct/decompose/HyDE/step-back), the LangGraph CRAG state machine with grader and exact fallback policy (Relevant/Ambiguous/Irrelevant), and citation verification for zero-hallucination guarantees.",
+      "tags": [
+        "presentation",
+        "agentic",
+        "crag",
+        "langgraph",
+        "query-transformation",
+        "hyde",
+        "citation-verification"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:Present/module-4-ops-security.md",
+      "type": "document",
+      "name": "Module 4 Ops & Security (presentation)",
+      "filePath": "Present/module-4-ops-security.md",
+      "summary": "Interview study guide covering semantic caching with role-bound cache keys and a 0.97/0.98 cosine threshold, database-level RBAC via OpenSearch efficient_filter inside HNSW traversal with three defense layers, and CI/CD evaluation gates (Ragas + DeepEval metrics, shadow/canary deployment, OTel/Jaeger observability).",
+      "tags": [
+        "presentation",
+        "security",
+        "rbac",
+        "semantic-cache",
+        "redis",
+        "cicd",
+        "ragas",
+        "observability"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:Present/presentation",
+      "type": "document",
+      "name": "Presentation Brief",
+      "filePath": "Present/presentation",
+      "summary": "Planning brief for a 5-minute YouTube video presenting the Tax Authority RAG project to a non-technical audience, specifying a 10-slide structure covering the problem, multi-agent approach, security design, test results, and a Gamma slide deck plus companion script.",
+      "tags": [
+        "presentation",
+        "youtube",
+        "brief",
+        "non-technical"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:Present/presentation-answers.md",
+      "type": "document",
+      "name": "Presentation Answers",
+      "filePath": "Present/presentation-answers.md",
+      "summary": "Condensed one-stop reference with concise 60–90 second answers to all nine assignment interview questions across Modules 1–4, including key diagrams, exact configuration values, and fallback policy tables.",
+      "tags": [
+        "presentation",
+        "answers",
+        "interview",
+        "reference",
+        "all-modules"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:Present/slidev/.gitignore",
+      "type": "config",
+      "name": "Slidev .gitignore",
+      "filePath": "Present/slidev/.gitignore",
+      "summary": "Excludes node_modules, dist, remote assets, generated component type declarations, local environment files, and macOS metadata from version control for the Slidev presentation project.",
+      "tags": [
+        "gitignore",
+        "slidev",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:Present/slidev/README.md",
+      "type": "document",
+      "name": "Slidev Presentation README",
+      "filePath": "Present/slidev/README.md",
+      "summary": "Developer guide for the Tax Authority RAG Slidev deck covering local dev setup, project structure (layouts, components, styles), editing conventions, speaker view shortcuts, PDF export, and rationale for using custom Vue components over Mermaid.",
+      "tags": [
+        "documentation",
+        "slidev",
+        "presentation",
+        "readme"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:Present/slidev/package.json",
+      "type": "config",
+      "name": "Slidev package.json",
+      "filePath": "Present/slidev/package.json",
+      "summary": "NPM package manifest for the tax-rag-presentation Slidev project (v1.1.0), defining dev/build/export scripts and dependencies on @slidev/cli, @slidev/theme-default, Vue 3, and playwright-chromium for PDF export.",
+      "tags": [
+        "package.json",
+        "slidev",
+        "npm",
+        "config"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:Present/slidev/slides.md",
+      "type": "document",
+      "name": "Enterprise RAG Slidev Presentation",
+      "filePath": "Present/slidev/slides.md",
+      "summary": "1085-line Slidev deck covering four modules of the Tax Authority enterprise RAG system: Module 1 (hierarchical chunking, parent-child retrieval, vector DB selection, HNSW memory math), Module 2 (hybrid BM25+dense search, RRF fusion, cross-encoder reranking cascade), Module 3 (query transformation routing, CRAG state machine with grader and fallback policy, citation verifier), and Module 4 (role-bound semantic cache, mathematically leak-proof RBAC via OpenSearch efficient_filter, CI evaluation gates with Ragas/DeepEval, and OpenTelemetry observability).",
+      "tags": [
+        "presentation",
+        "slidev",
+        "rag",
+        "enterprise",
+        "tax-authority",
+        "rbac",
+        "retrieval",
+        "chunking",
+        "crag",
+        "evaluation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:design/FINAL-rag-architecture.md",
+      "type": "document",
+      "name": "FINAL RAG Architecture",
+      "filePath": "design/FINAL-rag-architecture.md",
+      "summary": "Consolidated submission-ready architecture covering all 4 modules: ingestion/retrieval, CRAG agentic loop, RBAC security, and production observability. Documents the five core design decisions: RBAC pre-filter inside HNSW traversal, split ELI/ECLI citation fields, full-depth citation anchor verification, role-bound year-scoped cache keys, and redaction-guarded refusal payloads.",
+      "tags": [
+        "architecture",
+        "design",
+        "rag",
+        "tax-authority",
+        "bedrock",
+        "opentelemetry"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:design/module-1-2-retrieval.md",
+      "type": "document",
+      "name": "Module 1-2: Ingestion & Retrieval",
+      "filePath": "design/module-1-2-retrieval.md",
+      "summary": "Defines structure-aware chunking for Dutch fiscal law (256-token leaf / 1500-token parent), separate ELI/ECLI keyword fields, OpenSearch HNSW index schema, BM25+dense hybrid retrieval with Reciprocal Rank Fusion (k=60), Cohere reranking to top-8, and parent-document fetch pattern.",
+      "tags": [
+        "ingestion",
+        "chunking",
+        "retrieval",
+        "hybrid",
+        "bm25",
+        "hnsw",
+        "opensearch",
+        "cohere"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:design/module-3-agentic.md",
+      "type": "document",
+      "name": "Module 3: Agentic RAG & Self-Healing",
+      "filePath": "design/module-3-agentic.md",
+      "summary": "Specifies the LangGraph-based CRAG state machine with four query transform strategies (Direct, Decompose, HyDE, Step-back), deterministic routing by signal, Haiku 4.5 grader/generator/citation-judge nodes, retry loops with attempt caps, and structured refusal fallback. All nodes propagate RBAC role through state.",
+      "tags": [
+        "agentic",
+        "crag",
+        "langgraph",
+        "query-transform",
+        "hyde",
+        "decompose",
+        "bedrock",
+        "haiku"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:design/module-4-ops-security.md",
+      "type": "document",
+      "name": "Module 4: Production Ops, Security & Evaluation",
+      "filePath": "design/module-4-ops-security.md",
+      "summary": "Covers the four-principal threat model (helpdesk/inspector/legal/FIOD), role-bound SHA-256 semantic cache keys with 0.97 cosine floor in Redis Stack 7.4, RBAC pre-filter via OpenSearch efficient_filter, redaction_guard secondary gate, citation anchor verification at full lid/onderdeel/sub depth, OpenTelemetry observability, and Ragas/DeepEval evaluation harness.",
+      "tags": [
+        "security",
+        "rbac",
+        "cache",
+        "redis",
+        "observability",
+        "opentelemetry",
+        "evaluation",
+        "ragas"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "concept:CRAG",
+      "type": "concept",
+      "name": "CRAG (Corrective RAG)",
+      "summary": "LangGraph state machine implementing a corrective retrieval loop: transform query (Direct | Decompose | HyDE | Step-back) → retrieve → grade documents (Relevant/Ambiguous/Irrelevant) → generate → verify citations, with attempt-capped retry and structured refusal fallback. RBAC role propagates through every node.",
+      "tags": [
+        "crag",
+        "agentic",
+        "retrieval",
+        "langgraph",
+        "self-healing"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "concept:RBAC-filtering",
+      "type": "concept",
+      "name": "RBAC Filtering (efficient_filter in HNSW)",
+      "summary": "Role-based access control enforced by OpenSearch's efficient_filter, which pre-computes a BitSet of allowed document IDs before HNSW graph traversal begins. FIOD chunks are invisible to the ANN walk, eliminating both content-leak and timing side-channel vectors. A secondary redaction_guard drops any post-RRF chunks exceeding the user's classification ceiling.",
+      "tags": [
+        "rbac",
+        "security",
+        "hnsw",
+        "opensearch",
+        "efficient-filter",
+        "access-control"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "concept:hybrid-retrieval",
+      "type": "concept",
+      "name": "Hybrid Retrieval (BM25 + Dense + RRF)",
+      "summary": "Parallel retrieval using BM25 (Dutch analyzer, top-100) and Cohere dense embeddings (embed-multilingual-v3, 1024-dim, top-100) fused via Reciprocal Rank Fusion (k=60) to produce a post-RRF top-60 candidate set, then reranked by Cohere rerank-v3-5:0 to top-8 for generation context.",
+      "tags": [
+        "hybrid-retrieval",
+        "bm25",
+        "dense",
+        "rrf",
+        "cohere",
+        "opensearch",
+        "rerank"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "concept:citation-verification",
+      "type": "concept",
+      "name": "Citation Verification (Zero-Hallucination Grounding)",
+      "summary": "Anchor regex + NLI grounding judge operating at full (doc_id, article, lid, onderdeel, sub) hierarchy depth for ELI legislation and ECLI case-law citations. A citation correct at the article level but wrong at lid/onderdeel is treated as a legal hallucination. Unsupported citations trigger a generation retry; cap hit produces a structured refusal filtered through redaction_guard.",
+      "tags": [
+        "citation",
+        "hallucination",
+        "grounding",
+        "nli",
+        "eli",
+        "ecli",
+        "verification"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "config:docker/.env",
+      "type": "config",
+      "name": ".env",
+      "filePath": "docker/.env",
+      "summary": "Active runtime environment variables supplying AWS credentials, Bedrock model IDs, OpenSearch connection details, Redis URL, and Jaeger OTLP endpoint for the Tax Authority RAG stack.",
+      "tags": [
+        "config",
+        "docker",
+        "environment",
+        "aws",
+        "secrets"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:docker/.env.example",
+      "type": "config",
+      "name": ".env.example",
+      "filePath": "docker/.env.example",
+      "summary": "Annotated template listing all required environment variables with placeholder values and inline guidance on AWS credentials, Bedrock model IDs, OpenSearch, Redis, and observability settings.",
+      "tags": [
+        "config",
+        "docker",
+        "environment",
+        "template"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:docker/IAM-POLICY.md",
+      "type": "document",
+      "name": "IAM-POLICY.md",
+      "filePath": "docker/IAM-POLICY.md",
+      "summary": "Documents the least-privilege IAM policy required by the app container, covering bedrock:InvokeModel permissions for Cohere Embed, Cohere Rerank, and Claude Haiku 4.5 cross-region profile, plus sts:GetCallerIdentity for startup validation.",
+      "tags": [
+        "docs",
+        "iam",
+        "aws",
+        "security",
+        "bedrock"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:docker/compose.override.yml",
+      "type": "config",
+      "name": "compose.override.yml",
+      "filePath": "docker/compose.override.yml",
+      "summary": "Docker Compose development override that exposes host ports for OpenSearch, Redis Stack, Jaeger, and the app container, and bind-mounts source directories for hot-reload and interactive debugging.",
+      "tags": [
+        "config",
+        "docker",
+        "compose",
+        "development",
+        "infra"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:docker/requirements.txt",
+      "type": "config",
+      "name": "requirements.txt",
+      "filePath": "docker/requirements.txt",
+      "summary": "Pinned Python dependencies for the app container, including boto3, opensearch-py, redis, ragas, deepeval, pytest plugins, and a version-aligned set of OpenTelemetry packages constrained by deepeval.",
+      "tags": [
+        "config",
+        "python",
+        "dependencies",
+        "docker"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:docker/healthchecks/app.sh",
+      "type": "file",
+      "name": "app healthcheck",
+      "filePath": "docker/healthchecks/app.sh",
+      "summary": "Shell startup probe that calls AWS STS GetCallerIdentity via boto3 to verify AWS credentials are accessible inside the app container. Exits 0 on success, 1 on failure.",
+      "tags": [
+        "healthcheck",
+        "docker",
+        "script",
+        "aws",
+        "sts"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:docker/healthchecks/jaeger.sh",
+      "type": "file",
+      "name": "jaeger healthcheck",
+      "filePath": "docker/healthchecks/jaeger.sh",
+      "summary": "Shell healthcheck that probes the Jaeger all-in-one admin HTTP endpoint on port 14269 and expects a 200 response.",
+      "tags": [
+        "healthcheck",
+        "docker",
+        "script",
+        "jaeger",
+        "tracing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:docker/healthchecks/opensearch.sh",
+      "type": "file",
+      "name": "opensearch healthcheck",
+      "filePath": "docker/healthchecks/opensearch.sh",
+      "summary": "Shell healthcheck that polls the OpenSearch cluster health API waiting for at least yellow status, handling the demo-cert first-boot race condition. Credentials and URL are configurable via environment variables.",
+      "tags": [
+        "healthcheck",
+        "docker",
+        "script",
+        "opensearch",
+        "search"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:docker/healthchecks/redis.sh",
+      "type": "file",
+      "name": "redis healthcheck",
+      "filePath": "docker/healthchecks/redis.sh",
+      "summary": "Shell healthcheck that sends a PING command via redis-cli and asserts a PONG response. Port is configurable via the REDIS_PORT environment variable.",
+      "tags": [
+        "healthcheck",
+        "docker",
+        "script",
+        "redis"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:plans/MASTER-PLAN.md",
+      "type": "document",
+      "name": "Master Plan",
+      "filePath": "plans/MASTER-PLAN.md",
+      "summary": "Top-level project plan for the Tax Authority Enterprise RAG system, consolidating the locked AWS Bedrock + OpenSearch + Jaeger stack, execution phases, agent sequencing, promotion gates, and open risks.",
+      "tags": [
+        "planning",
+        "multi-agent",
+        "architecture",
+        "aws",
+        "rag"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:plans/agentic-rag-designer-plan.md",
+      "type": "document",
+      "name": "Agentic RAG Designer Plan",
+      "filePath": "plans/agentic-rag-designer-plan.md",
+      "summary": "Planning document for Module 3 covering the CRAG state machine, query transformation routing, retrieval grader design, citation verification, and loop guard logic using Claude Haiku 4.5 on Bedrock.",
+      "tags": [
+        "planning",
+        "agentic",
+        "crag",
+        "langgraph",
+        "query-transform"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:plans/docker-runner-plan.md",
+      "type": "document",
+      "name": "Docker Runner Plan",
+      "filePath": "plans/docker-runner-plan.md",
+      "summary": "Planning document for the docker-runner agent, detailing the multi-stage Dockerfile, docker-compose service stack (OpenSearch, Redis Stack, Jaeger, MinIO (scoped out)), eval orchestration scripts, and anticipated failure mitigations.",
+      "tags": [
+        "planning",
+        "docker",
+        "infrastructure",
+        "devops",
+        "compose"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:plans/mlops-security-architect-plan.md",
+      "type": "document",
+      "name": "MLOps Security Architect Plan",
+      "filePath": "plans/mlops-security-architect-plan.md",
+      "summary": "Planning document for Module 4 covering semantic cache design, three-layer RBAC enforcement, CI/CD promotion gates, and OpenTelemetry observability via Jaeger for the production RAG system.",
+      "tags": [
+        "planning",
+        "security",
+        "rbac",
+        "mlops",
+        "observability",
+        "cache"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:plans/rag-evaluation-engineer-plan.md",
+      "type": "document",
+      "name": "RAG Evaluation Engineer Plan",
+      "filePath": "plans/rag-evaluation-engineer-plan.md",
+      "summary": "Planning document for the test suite covering ten pytest files with Ragas and DeepEval metrics, a 50-pair golden set, adversarial RBAC red-team tests, latency benchmarks, and a synthetic fixture corpus.",
+      "tags": [
+        "planning",
+        "evaluation",
+        "testing",
+        "ragas",
+        "deepeval",
+        "rbac"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:plans/rag-retrieval-architect-plan.md",
+      "type": "document",
+      "name": "RAG Retrieval Architect Plan",
+      "filePath": "plans/rag-retrieval-architect-plan.md",
+      "summary": "Planning document for Modules 1 and 2 covering structure-aware chunking, hierarchical metadata schema, Amazon OpenSearch HNSW configuration, hybrid BM25 + dense fusion, Cohere reranking, and the top-K cascade latency budget.",
+      "tags": [
+        "planning",
+        "retrieval",
+        "opensearch",
+        "hnsw",
+        "hybrid-search",
+        "chunking"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:reports/PROCESS-REPORT.md",
+      "type": "document",
+      "name": "Process Report",
+      "filePath": "reports/PROCESS-REPORT.md",
+      "summary": "Governance and methodology report describing the seven-agent pipeline that produced the Tax Authority RAG architecture across six sequential phases over two calendar days.",
+      "tags": [
+        "report",
+        "multi-agent",
+        "process",
+        "methodology",
+        "governance"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:reports/agent-timings.jsonl",
+      "type": "file",
+      "name": "Agent Timings",
+      "filePath": "reports/agent-timings.jsonl",
+      "summary": "JSONL log of per-agent execution metrics including phase, start/end timestamps, duration, token counts, tool uses, and completion status for all nine agent runs.",
+      "tags": [
+        "data",
+        "timings",
+        "agents",
+        "metrics",
+        "observability"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:reports/jaeger-observability.md",
+      "type": "document",
+      "name": "Jaeger Observability Report",
+      "filePath": "reports/jaeger-observability.md",
+      "summary": "Distributed tracing analysis of 16 representative traces across 3 query scenarios captured via Jaeger, documenting pipeline latency breakdown and RBAC span propagation.",
+      "tags": [
+        "report",
+        "observability",
+        "jaeger",
+        "tracing",
+        "latency"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:reports/junit.xml",
+      "type": "file",
+      "name": "JUnit XML Results",
+      "filePath": "reports/junit.xml",
+      "summary": "Machine-readable pytest JUnit XML output recording 179 passing test cases (0 errors, 0 failures) across citation, RBAC, retrieval, latency, cache, and temporal correctness test suites.",
+      "tags": [
+        "data",
+        "test-results",
+        "junit",
+        "pytest",
+        "xml"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:reports/test-results.md",
+      "type": "document",
+      "name": "Test Results",
+      "filePath": "reports/test-results.md",
+      "summary": "Human-readable test execution report documenting the Docker stack (OpenSearch, Redis, Jaeger), pytest run outcomes, and the 170 mock plus 3 live Redis integration passes.",
+      "tags": [
+        "report",
+        "test-results",
+        "docker",
+        "pytest",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:reports/understand-session-report.md",
+      "type": "document",
+      "name": "Understand Session Report",
+      "filePath": "reports/understand-session-report.md",
+      "summary": "Session report from the /understand skill run on this project, describing the multi-phase knowledge-graph build and project statistics for the Tax Authority Enterprise RAG codebase.",
+      "tags": [
+        "report",
+        "knowledge-graph",
+        "understand",
+        "session"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:reports/youtube-script.md",
+      "type": "document",
+      "name": "YouTube Script",
+      "filePath": "reports/youtube-script.md",
+      "summary": "Five-minute conversational video script for a LinkedIn/YouTube audience explaining how an AI multi-agent pipeline designed a secure enterprise RAG system for a national tax authority interview assignment.",
+      "tags": [
+        "script",
+        "youtube",
+        "communication",
+        "rag",
+        "explainer"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:reports/jaeger-screenshots/trace-cache-hit-raw.json",
+      "type": "file",
+      "name": "trace-cache-hit-raw.json",
+      "filePath": "reports/jaeger-screenshots/trace-cache-hit-raw.json",
+      "summary": "Jaeger trace export showing a cache hit scenario in the RAG pipeline.",
+      "tags": [
+        "observability",
+        "jaeger",
+        "trace",
+        "data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:reports/jaeger-screenshots/trace-generation-raw.json",
+      "type": "file",
+      "name": "trace-generation-raw.json",
+      "filePath": "reports/jaeger-screenshots/trace-generation-raw.json",
+      "summary": "Jaeger trace export capturing a full generation flow through the RAG pipeline.",
+      "tags": [
+        "observability",
+        "jaeger",
+        "trace",
+        "data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:reports/jaeger-screenshots/trace-refusal-raw.json",
+      "type": "file",
+      "name": "trace-refusal-raw.json",
+      "filePath": "reports/jaeger-screenshots/trace-refusal-raw.json",
+      "summary": "Jaeger trace export recording a refusal scenario in the RAG pipeline.",
+      "tags": [
+        "observability",
+        "jaeger",
+        "trace",
+        "data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/debug-shell.sh",
+      "type": "file",
+      "name": "debug-shell.sh",
+      "filePath": "scripts/debug-shell.sh",
+      "summary": "Execs an interactive bash shell (or an arbitrary command) inside the running tax-rag-app container, starting the Docker Compose stack first if the container is not already up.",
+      "tags": [
+        "script",
+        "debug",
+        "docker",
+        "developer-tooling"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/run-eval.sh",
+      "type": "file",
+      "name": "run-eval.sh",
+      "filePath": "scripts/run-eval.sh",
+      "summary": "Orchestrates the full evaluation pipeline — build, start, health-wait, seed corpus, run pytest, parse JUnit XML results, enforce the RBAC threshold gate, write a test-results.md report, and tear down the stack.",
+      "tags": [
+        "script",
+        "evaluation",
+        "ci",
+        "docker",
+        "pytest",
+        "reporting"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:scripts/seed-corpus.sh",
+      "type": "file",
+      "name": "seed-corpus.sh",
+      "filePath": "scripts/seed-corpus.sh",
+      "summary": "Synthesizes ~250 role-tagged tax-law fixture documents and pushes them into the OpenSearch 'tax-docs-test' index by invoking the Python seeder inside the app container (or locally as a fallback).",
+      "tags": [
+        "script",
+        "seed",
+        "opensearch",
+        "test-data",
+        "rbac"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.claude/settings.json",
+      "type": "config",
+      "name": "Claude MCP Settings",
+      "summary": "Project-level Claude Code settings enabling the AWS MCP server for Bedrock and STS operations.",
+      "filePath": ".claude/settings.json",
+      "tags": [
+        "claude",
+        "mcp",
+        "aws",
+        "config"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.claude/settings.local.json",
+      "type": "config",
+      "name": "Claude Local Permissions",
+      "summary": "Local Claude Code permission allowlist covering AWS CLI, Docker, pytest, PowerShell, and GitHub CLI commands accumulated during project development.",
+      "filePath": ".claude/settings.local.json",
+      "tags": [
+        "claude",
+        "permissions",
+        "config",
+        "local"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Present/slidev/components",
+      "type": "file",
+      "name": "Slidev Components & Layouts",
+      "summary": "Vue 3 components for the Slidev presentation: architecture diagrams (AgentGraph, PipeFlow, LayerStack), timeline charts (AgentGantt, Waterfall), and layout templates.",
+      "filePath": "Present/slidev/components",
+      "tags": [
+        "vue",
+        "presentation",
+        "visualization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:scripts/assert_thresholds.py",
+      "type": "file",
+      "name": "CI Promotion Gate (assert_thresholds)",
+      "summary": "Parses JUnit XML from the test run and enforces hard CI promotion gates: RBAC Leak Rate = 0.00, Citation Accuracy = 1.00, Faithfulness >= 0.95, ContextPrecision >= 0.85, ContextRecall >= 0.90. Exits non-zero if any hard gate fails.",
+      "filePath": "scripts/assert_thresholds.py",
+      "tags": [
+        "ci",
+        "quality-gate",
+        "junit",
+        "python",
+        "rbac"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/cleanup-knowledge-graph.py",
+      "type": "file",
+      "name": "Knowledge Graph Cleanup",
+      "summary": "Normalises the .understand-anything/knowledge-graph.json in-place: flattens non-standard node fields, remaps invalid edge types to spec-valid equivalents, removes orphan concept nodes, and drops dangling edges. Writes a backup before overwriting.",
+      "filePath": "scripts/cleanup-knowledge-graph.py",
+      "tags": [
+        "knowledge-graph",
+        "maintenance",
+        "python",
+        "normalization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:scripts/emit_demo_traces.py",
+      "type": "file",
+      "name": "Demo Trace Emitter",
+      "summary": "Emits five representative RAG pipeline traces to Jaeger via OTLP (gRPC) using realistic latency numbers from Module 4 §4.2. Covers cache-hit, RBAC-blocked, refusal, and normal retrieval scenarios.",
+      "filePath": "scripts/emit_demo_traces.py",
+      "tags": [
+        "opentelemetry",
+        "jaeger",
+        "tracing",
+        "demo",
+        "python"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:tests/golden/golden_qa.jsonl",
+      "type": "file",
+      "name": "Golden Q&A Dataset",
+      "summary": "59 curated question-answer pairs spanning Dutch tax legislation, case law, policy, and e-learning documents across 2020-2024, including RBAC-must-refuse, temporal, ECLI exact-match, and ambiguous/refusal cases. Used as the parameterised source for all evaluation test modules.",
+      "filePath": "tests/golden/golden_qa.jsonl",
+      "tags": [
+        "golden-dataset",
+        "evaluation",
+        "nlp",
+        "dutch",
+        "tax-law"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:tests/pytest.ini",
+      "type": "config",
+      "name": "pytest Configuration",
+      "summary": "Configures pytest test discovery, async mode, and custom markers (slow, redteam, latency, integration, citation, cache, temporal, refusal, observability). Default addopts exclude slow tests for the fast loop.",
+      "filePath": "tests/pytest.ini",
+      "tags": [
+        "pytest",
+        "testing",
+        "config",
+        "markers"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:tests/TEST-PLAN.md",
+      "type": "document",
+      "name": "Test Plan",
+      "summary": "Documents the full evaluation suite: per-file test counts, threat/quality dimensions, pass criteria, domain-review coverage mapping, promotion gate constants, and docker-runner hand-off procedure for the ~75 test functions covering ~250 effective assertions.",
+      "filePath": "tests/TEST-PLAN.md",
+      "tags": [
+        "test-plan",
+        "documentation",
+        "quality",
+        "evaluation"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:tests/test_ambiguity_refusal.py",
+      "target": "file:tests/conftest.py",
+      "type": "imports",
+      "direction": "directed",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tests/test_citation_accuracy.py",
+      "target": "file:tests/conftest.py",
+      "type": "imports",
+      "direction": "directed",
+      "weight": 0.9
+    },
+    {
+      "source": "file:tests/test_hybrid_retrieval.py",
+      "target": "file:tests/conftest.py",
+      "type": "imports",
+      "direction": "directed",
+      "weight": 0.7
+    },
+    {
+      "source": "file:tests/test_latency_budgets.py",
+      "target": "file:tests/conftest.py",
+      "type": "imports",
+      "direction": "directed",
+      "weight": 0.7
+    },
+    {
+      "source": "file:tests/test_observability.py",
+      "target": "file:tests/conftest.py",
+      "type": "imports",
+      "direction": "directed",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tests/test_rbac_redteam.py",
+      "target": "file:tests/conftest.py",
+      "type": "imports",
+      "direction": "directed",
+      "weight": 0.9
+    },
+    {
+      "source": "file:tests/test_semantic_cache.py",
+      "target": "file:tests/conftest.py",
+      "type": "imports",
+      "direction": "directed",
+      "weight": 0.7
+    },
+    {
+      "source": "file:tests/test_temporal_correctness.py",
+      "target": "file:tests/conftest.py",
+      "type": "imports",
+      "direction": "directed",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tests/seed_opensearch.py",
+      "target": "file:tests/conftest.py",
+      "type": "imports",
+      "direction": "directed",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tests/conftest.py",
+      "target": "class:tests/conftest.py:ChunkMeta",
+      "type": "contains",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/conftest.py",
+      "target": "class:tests/conftest.py:RAGResponse",
+      "type": "contains",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/conftest.py",
+      "target": "class:tests/conftest.py:UserContext",
+      "type": "contains",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/conftest.py",
+      "target": "class:tests/conftest.py:MockRAGClient",
+      "type": "contains",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/conftest.py",
+      "target": "class:tests/conftest.py:HaikuJudge",
+      "type": "contains",
+      "direction": "directed",
+      "weight": 1.0
+    },
+    {
+      "source": "service:docker/docker-compose.yml",
+      "target": "service:opensearch",
+      "type": "deploys",
+      "direction": "directed",
+      "weight": 0.7
+    },
+    {
+      "source": "service:docker/docker-compose.yml",
+      "target": "service:redis-stack",
+      "type": "deploys",
+      "direction": "directed",
+      "weight": 0.7
+    },
+    {
+      "source": "service:docker/docker-compose.yml",
+      "target": "service:jaeger",
+      "type": "deploys",
+      "direction": "directed",
+      "weight": 0.7
+    },
+    {
+      "source": "service:docker/docker-compose.yml",
+      "target": "service:app",
+      "type": "deploys",
+      "direction": "directed",
+      "weight": 0.7
+    },
+    {
+      "source": "config:docker/.dockerignore",
+      "target": "service:docker/Dockerfile",
+      "type": "configures",
+      "direction": "directed",
+      "weight": 0.6
+    },
+    {
+      "source": "service:docker/docker-compose.yml",
+      "target": "service:docker/Dockerfile",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "document:.claude/agents/rag-retrieval-architect.md",
+      "target": "document:.claude/agents/agentic-rag-designer.md",
+      "type": "related",
+      "label": "retrieval metadata schema feeds agentic CRAG state machine",
+      "direction": "directed"
+    },
+    {
+      "source": "document:.claude/agents/rag-retrieval-architect.md",
+      "target": "document:.claude/agents/mlops-security-architect.md",
+      "type": "related",
+      "label": "classification metadata field enables RBAC pre-filter design",
+      "direction": "directed"
+    },
+    {
+      "source": "document:.claude/agents/agentic-rag-designer.md",
+      "target": "document:.claude/agents/mlops-security-architect.md",
+      "type": "related",
+      "label": "grader output schema and state machine decisions feed observability spans",
+      "direction": "directed"
+    },
+    {
+      "source": "document:.claude/agents/rag-evaluation-engineer.md",
+      "target": "document:.claude/agents/docker-runner.md",
+      "type": "related",
+      "label": "test suite produced by eval engineer is executed by docker-runner",
+      "direction": "directed"
+    },
+    {
+      "source": "document:.claude/agents/legal-domain-reviewer.md",
+      "target": "document:.claude/agents/report-compiler.md",
+      "type": "related",
+      "label": "domain review flags (warnings/critical gaps) are resolved by report-compiler",
+      "direction": "directed"
+    },
+    {
+      "source": "document:.claude/agents/rag-retrieval-architect.md",
+      "target": "document:.claude/agents/report-compiler.md",
+      "type": "related",
+      "label": "module 1-2 design draft compiled into final document",
+      "direction": "directed"
+    },
+    {
+      "source": "document:.claude/agents/agentic-rag-designer.md",
+      "target": "document:.claude/agents/report-compiler.md",
+      "type": "related",
+      "label": "module 3 design draft compiled into final document",
+      "direction": "directed"
+    },
+    {
+      "source": "document:.claude/agents/mlops-security-architect.md",
+      "target": "document:.claude/agents/report-compiler.md",
+      "type": "related",
+      "label": "module 4 design draft compiled into final document",
+      "direction": "directed"
+    },
+    {
+      "source": "document:.claude/agents/docker-runner.md",
+      "target": "document:.claude/agents/report-compiler.md",
+      "type": "related",
+      "label": "test-results artifact consumed by report-compiler for validation section",
+      "direction": "directed"
+    },
+    {
+      "source": "document:.claude/agents/report-compiler.md",
+      "target": "document:.claude/agents/process-report-author.md",
+      "type": "related",
+      "label": "final compiled document and all agent outputs feed the process report",
+      "direction": "directed"
+    },
+    {
+      "source": "document:NEXT-SESSION-PROMPT.md",
+      "target": "document:assignment",
+      "direction": "directed",
+      "type": "documents"
+    },
+    {
+      "source": "document:README.md",
+      "target": "document:assignment",
+      "direction": "forward",
+      "type": "documents"
+    },
+    {
+      "source": "document:Present/module-1-ingestion.md",
+      "target": "document:design/module-1-2-retrieval.md",
+      "type": "related",
+      "label": "presentation covers",
+      "direction": "directed"
+    },
+    {
+      "source": "document:Present/module-2-retrieval.md",
+      "target": "document:design/module-1-2-retrieval.md",
+      "type": "related",
+      "label": "presentation covers",
+      "direction": "directed"
+    },
+    {
+      "source": "document:Present/module-3-agentic.md",
+      "target": "document:design/module-3-agentic.md",
+      "type": "related",
+      "label": "presentation covers",
+      "direction": "directed"
+    },
+    {
+      "source": "document:Present/module-4-ops-security.md",
+      "target": "document:design/module-4-ops-security.md",
+      "type": "related",
+      "label": "presentation covers",
+      "direction": "directed"
+    },
+    {
+      "source": "document:Present/presentation-answers.md",
+      "target": "document:Present/presentation",
+      "type": "related",
+      "label": "companion to",
+      "direction": "directed"
+    },
+    {
+      "source": "config:Present/slidev/package.json",
+      "target": "document:Present/slidev/slides.md",
+      "type": "configures",
+      "label": "configures",
+      "direction": "directed"
+    },
+    {
+      "source": "document:Present/slidev/README.md",
+      "target": "document:Present/slidev/slides.md",
+      "type": "documents",
+      "label": "documents",
+      "direction": "directed"
+    },
+    {
+      "source": "document:Present/slidev/slides.md",
+      "target": "document:Present/presentation-answers.md",
+      "type": "related",
+      "label": "derived from",
+      "direction": "directed"
+    },
+    {
+      "source": "document:design/module-1-2-retrieval.md",
+      "target": "concept:hybrid-retrieval",
+      "type": "contains",
+      "label": "primarily defines hybrid BM25+dense retrieval with RRF",
+      "direction": "directed"
+    },
+    {
+      "source": "document:design/module-3-agentic.md",
+      "target": "concept:CRAG",
+      "type": "contains",
+      "label": "primarily defines the CRAG LangGraph state machine",
+      "direction": "directed"
+    },
+    {
+      "source": "document:design/module-4-ops-security.md",
+      "target": "concept:RBAC-filtering",
+      "type": "contains",
+      "label": "primarily defines RBAC pre-filter inside HNSW traversal",
+      "direction": "directed"
+    },
+    {
+      "source": "document:design/module-4-ops-security.md",
+      "target": "concept:citation-verification",
+      "type": "contains",
+      "label": "primarily defines zero-hallucination citation anchor verification",
+      "direction": "directed"
+    },
+    {
+      "source": "document:design/FINAL-rag-architecture.md",
+      "target": "document:design/module-1-2-retrieval.md",
+      "type": "contains",
+      "label": "consolidates ingestion and retrieval module",
+      "direction": "directed"
+    },
+    {
+      "source": "document:design/FINAL-rag-architecture.md",
+      "target": "document:design/module-3-agentic.md",
+      "type": "contains",
+      "label": "consolidates agentic CRAG module",
+      "direction": "directed"
+    },
+    {
+      "source": "document:design/FINAL-rag-architecture.md",
+      "target": "document:design/module-4-ops-security.md",
+      "type": "contains",
+      "label": "consolidates ops, security, and evaluation module",
+      "direction": "directed"
+    },
+    {
+      "source": "document:design/FINAL-rag-architecture.md",
+      "target": "concept:CRAG",
+      "type": "documents",
+      "label": "documents CRAG corrective retrieval loop",
+      "direction": "directed"
+    },
+    {
+      "source": "document:design/FINAL-rag-architecture.md",
+      "target": "concept:RBAC-filtering",
+      "type": "documents",
+      "label": "documents RBAC pre-filter as primary security gate",
+      "direction": "directed"
+    },
+    {
+      "source": "document:design/FINAL-rag-architecture.md",
+      "target": "concept:hybrid-retrieval",
+      "type": "documents",
+      "label": "documents BM25+dense hybrid retrieval with RRF",
+      "direction": "directed"
+    },
+    {
+      "source": "document:design/FINAL-rag-architecture.md",
+      "target": "concept:citation-verification",
+      "type": "documents",
+      "label": "documents zero-hallucination citation verification",
+      "direction": "directed"
+    },
+    {
+      "source": "document:design/module-1-2-retrieval.md",
+      "target": "document:design/module-3-agentic.md",
+      "type": "related",
+      "label": "retrieval output feeds agentic CRAG grader/generator",
+      "direction": "directed"
+    },
+    {
+      "source": "document:design/module-1-2-retrieval.md",
+      "target": "document:design/module-4-ops-security.md",
+      "type": "related",
+      "label": "retrieval layer enforces RBAC and feeds audit/observability",
+      "direction": "directed"
+    },
+    {
+      "source": "document:design/module-3-agentic.md",
+      "target": "document:design/module-4-ops-security.md",
+      "type": "related",
+      "label": "agentic loop emits citation accuracy metrics to evaluation harness",
+      "direction": "directed"
+    },
+    {
+      "source": "document:plans/MASTER-PLAN.md",
+      "target": "document:plans/agentic-rag-designer-plan.md",
+      "type": "contains",
+      "label": "contains sub-plan",
+      "direction": "directed"
+    },
+    {
+      "source": "document:plans/MASTER-PLAN.md",
+      "target": "document:plans/docker-runner-plan.md",
+      "type": "contains",
+      "label": "contains sub-plan",
+      "direction": "directed"
+    },
+    {
+      "source": "document:plans/MASTER-PLAN.md",
+      "target": "document:plans/mlops-security-architect-plan.md",
+      "type": "contains",
+      "label": "contains sub-plan",
+      "direction": "directed"
+    },
+    {
+      "source": "document:plans/MASTER-PLAN.md",
+      "target": "document:plans/rag-evaluation-engineer-plan.md",
+      "type": "contains",
+      "label": "contains sub-plan",
+      "direction": "directed"
+    },
+    {
+      "source": "document:plans/MASTER-PLAN.md",
+      "target": "document:plans/rag-retrieval-architect-plan.md",
+      "type": "contains",
+      "label": "contains sub-plan",
+      "direction": "directed"
+    },
+    {
+      "source": "document:plans/agentic-rag-designer-plan.md",
+      "target": "document:.claude/agents/agentic-rag-designer.md",
+      "type": "related",
+      "label": "plan for agent",
+      "direction": "directed"
+    },
+    {
+      "source": "document:plans/docker-runner-plan.md",
+      "target": "document:.claude/agents/docker-runner.md",
+      "type": "related",
+      "label": "plan for agent",
+      "direction": "directed"
+    },
+    {
+      "source": "document:plans/mlops-security-architect-plan.md",
+      "target": "document:.claude/agents/mlops-security-architect.md",
+      "type": "related",
+      "label": "plan for agent",
+      "direction": "directed"
+    },
+    {
+      "source": "document:plans/rag-evaluation-engineer-plan.md",
+      "target": "document:.claude/agents/rag-evaluation-engineer.md",
+      "type": "related",
+      "label": "plan for agent",
+      "direction": "directed"
+    },
+    {
+      "source": "document:plans/rag-retrieval-architect-plan.md",
+      "target": "document:.claude/agents/rag-retrieval-architect.md",
+      "type": "related",
+      "label": "plan for agent",
+      "direction": "directed"
+    },
+    {
+      "source": "file:scripts/run-eval.sh",
+      "target": "service:docker/docker-compose.yml",
+      "type": "triggers",
+      "label": "builds, starts, and tears down the full Docker Compose stack",
+      "direction": "directed"
+    },
+    {
+      "source": "file:scripts/run-eval.sh",
+      "target": "file:tests/conftest.py",
+      "type": "triggers",
+      "label": "triggers the pytest test suite (references MOCK_CORPUS from conftest.py on seed failure)",
+      "direction": "directed"
+    },
+    {
+      "source": "file:scripts/run-eval.sh",
+      "target": "file:scripts/seed-corpus.sh",
+      "type": "triggers",
+      "label": "calls seed-corpus.sh as Step 4 before running tests",
+      "direction": "directed"
+    },
+    {
+      "source": "file:scripts/run-eval.sh",
+      "target": "file:scripts/assert_thresholds.py",
+      "type": "triggers",
+      "label": "runs RBAC threshold gate script after pytest to hard-fail on any data-leak",
+      "direction": "directed"
+    },
+    {
+      "source": "file:scripts/seed-corpus.sh",
+      "target": "service:opensearch",
+      "type": "triggers",
+      "label": "seeds the tax-docs-test index with ~250 role-tagged fixture documents",
+      "direction": "directed"
+    },
+    {
+      "source": "file:scripts/seed-corpus.sh",
+      "target": "file:tests/seed_opensearch.py",
+      "type": "triggers",
+      "label": "delegates actual indexing work to the Python seeder script",
+      "direction": "directed"
+    },
+    {
+      "source": "file:scripts/debug-shell.sh",
+      "target": "service:docker/docker-compose.yml",
+      "type": "related",
+      "label": "starts the Compose stack on-demand when the app container is not found",
+      "direction": "directed"
+    },
+    {
+      "source": "config:tests/pytest.ini",
+      "target": "file:tests/conftest.py",
+      "type": "configures",
+      "direction": "directed"
+    },
+    {
+      "source": "document:tests/TEST-PLAN.md",
+      "target": "file:tests/conftest.py",
+      "type": "documents",
+      "direction": "directed"
+    },
+    {
+      "source": "document:Present/slidev/slides.md",
+      "target": "file:Present/slidev/components",
+      "type": "contains",
+      "direction": "directed"
+    },
+    {
+      "source": "file:scripts/assert_thresholds.py",
+      "target": "file:reports/junit.xml",
+      "type": "reads_from",
+      "direction": "forward"
+    },
+    {
+      "source": "file:scripts/emit_demo_traces.py",
+      "target": "service:jaeger",
+      "type": "triggers",
+      "direction": "directed"
+    },
+    {
+      "source": "config:docker/.env",
+      "target": "service:docker/docker-compose.yml",
+      "type": "configures",
+      "direction": "directed",
+      "weight": 0.6
+    },
+    {
+      "source": "config:docker/.env.example",
+      "target": "config:docker/.env",
+      "type": "configures",
+      "direction": "directed",
+      "weight": 0.6
+    },
+    {
+      "source": "config:docker/requirements.txt",
+      "target": "service:docker/Dockerfile",
+      "type": "configures",
+      "direction": "directed",
+      "weight": 0.6
+    },
+    {
+      "source": "config:docker/compose.override.yml",
+      "target": "service:docker/docker-compose.yml",
+      "type": "configures",
+      "direction": "directed",
+      "weight": 0.6
+    },
+    {
+      "source": "document:docker/IAM-POLICY.md",
+      "target": "service:docker/docker-compose.yml",
+      "type": "documents",
+      "direction": "directed",
+      "weight": 0.5
+    },
+    {
+      "source": "file:docker/healthchecks/opensearch.sh",
+      "target": "service:opensearch",
+      "type": "serves",
+      "direction": "directed",
+      "weight": 0.6
+    },
+    {
+      "source": "file:docker/healthchecks/redis.sh",
+      "target": "service:redis-stack",
+      "type": "serves",
+      "direction": "directed",
+      "weight": 0.6
+    },
+    {
+      "source": "file:docker/healthchecks/jaeger.sh",
+      "target": "service:jaeger",
+      "type": "serves",
+      "direction": "directed",
+      "weight": 0.6
+    },
+    {
+      "source": "file:docker/healthchecks/app.sh",
+      "target": "service:app",
+      "type": "serves",
+      "direction": "directed",
+      "weight": 0.6
+    },
+    {
+      "source": "file:launch-dashboard.ps1",
+      "target": "document:reports/understand-session-report.md",
+      "type": "documents",
+      "direction": "directed",
+      "weight": 0.5
+    },
+    {
+      "source": "document:reports/PROCESS-REPORT.md",
+      "target": "document:reports/test-results.md",
+      "type": "related",
+      "direction": "directed",
+      "weight": 0.5
+    },
+    {
+      "source": "document:reports/jaeger-observability.md",
+      "target": "service:jaeger",
+      "type": "documents",
+      "direction": "directed",
+      "weight": 0.5
+    },
+    {
+      "source": "document:reports/test-results.md",
+      "target": "file:reports/junit.xml",
+      "type": "documents",
+      "direction": "directed",
+      "weight": 0.5
+    },
+    {
+      "source": "file:reports/agent-timings.jsonl",
+      "target": "document:reports/PROCESS-REPORT.md",
+      "type": "documents",
+      "direction": "directed",
+      "weight": 0.5
+    },
+    {
+      "source": "document:reports/understand-session-report.md",
+      "target": "document:README.md",
+      "type": "documents",
+      "direction": "directed",
+      "weight": 0.5
+    },
+    {
+      "source": "document:reports/youtube-script.md",
+      "target": "document:README.md",
+      "type": "related",
+      "direction": "directed",
+      "weight": 0.3
+    },
+    {
+      "source": "file:reports/jaeger-screenshots/trace-cache-hit-raw.json",
+      "target": "document:reports/jaeger-observability.md",
+      "type": "documents",
+      "direction": "directed",
+      "weight": 0.5
+    },
+    {
+      "source": "file:reports/jaeger-screenshots/trace-generation-raw.json",
+      "target": "document:reports/jaeger-observability.md",
+      "type": "documents",
+      "direction": "directed",
+      "weight": 0.5
+    },
+    {
+      "source": "file:reports/jaeger-screenshots/trace-refusal-raw.json",
+      "target": "document:reports/jaeger-observability.md",
+      "type": "documents",
+      "direction": "directed",
+      "weight": 0.5
+    },
+    {
+      "source": "config:.claude/settings.json",
+      "target": "config:.claude/settings.local.json",
+      "type": "related",
+      "direction": "directed",
+      "weight": 0.4
+    },
+    {
+      "source": "file:scripts/cleanup-knowledge-graph.py",
+      "target": "document:reports/understand-session-report.md",
+      "type": "related",
+      "direction": "directed",
+      "weight": 0.4
+    },
+    {
+      "source": "file:tests/golden/golden_qa.jsonl",
+      "target": "file:tests/conftest.py",
+      "type": "depends_on",
+      "direction": "directed",
+      "weight": 0.6
+    },
+    {
+      "source": "document:.claude/agents/rag-retrieval-architect.md",
+      "target": "document:design/module-1-2-retrieval.md",
+      "type": "documents",
+      "direction": "directed",
+      "weight": 0.6
+    },
+    {
+      "source": "document:.claude/agents/agentic-rag-designer.md",
+      "target": "document:design/module-3-agentic.md",
+      "type": "documents",
+      "direction": "directed",
+      "weight": 0.6
+    },
+    {
+      "source": "document:.claude/agents/mlops-security-architect.md",
+      "target": "document:design/module-4-ops-security.md",
+      "type": "documents",
+      "direction": "directed",
+      "weight": 0.6
+    },
+    {
+      "source": "file:scripts/run-eval.sh",
+      "target": "document:reports/test-results.md",
+      "type": "triggers",
+      "direction": "directed",
+      "weight": 0.6
+    },
+    {
+      "source": "file:tests/golden/golden_qa.jsonl",
+      "target": "file:tests/test_citation_accuracy.py",
+      "type": "depends_on",
+      "direction": "directed",
+      "weight": 0.6
+    },
+    {
+      "source": "file:tests/golden/golden_qa.jsonl",
+      "target": "file:tests/test_rbac_redteam.py",
+      "type": "depends_on",
+      "direction": "directed",
+      "weight": 0.6
+    },
+    {
+      "source": "file:tests/golden/golden_qa.jsonl",
+      "target": "file:tests/test_temporal_correctness.py",
+      "type": "depends_on",
+      "direction": "directed",
+      "weight": 0.6
+    },
+    {
+      "source": "file:tests/golden/golden_qa.jsonl",
+      "target": "file:tests/test_ambiguity_refusal.py",
+      "type": "depends_on",
+      "direction": "directed",
+      "weight": 0.6
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer:evaluation-harness",
+      "name": "Evaluation Harness",
+      "description": "Pytest test suite, golden QA data, seed scripts, and test infrastructure (conftest, fixtures, test plan).",
+      "nodeIds": [
+        "file:tests/conftest.py",
+        "file:tests/seed_opensearch.py",
+        "file:tests/test_ambiguity_refusal.py",
+        "file:tests/test_citation_accuracy.py",
+        "file:tests/test_hybrid_retrieval.py",
+        "file:tests/test_latency_budgets.py",
+        "file:tests/test_observability.py",
+        "file:tests/test_rbac_redteam.py",
+        "file:tests/test_semantic_cache.py",
+        "file:tests/test_temporal_correctness.py",
+        "file:tests/golden/golden_qa.jsonl",
+        "config:tests/pytest.ini",
+        "document:tests/TEST-PLAN.md",
+        "class:tests/conftest.py:ChunkMeta",
+        "class:tests/conftest.py:RAGResponse",
+        "class:tests/conftest.py:UserContext",
+        "class:tests/conftest.py:MockRAGClient",
+        "class:tests/conftest.py:HaikuJudge"
+      ]
+    },
+    {
+      "id": "layer:architecture-design",
+      "name": "Architecture & Design",
+      "description": "Core module design documents, the FINAL architecture doc, and the 4 key architectural concepts (CRAG, RBAC, hybrid retrieval, citation verification).",
+      "nodeIds": [
+        "document:design/FINAL-rag-architecture.md",
+        "document:design/module-1-2-retrieval.md",
+        "document:design/module-3-agentic.md",
+        "document:design/module-4-ops-security.md",
+        "concept:CRAG",
+        "concept:RBAC-filtering",
+        "concept:hybrid-retrieval",
+        "concept:citation-verification"
+      ]
+    },
+    {
+      "id": "layer:infrastructure",
+      "name": "Infrastructure",
+      "description": "Docker Compose stack, Dockerfile, environment config, healthchecks, requirements, and IAM policy.",
+      "nodeIds": [
+        "config:docker/.dockerignore",
+        "service:docker/docker-compose.yml",
+        "service:docker/Dockerfile",
+        "config:docker/.env",
+        "config:docker/.env.example",
+        "document:docker/IAM-POLICY.md",
+        "config:docker/compose.override.yml",
+        "config:docker/requirements.txt",
+        "file:docker/healthchecks/app.sh",
+        "file:docker/healthchecks/jaeger.sh",
+        "file:docker/healthchecks/opensearch.sh",
+        "file:docker/healthchecks/redis.sh"
+      ]
+    },
+    {
+      "id": "layer:runtime-services",
+      "name": "Runtime Services",
+      "description": "Virtual service nodes: OpenSearch vector store, Redis Stack cache, Jaeger tracing, and the app container.",
+      "nodeIds": [
+        "service:opensearch",
+        "service:redis-stack",
+        "service:jaeger",
+        "service:app"
+      ]
+    },
+    {
+      "id": "layer:agent-orchestration",
+      "name": "Agent Orchestration",
+      "description": "Claude subagent definition files, master plan, and agent sub-plans for five of the eight agents that coordinated the multi-agent build process.",
+      "nodeIds": [
+        "document:.claude/agents/agentic-rag-designer.md",
+        "document:.claude/agents/docker-runner.md",
+        "document:.claude/agents/legal-domain-reviewer.md",
+        "document:.claude/agents/mlops-security-architect.md",
+        "document:.claude/agents/process-report-author.md",
+        "document:.claude/agents/rag-evaluation-engineer.md",
+        "document:.claude/agents/rag-retrieval-architect.md",
+        "document:.claude/agents/report-compiler.md",
+        "document:plans/MASTER-PLAN.md",
+        "document:plans/agentic-rag-designer-plan.md",
+        "document:plans/docker-runner-plan.md",
+        "document:plans/mlops-security-architect-plan.md",
+        "document:plans/rag-evaluation-engineer-plan.md",
+        "document:plans/rag-retrieval-architect-plan.md"
+      ]
+    },
+    {
+      "id": "layer:scripts-automation",
+      "name": "Scripts & Automation",
+      "description": "Shell and Python scripts for evaluation CI, corpus seeding, demo trace emission, threshold gate assertions, and debugging.",
+      "nodeIds": [
+        "file:scripts/debug-shell.sh",
+        "file:scripts/run-eval.sh",
+        "file:scripts/seed-corpus.sh",
+        "file:scripts/assert_thresholds.py",
+        "file:scripts/cleanup-knowledge-graph.py",
+        "file:scripts/emit_demo_traces.py"
+      ]
+    },
+    {
+      "id": "layer:presentation",
+      "name": "Presentation",
+      "description": "Slidev presentation components, module slides, presentation answers, and the YouTube script.",
+      "nodeIds": [
+        "document:Present/module-1-ingestion.md",
+        "document:Present/module-2-retrieval.md",
+        "document:Present/module-3-agentic.md",
+        "document:Present/module-4-ops-security.md",
+        "document:Present/presentation",
+        "document:Present/presentation-answers.md",
+        "config:Present/slidev/.gitignore",
+        "document:Present/slidev/README.md",
+        "config:Present/slidev/package.json",
+        "document:Present/slidev/slides.md",
+        "file:Present/slidev/components",
+        "document:reports/youtube-script.md"
+      ]
+    },
+    {
+      "id": "layer:reports-artifacts",
+      "name": "Reports & Artifacts",
+      "description": "Evaluation reports, Jaeger trace exports, JUnit XML, process report, and observability analysis.",
+      "nodeIds": [
+        "document:reports/PROCESS-REPORT.md",
+        "file:reports/agent-timings.jsonl",
+        "document:reports/jaeger-observability.md",
+        "file:reports/junit.xml",
+        "document:reports/test-results.md",
+        "document:reports/understand-session-report.md",
+        "file:reports/jaeger-screenshots/trace-cache-hit-raw.json",
+        "file:reports/jaeger-screenshots/trace-generation-raw.json",
+        "file:reports/jaeger-screenshots/trace-refusal-raw.json"
+      ]
+    },
+    {
+      "id": "layer:project-root",
+      "name": "Project Root",
+      "description": "README, assignment brief, root config files (.gitignore, .mcp.json, Claude settings), and session bootstrap docs.",
+      "nodeIds": [
+        "config:.gitignore",
+        "config:.mcp.json",
+        "document:NEXT-SESSION-PROMPT.md",
+        "document:README.md",
+        "document:assignment",
+        "file:launch-dashboard.ps1",
+        "config:.claude/settings.json",
+        "config:.claude/settings.local.json"
+      ]
+    }
+  ],
+  "tour": [
+    {
+      "order": 1,
+      "title": "Project Overview",
+      "description": "Start with the README and the original assignment brief to understand what was built: a secure enterprise RAG system for a national tax authority with zero-hallucination citations and RBAC-enforced document filtering.",
+      "nodeIds": [
+        "document:README.md",
+        "document:assignment"
+      ]
+    },
+    {
+      "order": 2,
+      "title": "Architecture — Ingestion & Hybrid Retrieval",
+      "description": "The retrieval layer uses BM25 + dense embedding fusion with Reciprocal Rank Fusion, HNSW settings (m=32, ef=256), and Cohere reranking. Explore module 1-2 design and the hybrid-retrieval concept.",
+      "nodeIds": [
+        "document:design/module-1-2-retrieval.md",
+        "concept:hybrid-retrieval"
+      ]
+    },
+    {
+      "order": 3,
+      "title": "Architecture — CRAG Agentic Loop",
+      "description": "Module 3 implements a LangGraph state machine: transform query → retrieve → grade (Haiku judge) → generate → verify citations. The CRAG concept node shows how all pieces connect.",
+      "nodeIds": [
+        "document:design/module-3-agentic.md",
+        "concept:CRAG"
+      ]
+    },
+    {
+      "order": 4,
+      "title": "Architecture — RBAC & Observability",
+      "description": "RBAC uses efficient_filter inside HNSW traversal to prevent timing side-channel leaks. Role-bound Redis cache keys, zero-hallucination citation guard, and OpenTelemetry → Jaeger tracing.",
+      "nodeIds": [
+        "document:design/module-4-ops-security.md",
+        "concept:RBAC-filtering",
+        "concept:citation-verification"
+      ]
+    },
+    {
+      "order": 5,
+      "title": "Consolidated Architecture Document",
+      "description": "The FINAL-rag-architecture.md is the submission-ready document that integrates all four modules into a cohesive design with cross-cutting concerns like RBAC, observability, and CI gates.",
+      "nodeIds": [
+        "document:design/FINAL-rag-architecture.md"
+      ]
+    },
+    {
+      "order": 6,
+      "title": "Multi-Agent Build Pipeline",
+      "description": "This project was itself built by a 7-agent Claude pipeline. The Master Plan coordinated agents for retrieval design, CRAG, ops/security, evaluation, Docker, legal review, and final compilation. The Process Report documents methodology and agent timings.",
+      "nodeIds": [
+        "document:plans/MASTER-PLAN.md",
+        "document:.claude/agents/rag-retrieval-architect.md",
+        "document:.claude/agents/report-compiler.md",
+        "document:reports/PROCESS-REPORT.md"
+      ]
+    },
+    {
+      "order": 7,
+      "title": "Test Fixtures & Evaluation Harness",
+      "description": "conftest.py (1207 lines) defines the evaluation foundation: synthetic MOCK_CORPUS with 250 tax-law chunks, ChunkMeta, RAGResponse, UserContext, MockRAGClient, and HaikuJudge for live integration tests.",
+      "nodeIds": [
+        "file:tests/conftest.py",
+        "class:tests/conftest.py:MockRAGClient",
+        "class:tests/conftest.py:UserContext",
+        "file:tests/golden/golden_qa.jsonl"
+      ]
+    },
+    {
+      "order": 8,
+      "title": "RBAC Red-Team Tests",
+      "description": "test_rbac_redteam.py (637 lines) covers 7 threat classes: direct FIOD query, semantic proximity attacks, cache poisoning, prompt injection, existence disclosure, role-ceiling violations, and audit counters.",
+      "nodeIds": [
+        "file:tests/test_rbac_redteam.py",
+        "file:tests/test_semantic_cache.py"
+      ]
+    },
+    {
+      "order": 9,
+      "title": "Citation & Retrieval Quality Tests",
+      "description": "Citation accuracy test enforces a hard 1.00 gate — no partial credit. Hybrid retrieval tests validate nDCG@5 improvement from reranking. Temporal correctness tests validate tax-year versioning.",
+      "nodeIds": [
+        "file:tests/test_citation_accuracy.py",
+        "file:tests/test_hybrid_retrieval.py",
+        "file:tests/test_temporal_correctness.py"
+      ]
+    },
+    {
+      "order": 10,
+      "title": "Docker Infrastructure Stack",
+      "description": "docker-compose.yml orchestrates OpenSearch, Redis Stack, Jaeger, and the app container. Health-gated startup, TLS-secured OpenSearch, role-based Redis, and OTLP trace export.",
+      "nodeIds": [
+        "service:docker/docker-compose.yml",
+        "service:opensearch",
+        "service:redis-stack",
+        "service:jaeger"
+      ]
+    },
+    {
+      "order": 11,
+      "title": "CI Evaluation Pipeline",
+      "description": "run-eval.sh is the full CI pipeline: build → up → seed → pytest → JUnit parse → RBAC hard-fail gate → report → down. assert_thresholds.py enforces Citation=1.00 and RBAC Leak=0.00.",
+      "nodeIds": [
+        "file:scripts/run-eval.sh",
+        "file:scripts/assert_thresholds.py",
+        "document:reports/test-results.md"
+      ]
+    }
+  ]
+}
